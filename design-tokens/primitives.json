@@ -1,0 +1,124 @@
+{
+  "ink": {
+    "700": {
+      "$type": "color",
+      "$value": "#373B56",
+      "$description": "Strong border, stat dividers, icon-button stroke"
+    },
+    "800": {
+      "$type": "color",
+      "$value": "#272A41",
+      "$description": "Default border, image placeholder fill"
+    },
+    "850": {
+      "$type": "color",
+      "$value": "#1D2034",
+      "$description": "Raised card, FAQ item, active nav pill (mobile), hover fill"
+    },
+    "900": {
+      "$type": "color",
+      "$value": "#161828",
+      "$description": "Alt section, cards"
+    },
+    "950": {
+      "$type": "color",
+      "$value": "#0F1020",
+      "$description": "Page background"
+    }
+  },
+  "steel": {
+    "100": {
+      "$type": "color",
+      "$value": "#E8ECEC",
+      "$description": "Primary text, primary button fill"
+    },
+    "300": {
+      "$type": "color",
+      "$value": "#C1CBD0",
+      "$description": "Body text, nav links"
+    },
+    "500": {
+      "$type": "color",
+      "$value": "#8F9CA8",
+      "$description": "Secondary text, captions"
+    },
+    "700": {
+      "$type": "color",
+      "$value": "#5E6A78",
+      "$description": "Tertiary text, sub-footer, disabled"
+    }
+  },
+  "blue": {
+    "200": {
+      "$type": "color",
+      "$value": "#C9D6E3",
+      "$description": "Accent hover, primary button hover"
+    },
+    "300": {
+      "$type": "color",
+      "$value": "#A9BDD1",
+      "$description": "Accent: links, labels, icons, focus ring"
+    },
+    "600": {
+      "$type": "color",
+      "$value": "#5D7FA3",
+      "$description": "Accent pressed / deep"
+    },
+    "700": {
+      "$type": "color",
+      "$value": "#3E5878",
+      "$description": "Accent darkest"
+    }
+  },
+  "alpha": {
+    "blue-300-10": {
+      "$type": "color",
+      "$value": "#A9BDD11A",
+      "$description": "Event badge fill (blue-300 @ 10%)"
+    },
+    "blue-300-12": {
+      "$type": "color",
+      "$value": "#A9BDD11F",
+      "$description": "Icon box, active nav pill, event tag (blue-300 @ 12%)"
+    },
+    "blue-300-40": {
+      "$type": "color",
+      "$value": "#A9BDD166",
+      "$description": "Event badge stroke (blue-300 @ 40%)"
+    },
+    "blue-300-60": {
+      "$type": "color",
+      "$value": "#A9BDD199",
+      "$description": "Open FAQ stroke (blue-300 @ 60%)"
+    },
+    "steel-500-35": {
+      "$type": "color",
+      "$value": "#8F9CA859",
+      "$description": "Image placeholder dash, footer social stroke (steel-500 @ 35%)"
+    },
+    "steel-500-50": {
+      "$type": "color",
+      "$value": "#8F9CA880",
+      "$description": "Ghost button stroke (steel-500 @ 50%)"
+    },
+    "steel-100-20": {
+      "$type": "color",
+      "$value": "#E8ECEC33",
+      "$description": "Carousel arrow stroke (steel-100 @ 20%)"
+    },
+    "steel-100-40": {
+      "$type": "color",
+      "$value": "#E8ECEC66",
+      "$description": "Carousel dot inactive (steel-100 @ 40%)"
+    },
+    "ink-950-70": {
+      "$type": "color",
+      "$value": "#0F1020B2",
+      "$description": "Carousel arrow fill (ink-950 @ 70%)"
+    },
+    "blue-300-08": {
+      "$type": "color",
+      "$value": "#A9BDD114"
+    }
+  }
+}

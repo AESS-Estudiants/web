@@ -21,6 +21,8 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - name: Lint and format
         run: pnpm exec biome ci .
+      - name: Design tokens
+        run: pnpm tokens:check
       - name: Types
         run: pnpm typecheck
       - name: Unit and component tests

@@ -1,0 +1,126 @@
+{
+  "space": {
+    "2": {
+      "$type": "dimension",
+      "$value": "2px"
+    },
+    "4": {
+      "$type": "dimension",
+      "$value": "4px"
+    },
+    "6": {
+      "$type": "dimension",
+      "$value": "6px"
+    },
+    "8": {
+      "$type": "dimension",
+      "$value": "8px"
+    },
+    "10": {
+      "$type": "dimension",
+      "$value": "10px"
+    },
+    "12": {
+      "$type": "dimension",
+      "$value": "12px"
+    },
+    "14": {
+      "$type": "dimension",
+      "$value": "14px"
+    },
+    "16": {
+      "$type": "dimension",
+      "$value": "16px"
+    },
+    "20": {
+      "$type": "dimension",
+      "$value": "20px"
+    },
+    "24": {
+      "$type": "dimension",
+      "$value": "24px"
+    },
+    "28": {
+      "$type": "dimension",
+      "$value": "28px"
+    },
+    "32": {
+      "$type": "dimension",
+      "$value": "32px"
+    },
+    "40": {
+      "$type": "dimension",
+      "$value": "40px"
+    },
+    "48": {
+      "$type": "dimension",
+      "$value": "48px"
+    },
+    "56": {
+      "$type": "dimension",
+      "$value": "56px"
+    },
+    "64": {
+      "$type": "dimension",
+      "$value": "64px"
+    },
+    "72": {
+      "$type": "dimension",
+      "$value": "72px"
+    },
+    "80": {
+      "$type": "dimension",
+      "$value": "80px"
+    },
+    "96": {
+      "$type": "dimension",
+      "$value": "96px"
+    },
+    "200": {
+      "$type": "dimension",
+      "$value": "200px"
+    }
+  },
+  "radius": {
+    "xs": {
+      "$type": "dimension",
+      "$value": "4px",
+      "$description": "Text links, footer links, skeleton lines, keycap"
+    },
+    "sm": {
+      "$type": "dimension",
+      "$value": "8px",
+      "$description": "Small buttons, inputs, chips"
+    },
+    "md": {
+      "$type": "dimension",
+      "$value": "10px",
+      "$description": "Buttons, nav items, form fields"
+    },
+    "lg": {
+      "$type": "dimension",
+      "$value": "16px",
+      "$description": "Cards, panels, images"
+    },
+    "full": {
+      "$type": "dimension",
+      "$value": "9999px",
+      "$description": "Pills, dots"
+    },
+    "focus-sm": {
+      "$type": "dimension",
+      "$value": "12px",
+      "$description": "Focus ring around radius/sm (8+4)"
+    },
+    "focus-md": {
+      "$type": "dimension",
+      "$value": "14px",
+      "$description": "Focus ring around radius/md (10+4)"
+    },
+    "focus-lg": {
+      "$type": "dimension",
+      "$value": "20px",
+      "$description": "Focus ring around radius/lg (16+4)"
+    }
+  }
+}
