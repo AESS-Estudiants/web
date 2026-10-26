@@ -195,7 +195,46 @@ export const courses = z.object({
     ),
 })
 
+// AESSBot page
+
+const youtubeVideo = z.object({
+  youtubeId: z.string().regex(/^[\w-]{11}$/, 'A YouTube video id'),
+  title: z.string().min(1),
+  caption: z.string().optional(),
+})
+
+export const aessbot = z.object({
+  /** Which version of the page is shown: before the edition is announced, while registration is open or after it */
+  status: z.enum(['coming-soon', 'registration', 'finished']),
+  comingSoon: z.object({
+    badge: z.string().min(1),
+    title: z.tuple([z.string().min(1), z.string().min(1)]),
+    description: z.string().min(1),
+    actions: z.array(action).max(2),
+    note: z.string().optional(),
+  }),
+  editions: z.object({
+    title: z.string().min(1),
+    subtitle: z.string().optional(),
+    items: z
+      .array(z.object({ year: z.number().int(), video: youtubeVideo.optional() }))
+      .refine((items) => items.some((item) => item.video), 'At least one edition has a video'),
+  }),
+})
+
+// Missing page and unexpected error
+
+const errorState = z.object({
+  code: z.string().optional(),
+  title: z.string().min(1),
+  description: z.string().min(1),
+  action: link,
+})
+
+export const errors = z.object({ notFound: errorState, unexpected: errorState })
+
 export type Site = z.infer<typeof site>
+export type Aessbot = z.infer<typeof aessbot>
 export type Home = z.infer<typeof home>
 export type Courses = z.infer<typeof courses>
 export type Course = Courses['items'][number]
