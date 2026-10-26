@@ -11,6 +11,11 @@ pre-commit:
     - name: typecheck
       glob: "*.{ts,tsx}"
       run: pnpm typecheck
+    - name: design-tokens
+      glob:
+        - "*.css"
+        - "design-tokens/*.json"
+      run: pnpm tokens:check
 
 commit-msg:
   jobs:
