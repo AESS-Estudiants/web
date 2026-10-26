@@ -1,5 +1,5 @@
 import { home } from '~/content/home'
-import { organizationJsonLd, pageMeta, websiteJsonLd } from '~/lib/seo'
+import { faqJsonLd, organizationJsonLd, pageMeta, websiteJsonLd } from '~/lib/seo'
 import type { Route } from './+types/route'
 import { About } from './sections/About'
 import { Events } from './sections/Events'
@@ -15,6 +15,7 @@ export function meta(_: Route.MetaArgs) {
     }),
     { 'script:ld+json': organizationJsonLd },
     { 'script:ld+json': websiteJsonLd },
+    { 'script:ld+json': faqJsonLd(home.faq.items) },
   ]
 }
 

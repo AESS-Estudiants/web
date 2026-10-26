@@ -1,0 +1,103 @@
+.grid {
+  display: grid;
+  gap: var(--space-12);
+}
+
+.card {
+  composes: card from "../../../components/cards/card.module.css";
+  padding: var(--space-24) 22px;
+}
+
+.iconBox {
+  composes: iconBox from "../../../components/cards/card.module.css";
+  width: 52px;
+  height: 52px;
+}
+
+.eyebrow {
+  composes: eyebrow from "../../../components/cards/card.module.css";
+}
+
+.title {
+  color: var(--text-primary);
+  font: var(--font-heading-card);
+  letter-spacing: var(--tracking-heading-card);
+}
+
+.body,
+.text {
+  color: var(--text-secondary);
+  font: var(--font-body-default);
+  letter-spacing: var(--tracking-body-default);
+}
+
+/* Steps or details, growing so both buttons line up at the bottom */
+.details {
+  flex: 1;
+  align-self: stretch;
+  padding-block: var(--space-8);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+  padding: 0;
+  list-style: none;
+}
+
+.row {
+  display: flex;
+  gap: var(--space-10);
+}
+
+.number {
+  flex: none;
+  width: 18px;
+  color: var(--text-accent);
+  font: var(--font-ui-form-label);
+  letter-spacing: var(--tracking-ui-form-label);
+}
+
+/* The step number sits on the first line of its text */
+.row:has(.number) {
+  align-items: baseline;
+}
+
+.detailIcon {
+  display: flex;
+  flex: none;
+  align-items: center;
+  height: 27px;
+  color: var(--icon-accent);
+}
+
+.detail {
+  color: var(--text-primary);
+  font: var(--font-body-default);
+  letter-spacing: var(--tracking-body-default);
+}
+
+.action {
+  align-self: stretch;
+  margin-top: var(--space-4);
+}
+
+@media (min-width: 1024px) {
+  .header {
+    max-width: 800px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-16);
+  }
+
+  .card {
+    padding: var(--space-28);
+  }
+
+  .action {
+    align-self: flex-start;
+  }
+}

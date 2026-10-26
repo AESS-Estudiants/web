@@ -21,7 +21,7 @@ test('home describes the organisation with JSON-LD', async ({ page }) => {
   await page.goto('/')
   const blocks = await page.locator('script[type="application/ld+json"]').allTextContents()
   const types = blocks.map((block) => JSON.parse(block)['@type'])
-  expect(types).toEqual(['Organization', 'WebSite'])
+  expect(types).toEqual(['Organization', 'WebSite', 'FAQPage'])
 })
 
 test('the AESSBot registration page is only indexed while registration is open', async ({
@@ -50,7 +50,7 @@ test('robots allows crawling and points to the sitemap', async ({ request }) => 
 
 test('the not-found page is built as 404.html and is not indexed', async ({ page }) => {
   await page.goto('/404.html')
-  await expect(page.locator('h1')).toHaveText('Pàgina no trobada')
+  await expect(page.locator('h1')).toHaveText('Ups! Pàgina no trobada')
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', 'noindex')
   await expect(page.locator('link[rel="canonical"]')).toHaveCount(0)
 })

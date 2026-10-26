@@ -47,7 +47,7 @@ describe('/aessbot', () => {
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('AESSBot 2027')
     expect(screen.queryByRole('link', { name: 'Inscriu-te' })).not.toBeInTheDocument()
     expect(screen.queryByRole('table')).not.toBeInTheDocument()
-    expect(jsonLdTypes()).toEqual([])
+    expect(jsonLdTypes()).toEqual(['BreadcrumbList'])
   })
 
   afterEach(() => {
@@ -69,7 +69,7 @@ describe('/aessbot', () => {
     expect(screen.getByRole('timer')).toHaveTextContent(/1 dies.*00 hores.*59 min/)
     expect(screen.getByRole('table')).toBeInTheDocument()
     expect(screen.getByRole('tablist', { name: 'Temes' })).toBeInTheDocument()
-    expect(jsonLdTypes()).toEqual(['Event'])
+    expect(jsonLdTypes()).toEqual(['BreadcrumbList', 'Event'])
   })
 
   it('says registration is closed once the deadline has passed', () => {
@@ -88,7 +88,7 @@ describe('/aessbot', () => {
     expect(screen.queryByRole('link', { name: 'Inscriu-te' })).not.toBeInTheDocument()
     expect(screen.queryByRole('timer')).not.toBeInTheDocument()
     expect(screen.getByRole('heading', { name: 'Calendari' })).toBeInTheDocument()
-    expect(jsonLdTypes()).toEqual(['Event'])
+    expect(jsonLdTypes()).toEqual(['BreadcrumbList', 'Event'])
   })
 })
 

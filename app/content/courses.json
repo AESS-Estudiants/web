@@ -1,0 +1,168 @@
+{
+  "hero": {
+    "title": "Cursos",
+    "description": "Aprèn amb els nostres cursos pràctics en robòtica, electrònica i programació. Des de iniciació fins a nivell avançat, tenim el curs perfecte per a tu.",
+    "stats": [
+      {
+        "icon": "graduation-cap",
+        "value": "5",
+        "label": "Cursos disponibles"
+      },
+      {
+        "icon": "wrench",
+        "value": "100%",
+        "label": "Pràctic"
+      },
+      {
+        "icon": "award",
+        "value": "1 ECTS",
+        "label": "Convalidable"
+      },
+      {
+        "icon": "users",
+        "value": "Places",
+        "label": "Limitades"
+      }
+    ],
+    "poster": {
+      "src": "home/courses-2026-poster.png",
+      "alt": "Cartell dels cursos AESS 2026, d'1 ECTS: Python i Fusion 360 del 26 al 30 de gener, Raspberry Pi i Arduino Avançat del 2 al 6 de febrer, i Arduino Intro el 31 de gener i l'1 de febrer"
+    }
+  },
+  "intro": {
+    "title": "Cursos",
+    "subtitle": "A AESS Estudiants oferim una àmplia varietat de cursos i tallers pràctics per desenvolupar habilitats en robòtica, programació, disseny electrònic i molt més. Tots els cursos són gratuïts per als membres de l'associació. Oferim dues edicions anuals: **Gener-Febrer** i **Juny-Juliol**.",
+    "gallery": {
+      "label": "Fotos dels cursos d'AESS",
+      "images": [
+        {
+          "src": "courses/course-1.jpeg",
+          "alt": "Alumnes d'un curs d'electrònica soldant i muntant circuits a les taules del laboratori"
+        },
+        {
+          "src": "courses/course-2.jpeg",
+          "alt": "Classe d'un curs a un laboratori de la UPC, amb la professora escrivint a la pissarra i els alumnes treballant amb plaques i instruments"
+        },
+        {
+          "src": "courses/course-3.jpeg",
+          "alt": "Alumnes d'un curs de disseny 3D treballant amb els seus portàtils al voltant d'una taula"
+        }
+      ]
+    }
+  },
+  "enrollLink": "https://docs.google.com/forms/d/e/1FAIpQLSfPPmNP2heuAxZne8FewLPJgNdluvf332XoYgQdJmhzzoZDZA/viewform?usp=header",
+  "labels": {
+    "price": "Preu",
+    "credits": "Crèdits ECTS",
+    "requirements": "Requisits",
+    "location": "Ubicació",
+    "duration": "Durada",
+    "date": "Data",
+    "level": "Nivell",
+    "moreInfo": "Més informació",
+    "enroll": "Inscriu-te"
+  },
+  "modal": {
+    "description": "Descripció",
+    "content": "Contingut del Curs",
+    "contentPending": "El contingut detallat serà publicat properament amb l'obertura d'inscripcions.",
+    "requirements": "Requisits",
+    "materials": "Material Necessari",
+    "noMaterials": "No cal portar material; el facilitarem durant el curs.",
+    "registration": "Inscripció",
+    "registrationText": "Les inscripcions per a la propera edició s'obriran a **Gener 2026**. Estigues atent a les nostres xarxes socials i als grups de WhatsApp per no perdre't cap novetat!",
+    "close": "Tancar"
+  },
+  "items": [
+    {
+      "slug": "arduino-introduccio",
+      "name": "Arduino Introducció",
+      "logo": {
+        "src": "courses/logos/arduino-intro.png",
+        "alt": "Logotip d'Arduino"
+      },
+      "level": "Inicial",
+      "description": "Arrenca des de zero i construeix el teu primer projecte real amb sensors i actuadors. Comencem des de zero i consolidarem conceptes amb un mini projecte pràctic.",
+      "content": "Sessions: Repàs de C i funcions bàsiques d'Arduino; port sèrie i UART; LCD, servos i SoftwareSerial; I2C, SPI i sensors; projecte final aplicat.",
+      "materials": ["Portàtil, Preferiblement amb Arduino IDE instal·lat"],
+      "duration": "2 sessions (10 hores cada una)",
+      "date": "31 de gener i 1 de febrer",
+      "price": "85€ UPC / 105€ No UPC",
+      "credits": "1",
+      "requirements": "Portàtil preferiblement amb Arduino IDE instal·lat",
+      "location": "Campus Nord UPC - Aules per determinar"
+    },
+    {
+      "slug": "arduino-avancat",
+      "name": "Arduino Avançat",
+      "logo": {
+        "src": "/images/cursos/logos/logo_arduino_avanzado.svg",
+        "alt": "Logotip d'Arduino Avançat"
+      },
+      "level": "Avançat",
+      "description": "Fes el salt als projectes complexos amb interrupcions, comunicacions i control de motors; inclou taller pràctic i projecte final.",
+      "content": "Sessions: Interrupcions i registres interns; EEPROM i motors; comunicació radio, SPI, NFC i targetes SD; HID i sensors capacitatius; projecte final.",
+      "materials": ["Portàtil, Preferiblement amb Arduino IDE instal·lat"],
+      "duration": "5 sessions (4 hores cada una)",
+      "date": "2 al 6 de febrer · tardes",
+      "price": "85€ UPC / 105€ No UPC",
+      "credits": "1",
+      "requirements": "Portàtil preferiblement amb Arduino IDE instal·lat; Coneixements bàsics d'Arduino",
+      "location": "Campus Nord UPC - Aules per determinar"
+    },
+    {
+      "slug": "fusion-3d-design",
+      "name": "Fusion 3D Design",
+      "logo": {
+        "src": "courses/logos/fusion.png",
+        "alt": "Logotip d'Autodesk Fusion"
+      },
+      "level": "Inicial/Intermedi",
+      "description": "Porta a la realitat totes les teves idees! Comencem des de zero i aprendràs a dissenyar peces i estructures des dels fonaments del 3D fins a aplicacions habituals al món laboral.",
+      "content": "Sketches paramètrics, extrusions i lofts, assemblatges, juntes i restriccions, preparació per impressió 3D i exportació. Es recomana portar el programari Fusion instal·lat si és possible; porta un portàtil i ratolí per seguir els exercicis. Eines aplicables a Fusion, SolidWorks o Onshape.",
+      "materials": ["Portàtil, Preferiblement amb Fusion instal·lat"],
+      "duration": "5 sessions (4 hores cada una)",
+      "date": "26 al 30 de gener · tardes",
+      "price": "85€ UPC / 105€ No UPC",
+      "credits": "1",
+      "requirements": "Portàtil preferiblement amb Fusion instal·lat",
+      "location": "Campus Nord UPC - Aules per determinar"
+    },
+    {
+      "slug": "raspberry-pi",
+      "name": "Raspberry Pi",
+      "logo": {
+        "src": "/images/cursos/logos/logo_respbaerry_pi.svg",
+        "alt": "Logotip de Raspberry Pi"
+      },
+      "level": "Intermedi",
+      "description": "Domina la Raspberry Pi amb Linux pràctic, GPIO amb Python i automatització. Ideal per muntar projectes IoT lleugers amb serveis propis.",
+      "content": "Sessions: Linux bàsic i terminals; GPIO amb Python; I2C/SPI i perifèrics; serveis i systemd; mini projecte aplicat (IoT).",
+      "materials": ["Portàtil", "Opcional: Raspberry Pi"],
+      "duration": "5 sessions (4 hores cada una)",
+      "date": "2 al 6 de febrer · matins",
+      "price": "85€ UPC / 105€ No UPC",
+      "credits": "1",
+      "requirements": "Portàtil",
+      "location": "Campus Nord UPC - Aules per determinar"
+    },
+    {
+      "slug": "programacio-python",
+      "name": "Programació en Python",
+      "logo": {
+        "src": "courses/logos/python.png",
+        "alt": "Logotip de Python"
+      },
+      "level": "Inicial",
+      "description": "Aprèn Python des de zero amb enfocament pràctic en scripts útils, automatització i projectes ràpids per al dia a dia.",
+      "content": "Sessions: Sintaxi i estructures de dades; funcions i mòduls; fitxers i I/O; llibreries i entorns virtuals; petit projecte pràctic final.",
+      "materials": ["Portàtil", "Python instal·lat (recomanat)"],
+      "duration": "5 sessions (4 hores cada una)",
+      "date": "26 al 30 de gener · matins",
+      "price": "85€ UPC / 105€ No UPC",
+      "credits": "1",
+      "requirements": "Portàtil (preferiblement amb Python instal·lat)",
+      "location": "Campus Nord UPC - Aules per determinar"
+    }
+  ]
+}
