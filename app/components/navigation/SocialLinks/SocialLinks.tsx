@@ -20,7 +20,7 @@ export function SocialLinks({ size = 40, className }: SocialLinksProps) {
         <li key={social.network}>
           <IconButton
             href={social.url}
-            icon={ICONS[social.network as SocialNetwork]}
+            icon={ICONS[social.network]}
             label={`${social.label}, s'obre en una pestanya nova`}
             size={size}
           />
