@@ -1,0 +1,13 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":semanticCommitTypeAll(chore)",
+    ":semanticCommitScopeDisabled",
+    "group:allNonMajor"
+  ],
+  "baseBranches": ["dev"],
+  "schedule": ["before 9am on monday"],
+  "commitMessageLowerCase": "auto",
+  "rangeStrategy": "bump"
+}
