@@ -1,6 +1,10 @@
 import type { ReactNode } from 'react'
 import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration } from 'react-router'
 import type { Route } from './+types/root'
+import '@fontsource-variable/inter'
+import '~/styles/tokens.css'
+import '~/styles/base.css'
+import '~/styles/motion.css'
 
 export function Layout({ children }: { children: ReactNode }) {
   return (
