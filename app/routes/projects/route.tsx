@@ -1,5 +1,11 @@
+import { projects } from '~/content/projects'
 import { pageMeta } from '~/lib/seo'
 import type { Route } from './+types/route'
+import { Active } from './sections/Active'
+import { Activities } from './sections/Activities'
+import { Hero } from './sections/Hero'
+import { Intro } from './sections/Intro'
+import { Join } from './sections/Join'
 
 export function meta(_: Route.MetaArgs) {
   return pageMeta({
@@ -12,8 +18,12 @@ export function meta(_: Route.MetaArgs) {
 
 export default function ProjectsPage() {
   return (
-    <section>
-      <h1>Projectes</h1>
-    </section>
+    <>
+      <Hero hero={projects.hero} />
+      <Intro intro={projects.intro} />
+      <Active active={projects.active} />
+      <Activities activities={projects.activities} />
+      <Join join={projects.join} />
+    </>
   )
 }
