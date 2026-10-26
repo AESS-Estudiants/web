@@ -14,9 +14,10 @@ export function MobileMenu({ id, open }: MobileMenuProps) {
       <ul className={styles.list}>
         {site.navigation.map((link) => (
           <li key={link.to}>
+            {/* Only Inici is exact: pages are prerendered at /page/, with a trailing slash */}
             <NavLink
               to={link.to}
-              end
+              end={link.to === '/'}
               className={({ isActive }) => cx(styles.item, isActive && styles.current)}
             >
               {link.label}
