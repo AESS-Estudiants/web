@@ -145,6 +145,17 @@ export const aessbot = z.object({
   }),
 })
 
+// Missing page and unexpected error
+
+const errorState = z.object({
+  code: z.string().optional(),
+  title: z.string().min(1),
+  description: z.string().min(1),
+  action: link,
+})
+
+export const errors = z.object({ notFound: errorState, unexpected: errorState })
+
 export type Site = z.infer<typeof site>
 export type Aessbot = z.infer<typeof aessbot>
 export type Home = z.infer<typeof home>
