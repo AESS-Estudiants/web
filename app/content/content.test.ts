@@ -31,3 +31,11 @@ describe('home content', () => {
     for (const photo of photos) expect(IMAGE_PATHS).toContain(photo)
   })
 })
+
+describe('contact content', () => {
+  it('matches its schema and links to an existing privacy policy', async () => {
+    const { existsSync } = await import('node:fs')
+    const { contact } = await import('./contact')
+    expect(existsSync(`public${contact.form.privacy.link.href}`)).toBe(true)
+  })
+})
