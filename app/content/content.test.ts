@@ -32,6 +32,51 @@ describe('home content', () => {
   })
 })
 
+describe('courses content', () => {
+  it('matches its schema and only uses existing images', async () => {
+    const { courses } = await import('./courses')
+    const { IMAGE_PATHS } = await import('~/lib/images')
+    const { existsSync } = await import('node:fs')
+    const photos = [courses.hero.poster, ...courses.intro.gallery.images].map((image) => image.src)
+    const logos = courses.items.map((course) => course.logo.src)
+    const svgs = logos.filter((src) => src.endsWith('.svg'))
+    for (const photo of [...photos, ...logos.filter((src) => !svgs.includes(src))]) {
+      expect(IMAGE_PATHS).toContain(photo)
+    }
+    for (const svg of svgs) expect(existsSync(`public${svg}`)).toBe(true)
+  })
+
+  it('rejects two courses with the same slug', async () => {
+    const { courses: schema } = await import('./schemas')
+    const { default: data } = await import('./courses.json')
+    const broken = { ...data, items: [data.items[0], data.items[0]] }
+    expect(schema.safeParse(broken).success).toBe(false)
+  })
+})
+
+describe('projects content', () => {
+  it('matches its schema and only uses existing photos', async () => {
+    const { projects } = await import('./projects')
+    const { IMAGE_PATHS } = await import('~/lib/images')
+    for (const image of projects.intro.gallery.images) expect(IMAGE_PATHS).toContain(image.src)
+  })
+})
+
+describe('join content', () => {
+  it('matches its schema and every option leads somewhere outside the site', async () => {
+    const { join } = await import('./join')
+    expect(join.options.items.length).toBeGreaterThan(0)
+    for (const option of join.options.items) expect(option.action.href).toMatch(/^https:\/\//)
+  })
+
+  it('gives each option either steps or details', async () => {
+    const { join } = await import('./join')
+    for (const option of join.options.items) {
+      expect(Boolean(option.steps?.length) || Boolean(option.details?.length)).toBe(true)
+    }
+  })
+})
+
 describe('contact content', () => {
   it('matches its schema and links to an existing privacy policy', async () => {
     const { existsSync } = await import('node:fs')

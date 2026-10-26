@@ -17,6 +17,12 @@ for (const path of ROUTES) {
       expect(errors).toEqual([])
     })
 
+    test('marks the current page in the menu, also before hydration', async ({ page }) => {
+      await page.goto(path)
+      const current = page.getByRole('navigation', { name: 'Principal', includeHidden: true })
+      await expect(current.locator('[aria-current="page"]')).toHaveAttribute('href', path)
+    })
+
     test('has no accessibility violations', async ({ page }) => {
       await page.goto(path)
       const results = await new AxeBuilder({ page })
