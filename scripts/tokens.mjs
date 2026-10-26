@@ -94,6 +94,8 @@ export function buildCss({ primitives, semantic, spacing, typography, elevation 
 const COLOUR_LITERAL = /#[0-9a-f]{3,8}\b|\b(?:rgba?|hsla?|oklch|oklab|lab|lch)\(/i
 const VAR_USE = /var\(\s*(--[\w-]+)/g
 const VAR_DECLARATION = /(--[\w-]+)\s*:/g
+// Variables that libraries set at runtime
+const RUNTIME_VARIABLE = /^--radix-/
 
 // Returns the problems found in a set of stylesheets: hardcoded colours and unknown variables
 export function findViolations(files, tokensCss) {
@@ -110,7 +112,8 @@ export function findViolations(files, tokensCss) {
       const colour = COLOUR_LITERAL.exec(line)
       if (colour) problems.push(`${where} hardcoded colour "${colour[0]}", use a semantic token`)
       for (const m of line.matchAll(VAR_USE)) {
-        if (!defined.has(m[1])) problems.push(`${where} unknown variable ${m[1]}`)
+        if (!defined.has(m[1]) && !RUNTIME_VARIABLE.test(m[1]))
+          problems.push(`${where} unknown variable ${m[1]}`)
       }
     })
   }
