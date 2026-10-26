@@ -118,8 +118,47 @@ export const home = z.object({
   }),
 })
 
+// Join page
+
+/** Icon with a short text, such as a date or a place */
+export const iconLabel = z.object({ icon: iconName, label: z.string().min(1) })
+
+export const join = z.object({
+  hero: z.object({
+    badge: z.string().min(1).optional(),
+    title: z.string().min(1),
+    description: z.string().min(1),
+  }),
+  options: z.object({
+    title: z.string().min(1),
+    subtitle: z.string().optional(),
+    items: z
+      .array(
+        z.object({
+          icon: iconName,
+          eyebrow: z.string().min(1),
+          title: z.string().min(1),
+          body: z.string().min(1),
+          /** Numbered steps to follow */
+          steps: z.array(z.string().min(1)).optional(),
+          /** Practical details, such as the date, time and place */
+          details: z.array(iconLabel).optional(),
+          action,
+        }),
+      )
+      .min(1),
+  }),
+  visit: z.object({
+    eyebrow: z.string().min(1),
+    title: z.string().min(1),
+    body: z.string().min(1),
+    highlights: z.array(iconLabel).min(1),
+  }),
+})
+
 export type Site = z.infer<typeof site>
 export type Home = z.infer<typeof home>
+export type Join = z.infer<typeof join>
 export type Action = z.infer<typeof action>
 export type ImageContent = z.infer<typeof image>
 export type Stat = z.infer<typeof stat>

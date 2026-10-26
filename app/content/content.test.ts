@@ -31,3 +31,18 @@ describe('home content', () => {
     for (const photo of photos) expect(IMAGE_PATHS).toContain(photo)
   })
 })
+
+describe('join content', () => {
+  it('matches its schema and every option leads somewhere outside the site', async () => {
+    const { join } = await import('./join')
+    expect(join.options.items.length).toBeGreaterThan(0)
+    for (const option of join.options.items) expect(option.action.href).toMatch(/^https:\/\//)
+  })
+
+  it('gives each option either steps or details', async () => {
+    const { join } = await import('./join')
+    for (const option of join.options.items) {
+      expect(Boolean(option.steps?.length) || Boolean(option.details?.length)).toBe(true)
+    }
+  })
+})
