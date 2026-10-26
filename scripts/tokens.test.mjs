@@ -24,6 +24,7 @@ describe('buildCss', () => {
     expect(css).toContain('--space-16: 16px;')
     expect(css).toContain('--radius-lg: 16px;')
     expect(css).toContain('--shadow-floating: 0px 8px 24px 0px #00000059;')
+    expect(css).toContain('--drop-shadow-logo: 0px 27px 23.5px #00000080;')
   })
 })
 

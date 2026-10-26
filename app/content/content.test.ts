@@ -19,3 +19,15 @@ describe('schemas', () => {
     expect(schema.safeParse(broken).success).toBe(false)
   })
 })
+
+describe('home content', () => {
+  it('matches its schema and only uses existing photos', async () => {
+    const { home } = await import('./home')
+    const { IMAGE_PATHS } = await import('~/lib/images')
+    const photos = [
+      ...home.about.gallery.images,
+      ...home.events.items.map((event) => event.poster),
+    ].map((image) => image.src)
+    for (const photo of photos) expect(IMAGE_PATHS).toContain(photo)
+  })
+})
