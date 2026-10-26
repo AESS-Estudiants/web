@@ -23,5 +23,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
+  },
+  "packageManager": "pnpm@10.22.0",
+  "engines": {
+    "node": ">=24"
   }
 }
