@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs'
 import { expect, test } from '@playwright/test'
-import { AESSBOT_REGISTRATION_INDEXED, absoluteUrl, INDEXED_PATHS } from '../app/lib/seo'
+import { AESSBOT_REGISTRATION_INDEXED, INDEXED_PATHS } from '../app/lib/indexed-paths'
+import { absoluteUrl } from '../app/lib/seo'
 
 for (const path of INDEXED_PATHS) {
   test(`${path} has a title, description and canonical`, async ({ page }) => {

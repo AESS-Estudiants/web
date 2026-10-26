@@ -1,4 +1,5 @@
-import { absoluteUrl, INDEXED_PATHS } from '~/lib/seo'
+import { INDEXED_PATHS } from '~/lib/indexed-paths'
+import { absoluteUrl } from '~/lib/seo'
 
 export function loader() {
   const urls = INDEXED_PATHS.map((path) => `  <url>\n    <loc>${absoluteUrl(path)}</loc>\n  </url>`)

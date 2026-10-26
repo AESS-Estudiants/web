@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs'
 import { expect, type Page, test } from '@playwright/test'
-import { INDEXED_PATHS } from '../app/lib/seo'
+import { INDEXED_PATHS } from '../app/lib/indexed-paths'
 
 // The local server doesn't send Vercel's headers, so the policy from vercel.json is added here
 const { headers } = JSON.parse(readFileSync('vercel.json', 'utf8'))

@@ -1,23 +1,6 @@
 import type { MetaDescriptor } from 'react-router'
-// The raw file, not the parsed content, so the end-to-end tests can import this module too
-import aessbot from '../content/aessbot.json' with { type: 'json' }
-
 export const SITE_URL = 'https://aessestudiants.org'
 export const SITE_NAME = 'AESS Estudiants'
-
-/** The AESSBot registration page only exists for search engines while registration is open */
-export const AESSBOT_REGISTRATION_INDEXED = aessbot.status === 'registration'
-
-// Pages listed in the sitemap, in menu order
-export const INDEXED_PATHS = [
-  '/',
-  '/aessbot',
-  ...(AESSBOT_REGISTRATION_INDEXED ? ['/aessbot/inscripcio'] : []),
-  '/cursos',
-  '/projectes',
-  '/uneix-te',
-  '/contacte',
-]
 
 type PageMeta = {
   title?: string
