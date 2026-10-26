@@ -1,0 +1,5 @@
+/* Shared by components with `composes: container from '...'` */
+.container {
+  width: min(100% - 2 * var(--gutter), var(--content-width));
+  margin-inline: auto;
+}

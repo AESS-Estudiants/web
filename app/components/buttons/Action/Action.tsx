@@ -1,4 +1,4 @@
-import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from 'react'
+import type { ComponentPropsWithRef, ReactNode } from 'react'
 import { Link } from 'react-router'
 
 type BaseProps = { className?: string; children: ReactNode }
@@ -6,15 +6,15 @@ type BaseProps = { className?: string; children: ReactNode }
 export type ActionLinkProps = BaseProps & {
   /** Internal route, rendered with React Router */
   to: string
-} & Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'href' | 'className' | 'children'>
+} & Omit<ComponentPropsWithRef<'a'>, 'href' | 'className' | 'children'>
 
 export type ActionAnchorProps = BaseProps & {
   /** External URL or file, opened in a new tab when it leaves the site */
   href: string
-} & Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'className' | 'children'>
+} & Omit<ComponentPropsWithRef<'a'>, 'className' | 'children'>
 
 export type ActionButtonProps = BaseProps &
-  Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'className' | 'children'>
+  Omit<ComponentPropsWithRef<'button'>, 'className' | 'children'>
 
 export type ActionProps = ActionLinkProps | ActionAnchorProps | ActionButtonProps
 

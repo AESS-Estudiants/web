@@ -62,12 +62,6 @@ p {
   text-wrap: pretty;
 }
 
-ul[role="list"],
-ol[role="list"] {
-  padding: 0;
-  list-style: none;
-}
-
 :focus-visible {
   outline: 2px solid var(--focus-ring);
   outline-offset: 2px;
@@ -87,4 +81,23 @@ ol[role="list"] {
   clip-path: inset(50%);
   white-space: nowrap;
   border: 0;
+}
+
+/* Page frame: content column of the Figma desktop (1440 - 2 × 200) with side gutters */
+:root {
+  --content-width: 1040px;
+  --gutter: var(--space-20);
+  --header-height: 72px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: var(--space-32);
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --header-height: 100px;
+  }
 }
