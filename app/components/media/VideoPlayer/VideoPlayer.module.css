@@ -1,0 +1,77 @@
+.player {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--border-muted);
+  border-radius: var(--radius-lg);
+  background: var(--bg-surface-hover);
+}
+
+.facade {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-lg);
+  background: none;
+}
+
+.thumbnail {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.play {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  background: var(--overlay-scrim);
+  color: var(--icon-accent);
+  transition:
+    background-color var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard);
+}
+
+@media (hover: hover) {
+  .facade:hover .play {
+    border-color: var(--border-subtle-hover);
+    background: var(--bg-surface);
+  }
+}
+
+.facade:active .play {
+  background: var(--bg-surface-hover);
+}
+
+.skeleton,
+.frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.caption {
+  color: var(--text-muted);
+  font: var(--font-body-xsmall);
+  letter-spacing: var(--tracking-body-xsmall);
+}
