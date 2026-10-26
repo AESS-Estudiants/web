@@ -13,6 +13,7 @@
       "!**/.react-router",
       "!**/pnpm-lock.yaml",
       "!public",
+      "!app/assets",
       "!app/styles/tokens.css"
     ]
   },

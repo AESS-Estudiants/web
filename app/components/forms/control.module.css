@@ -1,0 +1,43 @@
+/* Shared look of inputs, textareas and selects */
+.control {
+  width: 100%;
+  min-height: var(--space-48);
+  padding: 0 var(--space-16);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--bg-section-alt);
+  color: var(--text-primary);
+  font: var(--font-ui-input);
+  letter-spacing: var(--tracking-ui-input);
+  transition: border-color var(--duration-fast) var(--ease-standard);
+}
+
+.control::placeholder {
+  color: var(--text-muted);
+  opacity: 1;
+}
+
+@media (hover: hover) {
+  .control:hover:not(:disabled, :focus) {
+    border-color: var(--border-disabled);
+  }
+}
+
+.control:focus-visible {
+  border-color: var(--accent-default);
+}
+
+.control[aria-invalid="true"] {
+  border-color: var(--border-inverse);
+}
+
+.control:disabled {
+  cursor: not-allowed;
+  border-color: var(--border-default);
+  background: var(--bg-page);
+  color: var(--text-disabled);
+}
+
+.control:disabled::placeholder {
+  color: var(--text-disabled);
+}

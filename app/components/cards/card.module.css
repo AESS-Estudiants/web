@@ -1,0 +1,76 @@
+/* Shared by the cards with `composes` */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-12);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  background: var(--bg-section-alt);
+  transition:
+    background-color var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard);
+}
+
+@media (hover: hover) {
+  .interactive:hover {
+    border-color: var(--border-hover);
+    background: var(--bg-surface);
+  }
+}
+
+.interactive:active {
+  border-color: var(--border-active);
+  background: var(--bg-section-alt);
+}
+
+.iconBox {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--accent-tint-12);
+  color: var(--icon-accent);
+}
+
+.eyebrow {
+  color: var(--text-accent);
+  font: var(--font-ui-eyebrow);
+  letter-spacing: var(--tracking-ui-eyebrow);
+  text-transform: uppercase;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  color: var(--text-secondary);
+}
+
+/* The link covers the whole card so it is clickable anywhere */
+.stretched::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+}
+
+.stretched:focus-visible {
+  outline: none;
+}
+
+.stretched:focus-visible::after {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+@media (min-width: 1024px) {
+  .iconBox {
+    width: 52px;
+    height: 52px;
+  }
+}

@@ -1,0 +1,21 @@
+.card {
+  composes: card from "../card.module.css";
+  padding: var(--space-24) 22px;
+}
+
+.title {
+  color: var(--text-primary);
+  font: var(--font-heading-card);
+  letter-spacing: var(--tracking-heading-card);
+}
+
+.body {
+  font: var(--font-body-default);
+  letter-spacing: var(--tracking-body-default);
+}
+
+@media (min-width: 1024px) {
+  .card {
+    padding: var(--space-28);
+  }
+}

@@ -15,8 +15,8 @@ export function meta(_: Route.MetaArgs) {
 
 export default function HomePage() {
   return (
-    <main>
+    <section>
       <h1>Inici</h1>
-    </main>
+    </section>
   )
 }

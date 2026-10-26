@@ -46,6 +46,10 @@ describe('findViolations', () => {
     expect(check('.a { color: var(--ink-950); }')).toEqual(['a.css:1 unknown variable --ink-950'])
   })
 
+  it('accepts variables set at runtime by Radix', () => {
+    expect(check('.a { height: var(--radix-accordion-content-height); }')).toEqual([])
+  })
+
   it('ignores comments', () => {
     expect(check('/* #fff var(--nope) */ .a { color: var(--bg-page); }')).toEqual([])
   })

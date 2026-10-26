@@ -1,0 +1,52 @@
+.logo {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: var(--space-14);
+  border-radius: var(--radius-sm);
+}
+
+.cube {
+  width: var(--space-40);
+  height: var(--space-40);
+  background: var(--icon-primary);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.wordmark {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.name {
+  color: var(--text-primary);
+  font: var(--font-logo-wordmark-mobile);
+  letter-spacing: var(--tracking-logo-wordmark-mobile);
+}
+
+.sub {
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font: var(--font-logo-sub-mobile);
+  letter-spacing: var(--tracking-logo-sub-mobile);
+}
+
+@media (min-width: 1024px) {
+  .cube {
+    width: 52px;
+    height: 52px;
+  }
+
+  .name {
+    font: var(--font-logo-wordmark);
+    letter-spacing: var(--tracking-logo-wordmark);
+  }
+
+  .sub {
+    font: var(--font-logo-sub);
+    letter-spacing: var(--tracking-logo-sub);
+  }
+}

@@ -12,8 +12,8 @@ export function meta(_: Route.MetaArgs) {
 
 export default function JoinPage() {
   return (
-    <main>
+    <section>
       <h1>Uneix-te</h1>
-    </main>
+    </section>
   )
 }

@@ -12,8 +12,8 @@ export function meta(_: Route.MetaArgs) {
 
 export default function ProjectsPage() {
   return (
-    <main>
+    <section>
       <h1>Projectes</h1>
-    </main>
+    </section>
   )
 }

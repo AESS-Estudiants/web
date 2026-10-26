@@ -1,0 +1,35 @@
+{
+  "name": "AESS Estudiants",
+  "description": "Associació d'estudiants de la UPC dedicada a la tecnologia, robòtica i innovació.",
+  "navigation": [
+    { "label": "Inici", "to": "/" },
+    { "label": "AESSBot", "to": "/aessbot" },
+    { "label": "Cursos", "to": "/cursos" },
+    { "label": "Projectes", "to": "/projectes" },
+    { "label": "Uneix-te", "to": "/uneix-te" },
+    { "label": "Contacte", "to": "/contacte" }
+  ],
+  "join": { "label": "Fes-te membre", "to": "/uneix-te" },
+  "contact": {
+    "email": "aess.estudiants@upc.edu",
+    "phone": "+34934137564",
+    "phoneLabel": "+34 934 13 75 64",
+    "address": "Campus Nord UPC, Barcelona"
+  },
+  "socials": [
+    {
+      "network": "instagram",
+      "label": "Instagram",
+      "url": "https://www.instagram.com/aessestudiants"
+    },
+    {
+      "network": "linkedin",
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/company/aess-estudiants-upc"
+    }
+  ],
+  "legal": [
+    { "label": "Política de privacitat", "href": "/documents/Política_Privacitat.pdf" },
+    { "label": "Normativa", "href": "/documents/Reglament.pdf" }
+  ]
+}

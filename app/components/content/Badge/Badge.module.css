@@ -1,0 +1,20 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  gap: var(--space-10);
+  padding: var(--space-10) var(--space-16);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-sm);
+  background: var(--accent-tint-10);
+  color: var(--text-accent);
+  font: var(--font-ui-badge-mobile);
+  letter-spacing: var(--tracking-ui-badge-mobile);
+}
+
+@media (min-width: 1024px) {
+  .badge {
+    font: var(--font-ui-badge);
+    letter-spacing: var(--tracking-ui-badge);
+  }
+}

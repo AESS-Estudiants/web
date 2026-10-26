@@ -1,0 +1,143 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+  min-width: 0;
+}
+
+.index {
+  min-width: 0;
+}
+
+.indexTitle {
+  display: none;
+}
+
+/* Chips that scroll sideways on mobile */
+.tabs {
+  display: flex;
+  gap: var(--space-8);
+  margin-inline: calc(-1 * var(--gutter));
+  padding-inline: var(--gutter);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.tab {
+  /* Keeps the hidden "preguntes" inside the scrolling row */
+  position: relative;
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: var(--space-8);
+  padding: var(--space-8) var(--space-14);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-secondary);
+  font: var(--font-ui-link);
+  letter-spacing: var(--tracking-ui-link);
+  text-align: left;
+  transition:
+    background-color var(--duration-fast) var(--ease-standard),
+    color var(--duration-fast) var(--ease-standard);
+}
+
+.count {
+  color: var(--text-muted);
+  font: var(--font-ui-button-small);
+  letter-spacing: var(--tracking-ui-button-small);
+}
+
+@media (hover: hover) {
+  .tab:hover {
+    background: var(--bg-surface);
+    color: var(--text-primary);
+  }
+
+  .tab:hover .count {
+    color: var(--text-secondary);
+  }
+}
+
+.tab[data-state="active"] {
+  border-color: var(--border-strong);
+  background: var(--bg-surface-hover);
+  color: var(--text-primary);
+}
+
+.tab[data-state="active"] .count {
+  color: var(--text-secondary);
+}
+
+.panel {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-12);
+  min-width: 0;
+}
+
+.panel[hidden] {
+  display: none;
+}
+
+.group {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-10);
+  padding-bottom: var(--space-4);
+}
+
+.groupTitle {
+  color: var(--text-primary);
+  font: var(--font-heading-card);
+  letter-spacing: var(--tracking-heading-card);
+}
+
+.groupCount {
+  flex: none;
+  color: var(--text-muted);
+  font: var(--font-body-xsmall);
+  letter-spacing: var(--tracking-body-xsmall);
+}
+
+@media (min-width: 1024px) {
+  .root {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--space-48);
+  }
+
+  .index {
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-24));
+    flex: none;
+    width: 280px;
+  }
+
+  .indexTitle {
+    display: block;
+    padding: var(--space-8) var(--space-12);
+    color: var(--text-muted);
+    font: var(--font-ui-eyebrow);
+    letter-spacing: var(--tracking-ui-eyebrow);
+    text-transform: uppercase;
+  }
+
+  .tabs {
+    flex-direction: column;
+    gap: var(--space-2);
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .tab {
+    justify-content: space-between;
+    gap: var(--space-12);
+    padding: var(--space-10) var(--space-12);
+    border: 0;
+  }
+}

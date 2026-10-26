@@ -12,8 +12,8 @@ export function meta(_: Route.MetaArgs) {
 
 export default function NotFoundPage() {
   return (
-    <main>
+    <section>
       <h1>Pàgina no trobada</h1>
-    </main>
+    </section>
   )
 }

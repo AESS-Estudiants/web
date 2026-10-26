@@ -1,0 +1,35 @@
+.link {
+  border-radius: var(--radius-xs);
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+.default {
+  color: var(--text-muted);
+  font: var(--font-body-small);
+  letter-spacing: var(--tracking-body-small);
+}
+
+.small {
+  /* Figma uses text/disabled here, which fails WCAG AA contrast (3.4:1) */
+  color: var(--text-muted);
+  font: var(--font-ui-caption);
+  letter-spacing: var(--tracking-ui-caption);
+}
+
+@media (hover: hover) {
+  .default:hover {
+    color: var(--text-primary);
+  }
+
+  .small:hover {
+    color: var(--text-primary);
+  }
+}
+
+.default:active {
+  color: var(--text-secondary);
+}
+
+.small:active {
+  color: var(--text-secondary);
+}

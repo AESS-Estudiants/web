@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration } from 'react-router'
+import { SiteLayout } from '~/components/layout'
 import type { Route } from './+types/root'
 import '@fontsource-variable/inter'
 import interLatin from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url'
@@ -32,14 +33,18 @@ export function Layout({ children }: { children: ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />
+  return (
+    <SiteLayout>
+      <Outlet />
+    </SiteLayout>
+  )
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   const title = isRouteErrorResponse(error) ? `${error.status}` : 'Error'
   return (
-    <main>
+    <SiteLayout>
       <h1>{title}</h1>
-    </main>
+    </SiteLayout>
   )
 }
