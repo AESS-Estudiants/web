@@ -1,5 +1,10 @@
+import { home } from '~/content/home'
 import { organizationJsonLd, pageMeta, websiteJsonLd } from '~/lib/seo'
 import type { Route } from './+types/route'
+import { About } from './sections/About'
+import { Events } from './sections/Events'
+import { Faq } from './sections/Faq'
+import { Hero } from './sections/Hero'
 
 export function meta(_: Route.MetaArgs) {
   return [
@@ -15,8 +20,11 @@ export function meta(_: Route.MetaArgs) {
 
 export default function HomePage() {
   return (
-    <section>
-      <h1>Inici</h1>
-    </section>
+    <>
+      <Hero hero={home.hero} />
+      <About about={home.about} />
+      <Events events={home.events} />
+      <Faq faq={home.faq} />
+    </>
   )
 }

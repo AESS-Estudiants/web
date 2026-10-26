@@ -1,0 +1,6 @@
+/* The subtitle stops short of the column, like the Figma header */
+@media (min-width: 1024px) {
+  .header {
+    max-width: 800px;
+  }
+}

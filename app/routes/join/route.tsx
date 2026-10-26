@@ -1,5 +1,9 @@
+import { join } from '~/content/join'
 import { pageMeta } from '~/lib/seo'
 import type { Route } from './+types/route'
+import { Hero } from './sections/Hero'
+import { Options } from './sections/Options'
+import { Visit } from './sections/Visit'
 
 export function meta(_: Route.MetaArgs) {
   return pageMeta({
@@ -12,8 +16,10 @@ export function meta(_: Route.MetaArgs) {
 
 export default function JoinPage() {
   return (
-    <section>
-      <h1>Uneix-te</h1>
-    </section>
+    <>
+      <Hero hero={join.hero} />
+      <Options options={join.options} />
+      <Visit visit={join.visit} />
+    </>
   )
 }

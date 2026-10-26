@@ -1,0 +1,13 @@
+{
+  "notFound": {
+    "code": "404",
+    "title": "Ups! Pàgina no trobada",
+    "description": "Sembla que la pàgina que busques no existeix.",
+    "action": { "label": "Tornar a l'inici", "to": "/" }
+  },
+  "unexpected": {
+    "title": "Alguna cosa ha fallat",
+    "description": "No hem pogut carregar aquesta pàgina. Torna-ho a provar d'aquí a una estona.",
+    "action": { "label": "Tornar a l'inici", "to": "/" }
+  }
+}

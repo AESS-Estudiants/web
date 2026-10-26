@@ -1,0 +1,26 @@
+.section {
+  padding-block: var(--space-72);
+  background: var(--bg-page);
+  scroll-margin-top: var(--header-height);
+}
+
+.alt {
+  background: var(--bg-section-alt);
+}
+
+.inner {
+  composes: container from "../../../styles/layout.module.css";
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-32);
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding-block: 112px;
+  }
+
+  .inner {
+    gap: var(--space-48);
+  }
+}

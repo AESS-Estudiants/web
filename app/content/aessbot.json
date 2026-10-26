@@ -1,0 +1,32 @@
+{
+  "status": "coming-soon",
+  "comingSoon": {
+    "badge": "Propera edició",
+    "title": ["AESSBot", "2027"],
+    "description": "Estem preparant la nova edició de la competició de robots minisumo de l'ETSETB. En breus tindreu tota la informació: dates, normativa i inscripcions. Mentrestant, escalfa motors: treu el robot de la CPU del ring.",
+    "actions": [
+      {
+        "label": "Segueix-nos a Instagram",
+        "href": "https://www.instagram.com/aessestudiants",
+        "icon": "instagram"
+      },
+      { "label": "Tornar a l'inici", "to": "/", "variant": "secondary" }
+    ],
+    "note": "Edició 2026 · 16 robots · Gran final a la Plaça Telecos"
+  },
+  "editions": {
+    "title": "Edicions anteriors",
+    "subtitle": "Mentre preparem l'AESSBot 2027, torna a viure les edicions anteriors.",
+    "items": [
+      { "year": 2026 },
+      {
+        "year": 2025,
+        "video": {
+          "youtubeId": "tPKSWS5g-3Y",
+          "title": "Vídeo resum de l'AESSBot 2025",
+          "caption": "Vídeo resum de l'AESSBot 2025"
+        }
+      }
+    ]
+  }
+}

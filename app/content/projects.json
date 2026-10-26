@@ -1,0 +1,99 @@
+{
+  "hero": {
+    "title": ["Els nostres", "Projectes"],
+    "description": "Descobreix les iniciatives en robòtica i electrònica que impulsem des del taller.",
+    "actions": [
+      { "label": "Uneix-te a l'equip", "to": "#participa", "icon": "users", "variant": "secondary" }
+    ]
+  },
+  "intro": {
+    "title": "Els nostres projectes",
+    "subtitle": "A l'associació es fan projectes de robòtica i electrònica molt diversos que donen resposta a les inquietuds dels seus membres. Es realitzen projectes com robots delta, minisumos, velocistes, braços robot, drons, etc.",
+    "gallery": {
+      "label": "Fotos dels projectes d'AESS",
+      "images": [
+        {
+          "src": "projects/delta.jpeg",
+          "alt": "Robot delta de fusta amb l'electrònica a la part de dalt, muntat sobre un palet"
+        },
+        {
+          "src": "projects/humanoide.jpeg",
+          "alt": "Robot humanoide daurat amb servomotors i cables sobre una taula del taller"
+        },
+        {
+          "src": "projects/immove.jpeg",
+          "alt": "Taula d'una exposició amb un braç protèsic imprès en 3D, un robot d'erugues i altres projectes"
+        },
+        {
+          "src": "projects/velocista.jpeg",
+          "alt": "Robot velocista amb sensors al davant, sobre una taula blanca"
+        },
+        {
+          "src": "projects/velocista-2.jpeg",
+          "alt": "Un membre col·loca un robot velocista a la pista de curses"
+        },
+        {
+          "src": "projects/cnc.jpeg",
+          "alt": "Màquina CNC del taller vista des de dalt, amb peces de fusta i eines"
+        },
+        {
+          "src": "projects/aranya.jpeg",
+          "alt": "Dos membres treballen en un robot aranya amb potes de metacrilat"
+        },
+        {
+          "src": "projects/aranya-2.jpeg",
+          "alt": "Robot aranya de sis potes amb una Raspberry Pi, dret a terra"
+        }
+      ]
+    }
+  },
+  "active": {
+    "title": "Projectes en curs",
+    "subtitle": "Actualment s'estan desenvolupant aquests projectes, però si tens propostes de nous projectes es poden començar més!",
+    "items": [
+      {
+        "icon": "activity",
+        "status": "En curs",
+        "title": "Smart Ring",
+        "body": "Desenvolupament d'un anell intel·ligent amb sensors i connectivitat per monitoritzar activitat física i altres funcions innovadores.",
+        "state": { "label": "Estat:", "value": "En desenvolupament" }
+      },
+      {
+        "icon": "bot",
+        "status": "En curs",
+        "title": "Delta 2.0",
+        "body": "Robot delta de precisió per a tasques d'automatització i pick-and-place. Segona versió millorada amb millor control i velocitat.",
+        "state": { "label": "Estat:", "value": "En desenvolupament" }
+      },
+      {
+        "icon": "plane",
+        "status": "En curs",
+        "title": "Drons de Velocitat",
+        "body": "Projecte de disseny i construcció de drons optimitzats per a competicions de velocitat i races FPV.",
+        "state": { "label": "Estat:", "value": "En desenvolupament" }
+      }
+    ]
+  },
+  "activities": {
+    "title": "També participem en...",
+    "subtitle": "A part de fer projectes per la nostra compte, també ens agrada fer més activitats com participar en competicions i fer xerrades.",
+    "items": [
+      {
+        "icon": "trophy",
+        "title": "Competicions i hacks",
+        "body": "Ens agrada participar en aquest tipus de competicions en equips, passar-nos-ho bé, aprendre i divertir-nos junts."
+      },
+      {
+        "icon": "presentation",
+        "title": "Xerrades",
+        "body": "Realitzem xerrades a col·legis, ESO i batxillerat que vénen a la UPC i aquest tipus d'esdeveniments."
+      }
+    ]
+  },
+  "join": {
+    "badge": { "icon": "handshake", "label": "Vols formar part?" },
+    "title": "Vols participar en un projecte?",
+    "body": "Tens una idea de projecte o et vols unir a algun dels nostres projectes actius? A AESS Estudiants valorem la creativitat i l'entusiasme de persones com tu. Sigues part del nostre equip i dóna vida a projectes innovadors en robòtica i tecnologia!",
+    "action": { "label": "Fes-te membre", "to": "/uneix-te", "icon": "send" }
+  }
+}

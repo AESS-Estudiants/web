@@ -77,3 +77,42 @@
     padding: 36px var(--space-40);
   }
 }
+
+.course {
+  flex-direction: column;
+  gap: var(--space-16);
+  padding: var(--space-24) 22px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+/* Grows like the details of the real card, so the buttons sit at the bottom */
+.details {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-10);
+  padding-block: var(--space-4);
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  gap: var(--space-10);
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+}
+
+@media (min-width: 1024px) {
+  .course {
+    padding: var(--space-28);
+  }
+}

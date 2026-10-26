@@ -1,0 +1,90 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  width: 100%;
+}
+
+.screen {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  background: var(--bg-page);
+  image-rendering: pixelated;
+  touch-action: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-12);
+}
+
+.help {
+  color: var(--text-muted);
+  font: var(--font-ui-caption);
+  letter-spacing: var(--tracking-ui-caption);
+  line-height: 1.6;
+}
+
+.help kbd {
+  display: inline-block;
+  min-width: var(--space-20);
+  margin: 0 1px;
+  padding: 1px 5px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-xs);
+  background: var(--bg-surface);
+  color: var(--text-secondary);
+  font: var(--font-ui-keycap);
+  letter-spacing: var(--tracking-ui-keycap);
+  text-align: center;
+}
+
+.helpTouch {
+  display: none;
+}
+
+.controls {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.dash {
+  display: none;
+  height: var(--space-40);
+  padding: 0 18px;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: var(--action-primary-bg);
+  color: var(--action-primary-text);
+  font: var(--font-ui-button-small);
+  touch-action: manipulation;
+}
+
+.dash:active {
+  background: var(--action-primary-bg-pressed);
+}
+
+/* Touch screens: drag on the screen to move, button to dash */
+@media (hover: none) and (pointer: coarse) {
+  .helpKeys {
+    display: none;
+  }
+
+  .helpTouch {
+    display: inline;
+  }
+
+  .dash {
+    display: inline-flex;
+    align-items: center;
+  }
+}

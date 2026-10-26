@@ -76,9 +76,11 @@ export function buildCss({ primitives, semantic, spacing, typography, elevation 
   section('Elevation')
   for (const [path, token] of leaves(elevation)) {
     const { offsetX, offsetY, blur, spread, color } = token.$value
-    lines.push(
-      `  --shadow-${path.join('-')}: ${offsetX} ${offsetY} ${blur} ${spread} ${hex(color)};`,
-    )
+    const name = path.join('-')
+    lines.push(`  --shadow-${name}: ${offsetX} ${offsetY} ${blur} ${spread} ${hex(color)};`)
+    // Same shadow for filter: drop-shadow(), which follows the shape; its blur is a radius
+    const radius = `${Number.parseFloat(blur) / 2}px`
+    lines.push(`  --drop-shadow-${name}: ${offsetX} ${offsetY} ${radius} ${hex(color)};`)
   }
 
   return [

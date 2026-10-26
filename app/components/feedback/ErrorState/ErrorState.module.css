@@ -1,0 +1,55 @@
+.state {
+  composes: container from "../../../styles/layout.module.css";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: var(--space-72);
+  text-align: center;
+}
+
+.code {
+  color: var(--text-accent);
+  font: var(--font-display-hero-mobile);
+  letter-spacing: var(--tracking-display-hero-mobile);
+}
+
+.title {
+  margin-top: var(--space-16);
+  color: var(--text-primary);
+  font: var(--font-heading-section-mobile);
+  letter-spacing: var(--tracking-heading-section-mobile);
+}
+
+.description {
+  max-width: 420px;
+  margin-top: var(--space-20);
+  color: var(--text-secondary);
+  font: var(--font-body-large);
+  letter-spacing: var(--tracking-body-large);
+}
+
+.action {
+  margin-top: var(--space-32);
+}
+
+@media (min-width: 1024px) {
+  .state {
+    padding-block: 112px;
+  }
+
+  .code {
+    font: var(--font-display-hero);
+    letter-spacing: var(--tracking-display-hero);
+  }
+
+  .title {
+    font: var(--font-heading-section);
+    letter-spacing: var(--tracking-heading-section);
+  }
+
+  .description {
+    margin-top: var(--space-24);
+    font: var(--font-body-lead);
+    letter-spacing: var(--tracking-body-lead);
+  }
+}

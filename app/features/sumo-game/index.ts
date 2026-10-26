@@ -1,0 +1,1 @@
+export { SumoGame } from './SumoGame'

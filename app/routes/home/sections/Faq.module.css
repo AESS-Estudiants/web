@@ -1,0 +1,9 @@
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-16);
+  color: var(--text-muted);
+  font: var(--font-body-default);
+  letter-spacing: var(--tracking-body-default);
+}
