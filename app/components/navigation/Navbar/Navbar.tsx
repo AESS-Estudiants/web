@@ -1,9 +1,10 @@
 import { Menu, UserPlus, X } from 'lucide-react'
 import { useEffect, useId, useRef, useState } from 'react'
-import { NavLink, useLocation } from 'react-router'
+import { Link, useLocation } from 'react-router'
 import { Button, IconButton } from '~/components/buttons'
 import { site } from '~/content/site'
 import { cx } from '~/lib/cx'
+import { useIsCurrentPage } from '../current-page'
 import { Logo } from '../Logo/Logo'
 import { MobileMenu } from '../MobileMenu/MobileMenu'
 import styles from './Navbar.module.css'
@@ -13,6 +14,7 @@ export function Navbar() {
   const menuId = useId()
   const toggleRef = useRef<HTMLButtonElement>(null)
   const { pathname } = useLocation()
+  const isCurrent = useIsCurrentPage()
 
   // A new page closes the menu
   // biome-ignore lint/correctness/useExhaustiveDependencies: runs on route change only
@@ -44,14 +46,13 @@ export function Navbar() {
           <ul className={styles.list}>
             {site.navigation.map((link) => (
               <li key={link.to}>
-                {/* Only Inici is exact: pages are prerendered at /page/, with a trailing slash */}
-                <NavLink
+                <Link
                   to={link.to}
-                  end={link.to === '/'}
-                  className={({ isActive }) => cx(styles.item, isActive && styles.current)}
+                  aria-current={isCurrent(link.to) ? 'page' : undefined}
+                  className={cx(styles.item, isCurrent(link.to) && styles.current)}
                 >
                   {link.label}
-                </NavLink>
+                </Link>
               </li>
             ))}
           </ul>

@@ -8,7 +8,8 @@ import styles from './FeatureCard.module.css'
 
 type FeatureCardProps = {
   icon: LucideIcon
-  eyebrow: string
+  /** Small label above the title */
+  eyebrow?: string
   title: string
   /** One or more paragraphs */
   children: ReactNode
@@ -32,7 +33,7 @@ export function FeatureCard({
       <span className={card.iconBox}>
         <Icon icon={icon} size={22} />
       </span>
-      <p className={card.eyebrow}>{eyebrow}</p>
+      {eyebrow && <p className={card.eyebrow}>{eyebrow}</p>}
       <Heading className={styles.title}>
         {to ? (
           <Link to={to} className={card.stretched}>

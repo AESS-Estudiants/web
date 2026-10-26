@@ -1,6 +1,8 @@
 import type { ReactNode } from 'react'
 import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration } from 'react-router'
+import { ErrorState } from '~/components/feedback'
 import { SiteLayout } from '~/components/layout'
+import { errors } from '~/content/errors'
 import type { Route } from './+types/root'
 import '@fontsource-variable/inter'
 import interLatin from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url'
@@ -41,10 +43,10 @@ export default function App() {
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
-  const title = isRouteErrorResponse(error) ? `${error.status}` : 'Error'
+  const missing = isRouteErrorResponse(error) && error.status === 404
   return (
     <SiteLayout>
-      <h1>{title}</h1>
+      <ErrorState {...(missing ? errors.notFound : errors.unexpected)} />
     </SiteLayout>
   )
 }

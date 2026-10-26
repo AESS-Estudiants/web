@@ -1,5 +1,9 @@
+import { courses } from '~/content/courses'
 import { pageMeta } from '~/lib/seo'
 import type { Route } from './+types/route'
+import { CourseList } from './sections/CourseList'
+import { Hero } from './sections/Hero'
+import { Intro } from './sections/Intro'
 
 export function meta(_: Route.MetaArgs) {
   return pageMeta({
@@ -12,8 +16,10 @@ export function meta(_: Route.MetaArgs) {
 
 export default function CoursesPage() {
   return (
-    <section>
-      <h1>Cursos</h1>
-    </section>
+    <>
+      <Hero hero={courses.hero} />
+      <Intro intro={courses.intro} />
+      <CourseList courses={courses} />
+    </>
   )
 }
