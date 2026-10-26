@@ -19,6 +19,8 @@
 .slide {
   flex: 0 0 100%;
   min-width: 0;
+  /* Gap between slides, so rounding never shows a sliver of the next one */
+  margin-right: var(--space-12);
   aspect-ratio: 3 / 2;
   background: var(--bg-surface-hover);
 }
