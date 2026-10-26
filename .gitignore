@@ -36,3 +36,5 @@ lerna-debug.log*
 .vite/
 
 **/guides
+# React Router
+.react-router/

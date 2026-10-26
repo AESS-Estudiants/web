@@ -1,6 +1,6 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
-  ],
-  "cleanUrls": true
+  "buildCommand": "pnpm build",
+  "outputDirectory": "build/client",
+  "cleanUrls": true,
+  "trailingSlash": false
 }

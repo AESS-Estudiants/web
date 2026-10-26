@@ -4,7 +4,7 @@ Website of AESS Estudiants, the robotics student association of ETSETB (UPC). Li
 
 ## Stack
 
-React 19 · React Router 7 (prerendered static pages) · Vite · TypeScript · CSS Modules · Biome · Vitest · Playwright · pnpm.
+React 19 · React Router 8 (prerendered static pages) · Vite · TypeScript · CSS Modules · Biome · Vitest · Playwright · pnpm.
 
 ## Getting started
 

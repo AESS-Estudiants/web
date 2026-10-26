@@ -10,7 +10,7 @@ pre-commit:
       stage_fixed: true
     - name: typecheck
       glob: "*.{ts,tsx}"
-      run: pnpm exec tsc --noEmit
+      run: pnpm typecheck
 
 commit-msg:
   jobs:
