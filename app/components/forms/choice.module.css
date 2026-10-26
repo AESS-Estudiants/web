@@ -1,0 +1,63 @@
+/* Shared by checkboxes and radios */
+.option {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--space-12);
+  color: var(--text-secondary);
+  font: var(--font-body-default);
+  letter-spacing: var(--tracking-body-default);
+  cursor: pointer;
+}
+
+.box {
+  position: relative;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: var(--space-20);
+  height: var(--space-20);
+  margin-top: 3px;
+}
+
+.input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  border: 1px solid var(--border-strong);
+  background: var(--bg-section-alt);
+  appearance: none;
+  cursor: inherit;
+  transition:
+    background-color var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard);
+}
+
+.input:checked {
+  border-color: var(--border-inverse);
+}
+
+@media (hover: hover) {
+  .option:hover {
+    color: var(--text-primary);
+  }
+
+  .option:hover .input:not(:checked, :disabled) {
+    border-color: var(--border-disabled);
+  }
+}
+
+.input:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.option:has(.input:disabled) {
+  cursor: not-allowed;
+  color: var(--text-disabled);
+}
+
+.input:disabled {
+  border-color: var(--border-default);
+  background: var(--bg-surface-hover);
+}
