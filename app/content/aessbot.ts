@@ -1,4 +1,5 @@
 import data from './aessbot.json'
-import { aessbot as schema } from './schemas'
+import type { Aessbot } from './schemas'
 
-export const aessbot = schema.parse(data)
+// Checked against its schema at build time (see validate.ts), so zod stays out of the browser
+export const aessbot = data as Aessbot

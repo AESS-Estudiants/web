@@ -1,4 +1,5 @@
 import data from './projects.json'
-import { projects as schema } from './schemas'
+import type { Projects } from './schemas'
 
-export const projects = schema.parse(data)
+// Checked against its schema at build time (see validate.ts), so zod stays out of the browser
+export const projects = data as Projects

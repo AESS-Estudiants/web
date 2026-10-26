@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { ICON_NAMES } from '~/components/icons/registry'
+import { ICON_NAMES } from '../components/icons/registry'
 
 // Shared pieces
 
@@ -21,9 +21,9 @@ export const stat = z.object({ icon: iconName, value: z.string().min(1), label: 
 export const action = z
   .object({
     label: z.string().min(1),
-    variant: z.enum(['primary', 'secondary']).default('primary'),
+    variant: z.enum(['primary', 'secondary']).optional(),
     icon: iconName.optional(),
-    arrow: z.boolean().default(false),
+    arrow: z.boolean().optional(),
     to: z.string().regex(/^[/#]/, 'A route starts with / or #').optional(),
     href: href.optional(),
   })
@@ -383,6 +383,7 @@ export type Contact = z.infer<typeof contact>
 export type Join = z.infer<typeof join>
 export type Projects = z.infer<typeof projects>
 export type Courses = z.infer<typeof courses>
+export type Errors = z.infer<typeof errors>
 export type Course = Courses['items'][number]
 export type RichTextContent = z.infer<typeof richText>
 export type LogoContent = z.infer<typeof logo>

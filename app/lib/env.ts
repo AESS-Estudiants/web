@@ -1,17 +1,17 @@
-import { z } from 'zod'
-
-const emailJs = z.object({
-  VITE_EMAILJS_SERVICE_ID: z.string().min(1),
-  VITE_EMAILJS_TEMPLATE_ID: z.string().min(1),
-  VITE_EMAILJS_PUBLIC_KEY: z.string().min(1),
-})
+const KEYS = [
+  'VITE_EMAILJS_SERVICE_ID',
+  'VITE_EMAILJS_TEMPLATE_ID',
+  'VITE_EMAILJS_PUBLIC_KEY',
+] as const
 
 // Read when a message is sent, so the build and the tests don't need the keys
 export function emailJsEnv() {
-  const env = emailJs.parse(import.meta.env)
+  const env = import.meta.env as Record<string, string | undefined>
+  const missing = KEYS.filter((key) => !env[key])
+  if (missing.length > 0) throw new Error(`Missing environment variables: ${missing.join(', ')}`)
   return {
-    serviceId: env.VITE_EMAILJS_SERVICE_ID,
-    templateId: env.VITE_EMAILJS_TEMPLATE_ID,
-    publicKey: env.VITE_EMAILJS_PUBLIC_KEY,
+    serviceId: env.VITE_EMAILJS_SERVICE_ID as string,
+    templateId: env.VITE_EMAILJS_TEMPLATE_ID as string,
+    publicKey: env.VITE_EMAILJS_PUBLIC_KEY as string,
   }
 }
