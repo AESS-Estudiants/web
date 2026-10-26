@@ -13,6 +13,14 @@ type PageMeta = {
   noindex?: boolean
 }
 
+// Default share image, 1200 × 630
+const SHARE_IMAGE = {
+  url: '/images/og/aess-estudiants.png',
+  width: '1200',
+  height: '630',
+  alt: "AESS Estudiants: robòtica, electrònica i programació a l'ETSETB (UPC)",
+}
+
 export function absoluteUrl(path: string) {
   return new URL(path, SITE_URL).href
 }
@@ -29,9 +37,14 @@ export function pageMeta({ title, description, path, noindex }: PageMeta): MetaD
     { property: 'og:title', content: fullTitle },
     { property: 'og:description', content: description },
     { property: 'og:url', content: url },
-    { name: 'twitter:card', content: 'summary' },
+    { property: 'og:image', content: absoluteUrl(SHARE_IMAGE.url) },
+    { property: 'og:image:width', content: SHARE_IMAGE.width },
+    { property: 'og:image:height', content: SHARE_IMAGE.height },
+    { property: 'og:image:alt', content: SHARE_IMAGE.alt },
+    { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: fullTitle },
     { name: 'twitter:description', content: description },
+    { name: 'twitter:image', content: absoluteUrl(SHARE_IMAGE.url) },
   ]
   if (noindex) meta.push({ name: 'robots', content: 'noindex' })
   else meta.push({ tagName: 'link', rel: 'canonical', href: url })
@@ -67,4 +80,49 @@ export const websiteJsonLd = {
   name: SITE_NAME,
   url: SITE_URL,
   inLanguage: 'ca',
+}
+
+/** Breadcrumb from the home page to an inner page */
+export function breadcrumbJsonLd(name: string, path: string) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Inici', item: absoluteUrl('/') },
+      { '@type': 'ListItem', position: 2, name, item: absoluteUrl(path) },
+    ],
+  }
+}
+
+/** Questions and answers shown on a page, for rich results */
+export function faqJsonLd(items: { question: string; answer: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: { '@type': 'Answer', text: item.answer },
+    })),
+  }
+}
+
+/** Courses offered by the association */
+export function coursesJsonLd(items: { name: string; description: string; slug: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: items.map((course, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'Course',
+        name: course.name,
+        description: course.description,
+        url: absoluteUrl(`/cursos?curs=${course.slug}`),
+        inLanguage: 'ca',
+        provider: { '@type': 'Organization', name: SITE_NAME, sameAs: SITE_URL },
+      },
+    })),
+  }
 }

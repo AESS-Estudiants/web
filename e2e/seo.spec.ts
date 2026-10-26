@@ -21,7 +21,7 @@ test('home describes the organisation with JSON-LD', async ({ page }) => {
   await page.goto('/')
   const blocks = await page.locator('script[type="application/ld+json"]').allTextContents()
   const types = blocks.map((block) => JSON.parse(block)['@type'])
-  expect(types).toEqual(['Organization', 'WebSite'])
+  expect(types).toEqual(['Organization', 'WebSite', 'FAQPage'])
 })
 
 test('sitemap lists every indexed page', async ({ request }) => {
