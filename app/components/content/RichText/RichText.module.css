@@ -1,0 +1,5 @@
+/* Bold fragments stand out in the primary text colour, like in Figma */
+.strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}

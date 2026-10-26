@@ -13,6 +13,7 @@ it('hides skeletons from assistive technology', () => {
       <SkeletonText lines={[100, 60]} />
       <SkeletonEmbed type="video" />
       <SkeletonCard type="feature" />
+      <SkeletonCard type="course" />
     </>,
   )
   for (const skeleton of container.children) expect(skeleton).toHaveAttribute('aria-hidden', 'true')
