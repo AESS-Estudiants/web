@@ -1,0 +1,70 @@
+.hero {
+  padding-block: var(--space-48) var(--space-64);
+  background: var(--bg-page);
+}
+
+.inner {
+  composes: container from "../../../styles/layout.module.css";
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-32);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-20);
+  max-width: 540px;
+}
+
+.title {
+  color: var(--text-primary);
+  font: var(--font-display-hero-mobile);
+  letter-spacing: var(--tracking-display-hero-mobile);
+}
+
+.description {
+  color: var(--text-secondary);
+  font: var(--font-body-large);
+  letter-spacing: var(--tracking-body-large);
+}
+
+/* The poster keeps its A4 shape */
+.poster {
+  aspect-ratio: 210 / 297;
+  border: 1px solid var(--border-muted);
+  border-radius: var(--radius-lg);
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    padding-block: 112px 120px;
+  }
+
+  .inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-48);
+  }
+
+  .text {
+    gap: 22px;
+  }
+
+  .title {
+    font: var(--font-display-hero);
+    letter-spacing: var(--tracking-display-hero);
+  }
+
+  .description {
+    font: var(--font-body-lead);
+    letter-spacing: var(--tracking-body-lead);
+  }
+
+  .poster {
+    flex: none;
+    width: 380px;
+  }
+}
