@@ -1,10 +1,20 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.6.3/schema.json",
-  "vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
   "files": {
     "includes": ["**", "!**/dist", "!**/build", "!**/.react-router", "!**/pnpm-lock.yaml"]
   },
-  "assist": { "actions": { "source": { "organizeImports": "on" } } },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  },
   "formatter": {
     "enabled": true,
     "indentStyle": "space",
@@ -21,8 +31,10 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true,
-      "suspicious": { "noExplicitAny": "error" }
+      "preset": "recommended",
+      "suspicious": {
+        "noExplicitAny": "error"
+      }
     }
   }
 }
