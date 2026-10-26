@@ -1,0 +1,72 @@
+.groups {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-40);
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.groupTitle {
+  color: var(--text-muted);
+  font: var(--font-ui-eyebrow);
+  letter-spacing: var(--tracking-ui-eyebrow);
+  text-transform: uppercase;
+}
+
+/* Left aligned, as agreed for the AESSBot page */
+.logos {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  padding: var(--space-24);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  background: var(--bg-surface);
+}
+
+.large {
+  height: 160px;
+}
+
+.logo img {
+  max-width: 100%;
+  max-height: 72px;
+}
+
+.large img {
+  max-height: 88px;
+}
+
+/* Dark logos are drawn in white so they show on the dark page */
+.monochrome {
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+
+@media (min-width: 1024px) {
+  .logos {
+    flex-direction: row;
+  }
+
+  .logo {
+    width: 300px;
+  }
+
+  .large {
+    width: 520px;
+  }
+}

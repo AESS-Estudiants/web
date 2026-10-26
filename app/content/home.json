@@ -78,18 +78,18 @@
     "gallery": {
       "label": "Fotos de les activitats d'AESS",
       "images": [
-        { "src": "home/qui-som-8.png", "alt": "Dos membres treballant amb la serra al taller" },
+        { "src": "home/qui-som-8.jpg", "alt": "Dos membres treballant amb la serra al taller" },
         { "src": "home/qui-som-1.jpeg", "alt": "Estand d'AESS amb robots i cartells de l'AESSBot" },
         { "src": "home/qui-som-3.jpeg", "alt": "Una membre fa una classe a un grup d'estudiants" },
         {
-          "src": "home/qui-som-4.jpeg",
+          "src": "home/qui-som-4.jpg",
           "alt": "Membres d'AESS soldant en una activitat a l'aire lliure"
         },
         {
           "src": "home/qui-som-5.jpeg",
           "alt": "Un equip treballant amb ordinadors en una sessió de vespre"
         },
-        { "src": "home/qui-som-6.jpeg", "alt": "Dos robots minisumo al ring de l'AESSBot" },
+        { "src": "home/qui-som-6.jpg", "alt": "Dos robots minisumo al ring de l'AESSBot" },
         {
           "src": "home/qui-som-7.jpeg",
           "alt": "Estudiants soldant components electrònics en un taller"
@@ -106,7 +106,7 @@
         "tag": "Competició anual",
         "title": "AESSBot 2026",
         "body": "La competició de robòtica més esperada de la UPC. Construeix el teu propi robot minisumo i competeix contra altres equips en una batalla d'enginyeria i estratègia.",
-        "poster": { "src": "home/aessbot-2026-poster.png", "alt": "Cartell de l'AESSBot 2026" },
+        "poster": { "src": "home/aessbot-2026-poster.jpg", "alt": "Cartell de l'AESSBot 2026" },
         "stats": [
           { "icon": "trophy", "value": "Més de 1.000€", "label": "En premis" },
           { "icon": "award", "value": "1 ECTS", "label": "Per arribar a la final" },
@@ -122,7 +122,7 @@
         "tag": "Cursos semestrals",
         "title": "Cursos",
         "body": "Desenvolupa habilitats pràctiques en robòtica i electrònica amb els nostres cursos intensius. Tots els cursos es fan en períodes no lectius (gener-febrer i juny-juliol).",
-        "poster": { "src": "home/courses-2026-poster.png", "alt": "Cartell dels cursos d'AESS" },
+        "poster": { "src": "home/courses-2026-poster.jpg", "alt": "Cartell dels cursos d'AESS" },
         "stats": [
           { "icon": "award", "value": "1 ECTS", "label": "Per curs aprovat" },
           { "icon": "users", "value": "Places limitades", "label": "Reserva la teva aviat" },

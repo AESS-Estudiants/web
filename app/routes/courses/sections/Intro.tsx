@@ -12,7 +12,7 @@ export function Intro({ intro }: { intro: Courses['intro'] }) {
       <SectionHeader
         id="sobre-els-cursos-title"
         title={intro.title}
-        subtitle={<RichText text={intro.subtitle} />}
+        subtitle={<RichText>{intro.subtitle}</RichText>}
         className={styles.header}
       />
       <Carousel

@@ -1,4 +1,5 @@
 import data from './join.json'
-import { join as schema } from './schemas'
+import type { Join } from './schemas'
 
-export const join = schema.parse(data)
+// Checked against its schema at build time (see validate.ts), so zod stays out of the browser
+export const join = data as Join

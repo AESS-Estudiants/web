@@ -1,4 +1,5 @@
 import data from './errors.json'
-import { errors as schema } from './schemas'
+import type { Errors } from './schemas'
 
-export const errors = schema.parse(data)
+// Checked against its schema at build time (see validate.ts), so zod stays out of the browser
+export const errors = data as Errors

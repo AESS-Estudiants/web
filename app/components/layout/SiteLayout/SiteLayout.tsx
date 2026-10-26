@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { ScrollToTopButton } from '~/components/buttons'
 import { Footer, Navbar } from '~/components/navigation'
+import { SiteAnalytics } from '../SiteAnalytics/SiteAnalytics'
 import styles from './SiteLayout.module.css'
 
 export const MAIN_ID = 'contingut'
@@ -17,6 +18,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       </main>
       <Footer />
       <ScrollToTopButton />
+      <SiteAnalytics />
     </>
   )
 }

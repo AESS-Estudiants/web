@@ -1,0 +1,21 @@
+.cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-16);
+  color: var(--text-secondary);
+  font: var(--font-body-default);
+  letter-spacing: var(--tracking-body-default);
+}
+
+.large {
+  font: var(--font-body-large);
+  letter-spacing: var(--tracking-body-large);
+}
+
+@media (min-width: 1024px) {
+  .cta {
+    flex-direction: row;
+    align-items: center;
+  }
+}

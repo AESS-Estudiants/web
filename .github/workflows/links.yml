@@ -26,5 +26,6 @@ jobs:
       - run: pnpm build
       - uses: lycheeverse/lychee-action@v2
         with:
-          args: --no-progress --root-dir "$(pwd)/build/client" "build/client/**/*.html"
+          # Instagram (429) and LinkedIn (999) refuse bots, which is not a broken link
+          args: --no-progress --accept 200..=299,429,999 --cache --max-cache-age 1d --root-dir "$(pwd)/build/client" "build/client/**/*.html"
           fail: true

@@ -19,5 +19,7 @@ export default defineConfig({
     }),
     reactRouter(),
   ],
+  // One small stylesheet instead of a render-blocking file per component family
+  build: { cssCodeSplit: false },
   resolve: { alias: { '~': fileURLToPath(new URL('./app', import.meta.url)) } },
 })

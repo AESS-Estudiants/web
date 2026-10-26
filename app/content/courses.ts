@@ -1,4 +1,5 @@
 import data from './courses.json'
-import { courses as schema } from './schemas'
+import type { Courses } from './schemas'
 
-export const courses = schema.parse(data)
+// Checked against its schema at build time (see validate.ts), so zod stays out of the browser
+export const courses = data as Courses

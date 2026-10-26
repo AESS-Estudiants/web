@@ -18,7 +18,8 @@ const MIME: Record<string, string> = { avif: 'image/avif', webp: 'image/webp', j
 
 export function Picture({ src, alt, sizes = '100vw', priority = false, className }: PictureProps) {
   const imgRef = useRef<HTMLImageElement>(null)
-  const [loaded, setLoaded] = useState(false)
+  // The main image shows straight away: fading it in would wait for JavaScript and delay the LCP
+  const [loaded, setLoaded] = useState(priority)
 
   // The image may finish loading before React hydrates and misses the load event
   useEffect(() => {
