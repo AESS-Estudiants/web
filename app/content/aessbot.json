@@ -50,7 +50,7 @@
       "title": ["AESSBot", "2026"],
       "description": "La competició de robòtica més esperada de la UPC. Apunta el teu equip avui perquè les places són limitades i es tanquen aviat.",
       "poster": {
-        "src": "home/aessbot-2026-poster.png",
+        "src": "home/aessbot-2026-poster.jpg",
         "alt": "Cartell de l'AESSBot 2026, la competició de robots minisumo de l'ETSETB"
       },
       "stats": [
@@ -93,11 +93,11 @@
         "label": "Fotos de l'AESSBot 2025",
         "images": [
           {
-            "src": "aessbot/aessbot-2025-group.png",
+            "src": "aessbot/aessbot-2025-group.jpg",
             "alt": "Foto de grup dels participants i l'organització de l'AESSBot 2025 a les escales del Campus Nord, al costat del cartell de la competició"
           },
           {
-            "src": "aessbot/aessbot-2025-demo.png",
+            "src": "aessbot/aessbot-2025-demo.jpg",
             "alt": "Un membre de l'organització ensenya un robot minisumo a un grup de participants de l'AESSBot 2025"
           }
         ]
