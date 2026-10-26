@@ -1,0 +1,12 @@
+.download {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-12);
+}
+
+.note {
+  color: var(--text-muted);
+  font: var(--font-ui-caption);
+  letter-spacing: var(--tracking-ui-caption);
+}

@@ -1,10 +1,23 @@
 import type { MetaDescriptor } from 'react-router'
+// The raw file, not the parsed content, so the end-to-end tests can import this module too
+import aessbot from '../content/aessbot.json' with { type: 'json' }
 
 export const SITE_URL = 'https://aessestudiants.org'
 export const SITE_NAME = 'AESS Estudiants'
 
+/** The AESSBot registration page only exists for search engines while registration is open */
+export const AESSBOT_REGISTRATION_INDEXED = aessbot.status === 'registration'
+
 // Pages listed in the sitemap, in menu order
-export const INDEXED_PATHS = ['/', '/aessbot', '/cursos', '/projectes', '/uneix-te', '/contacte']
+export const INDEXED_PATHS = [
+  '/',
+  '/aessbot',
+  ...(AESSBOT_REGISTRATION_INDEXED ? ['/aessbot/inscripcio'] : []),
+  '/cursos',
+  '/projectes',
+  '/uneix-te',
+  '/contacte',
+]
 
 type PageMeta = {
   title?: string
@@ -59,6 +72,50 @@ export const organizationJsonLd = {
     'https://www.instagram.com/aessestudiants',
     'https://www.linkedin.com/company/aess-estudiants-upc',
   ],
+}
+
+type EventJsonLd = {
+  name: string
+  description: string
+  startDate: string
+  endDate: string
+  location: { name: string; address: string }
+  /** Path of the page about the event */
+  path: string
+  /** Absolute or root-relative URL of the poster */
+  image: string
+  /** While registration is open: where to sign up and until when */
+  registration?: { path: string; deadline: string }
+}
+
+/** schema.org Event for a competition or activity */
+export function eventJsonLd(event: EventJsonLd) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Event',
+    name: event.name,
+    description: event.description,
+    startDate: event.startDate,
+    endDate: event.endDate,
+    eventStatus: 'https://schema.org/EventScheduled',
+    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+    inLanguage: 'ca',
+    isAccessibleForFree: true,
+    url: absoluteUrl(event.path),
+    image: [absoluteUrl(event.image)],
+    location: { '@type': 'Place', name: event.location.name, address: event.location.address },
+    organizer: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+    ...(event.registration && {
+      offers: {
+        '@type': 'Offer',
+        price: 0,
+        priceCurrency: 'EUR',
+        availability: 'https://schema.org/InStock',
+        url: absoluteUrl(event.registration.path),
+        validThrough: event.registration.deadline,
+      },
+    }),
+  }
 }
 
 export const websiteJsonLd = {

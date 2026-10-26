@@ -1,0 +1,22 @@
+.strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.link {
+  border-radius: var(--radius-xs);
+  color: var(--text-accent);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+@media (hover: hover) {
+  .link:hover {
+    color: var(--text-accent-hover);
+  }
+}
+
+.link:active {
+  color: var(--text-accent-strong);
+}
