@@ -2,6 +2,13 @@ import { describe, expect, it } from 'vitest'
 import { site as schema } from './schemas'
 import data from './site.json'
 
+describe('all content', () => {
+  it('matches the schemas, as the build checks', async () => {
+    const { validateContent } = await import('./validate')
+    expect(() => validateContent()).not.toThrow()
+  })
+})
+
 describe('site content', () => {
   it('matches its schema', () => {
     expect(() => schema.parse(data)).not.toThrow()

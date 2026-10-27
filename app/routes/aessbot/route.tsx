@@ -1,9 +1,14 @@
 import '@fontsource/squada-one/latin-400.css'
+import squadaOne from '@fontsource/squada-one/files/squada-one-latin-400-normal.woff2?url'
 import { aessbot } from '~/content/aessbot'
 import { pageMeta } from '~/lib/seo'
 import type { Route } from './+types/route'
 import { ComingSoon } from './sections/ComingSoon'
 import { Editions } from './sections/Editions'
+
+export const links: Route.LinksFunction = () => [
+  { rel: 'preload', href: squadaOne, as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
+]
 
 export function meta(_: Route.MetaArgs) {
   return pageMeta({

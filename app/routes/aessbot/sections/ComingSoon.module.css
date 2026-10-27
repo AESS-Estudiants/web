@@ -42,6 +42,8 @@
   line-height: 0.9;
   letter-spacing: 0.01em;
   text-transform: uppercase;
+  /* One line on mobile and one word per line on desktop, so the height doesn't change when the font arrives */
+  white-space: nowrap;
 }
 
 .year {
@@ -91,6 +93,8 @@
   }
 
   .title {
+    display: flex;
+    flex-direction: column;
     font-size: 112px;
   }
 
