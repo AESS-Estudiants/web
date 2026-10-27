@@ -59,7 +59,11 @@ export type SumoGame = {
   destroy: () => void
 }
 
-const RING = { x: WIDTH / 2, y: HEIGHT / 2, r: 44 }
+// The HUD (names, lives, round and dash bar) takes the top rows; the ring is drawn 4px deep
+const HUD_BOTTOM = 13
+const RING_DEPTH = 4
+// Ring centred in the space under the HUD, counting its side
+const RING = { x: WIDTH / 2, y: Math.round((HUD_BOTTOM + HEIGHT - RING_DEPTH) / 2), r: 44 }
 const ROBOT_R = 6.5
 const ACCEL = 210
 const MAX_SPEED = 60
@@ -136,7 +140,7 @@ function paintBackground() {
   for (let y = 0; y < HEIGHT; y++) {
     for (let x = 0; x < WIDTH; x++) {
       const d = len(x + 0.5 - cx, y + 0.5 - cy)
-      const dSide = len(x + 0.5 - cx, y + 0.5 - (cy + 4))
+      const dSide = len(x + 0.5 - cx, y + 0.5 - (cy + RING_DEPTH))
       let color: string | null = null
       if (d <= r + 2) {
         color = PALETTE.ring
@@ -493,7 +497,7 @@ export function createSumoGame(
     // Equal padding top and bottom; a bigger gap after the (scaled) title than between body lines
     const PAD = 9
     type Line = [text: string, color: string, scale?: number]
-    const panel = (lines: Line[], centerY = HEIGHT / 2) => {
+    const panel = (lines: Line[], centerY = RING.y + RING_DEPTH / 2) => {
       const scaleOf = (i: number) => lines[i]?.[2] ?? 1
       const gapAfter = (i: number) => (i === lines.length - 1 ? 0 : scaleOf(i) > 1 ? 9 : 5)
       const lineHeight = (i: number) => 5 * scaleOf(i)
@@ -512,13 +516,14 @@ export function createSumoGame(
     }
 
     if (state.phase === 'title') {
-      panel([
+      const title: Line[] = [
         ['SUMO AESSBOT', PALETTE.paper, 2],
         ['TREU LA CPU DEL RING', PALETTE.text],
         ['CLICA O PREM ESPAI', PALETTE.accent],
-      ])
-      if (state.wins)
-        drawTextCentered(ctx, `VICTORIES: ${state.wins}`, WIDTH / 2, HEIGHT - 7, PALETTE.muted)
+      ]
+      // Inside the panel: under it, it would sit on the ring
+      if (state.wins) title.push([`VICTORIES: ${state.wins}`, PALETTE.muted])
+      panel(title)
     } else if (state.phase === 'countdown') {
       drawTextCentered(
         ctx,
@@ -537,7 +542,7 @@ export function createSumoGame(
           : state.lastWinner === 'cpu'
             ? 'PUNT PER A LA CPU'
             : 'EMPAT, REPETIM'
-      panel([[text, PALETTE.paper]], 26)
+      panel([[text, PALETTE.paper]], RING.y - 34)
     } else if (state.phase === 'over') {
       const won = state.lastWinner === 'p1'
       panel([
