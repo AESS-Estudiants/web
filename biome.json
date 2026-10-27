@@ -12,7 +12,8 @@
       "!**/build",
       "!**/.react-router",
       "!**/pnpm-lock.yaml",
-      "!public"
+      "!public",
+      "!app/styles/tokens.css"
     ]
   },
   "assist": {
