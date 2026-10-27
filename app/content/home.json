@@ -190,7 +190,7 @@
         "label": "Contacta'ns",
         "to": "/contacte",
         "icon": "mail",
-        "variant": "secondary"
+        "variant": "primary"
       }
     }
   }
