@@ -76,3 +76,11 @@ describe('join content', () => {
     }
   })
 })
+
+describe('contact content', () => {
+  it('matches its schema and links to an existing privacy policy', async () => {
+    const { existsSync } = await import('node:fs')
+    const { contact } = await import('./contact')
+    expect(existsSync(`public${contact.form.privacy.link.href}`)).toBe(true)
+  })
+})
