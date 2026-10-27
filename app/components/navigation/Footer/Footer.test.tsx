@@ -25,3 +25,12 @@ it('links to the social networks in a new tab', () => {
   expect(instagram).toHaveAttribute('href', 'https://www.instagram.com/aessestudiants')
   expect(instagram).toHaveAttribute('target', '_blank')
 })
+
+it('opens the address in google maps', () => {
+  renderWithRouter(<Footer />)
+  const address = screen.getByRole('link', {
+    name: "Campus Nord UPC, Barcelona, s'obre en una pestanya nova",
+  })
+  expect(address.getAttribute('href')).toMatch(/^https:\/\/www\.google\.com\/maps\/search\//)
+  expect(address).toHaveAttribute('target', '_blank')
+})

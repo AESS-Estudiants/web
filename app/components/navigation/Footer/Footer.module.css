@@ -44,9 +44,6 @@
 
 .address {
   max-width: 200px;
-  color: var(--text-muted);
-  font: var(--font-body-small);
-  letter-spacing: var(--tracking-body-small);
 }
 
 .sub {

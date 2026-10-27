@@ -21,7 +21,9 @@ export function Footer() {
           <h2 className={styles.heading}>Contacte</h2>
           <FooterLink href={`mailto:${contact.email}`}>{contact.email}</FooterLink>
           <FooterLink href={`tel:${contact.phone}`}>{contact.phoneLabel}</FooterLink>
-          <p className={styles.address}>{contact.address}</p>
+          <FooterLink href={contact.mapsUrl} className={styles.address}>
+            {contact.address}
+          </FooterLink>
         </address>
       </div>
 

@@ -53,6 +53,8 @@
 
 .question {
   flex: 1;
+  /* Fill each line like the design, instead of the balanced wrap of headings */
+  text-wrap: wrap;
   font: var(--font-ui-faq-question-mobile);
   letter-spacing: var(--tracking-ui-faq-question-mobile);
 }
@@ -60,6 +62,10 @@
 .toggle {
   flex: none;
   color: var(--icon-muted);
+}
+
+.trigger[data-state="open"] {
+  padding-bottom: var(--space-14);
 }
 
 .minus,
@@ -93,6 +99,10 @@
   letter-spacing: var(--tracking-body-default);
 }
 
+.answer :is(p) {
+  text-wrap: wrap;
+}
+
 .answer :is(a) {
   color: var(--text-accent);
   text-decoration: underline;
@@ -122,6 +132,10 @@
 @media (min-width: 1024px) {
   .trigger {
     padding: 22px var(--space-24);
+  }
+
+  .trigger[data-state="open"] {
+    padding-bottom: var(--space-14);
   }
 
   .question {

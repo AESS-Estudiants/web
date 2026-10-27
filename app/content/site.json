@@ -14,7 +14,8 @@
     "email": "aess.estudiants@upc.edu",
     "phone": "+34934137564",
     "phoneLabel": "+34 934 13 75 64",
-    "address": "Campus Nord UPC, Barcelona"
+    "address": "Campus Nord UPC, Barcelona",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Edifici+Omega%2C+Campus+Nord+UPC%2C+Carrer+de+Jordi+Girona+1-3%2C+08034+Barcelona"
   },
   "socials": [
     {

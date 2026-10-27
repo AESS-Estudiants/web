@@ -10,6 +10,7 @@
       {
         "icon": "map-pin",
         "title": "Adreça",
+        "href": "https://www.google.com/maps/search/?api=1&query=Edifici+Omega%2C+Campus+Nord+UPC%2C+Carrer+de+Jordi+Girona+1-3%2C+08034+Barcelona",
         "lines": [
           "Edifici Omega, Aula S203",
           "Campus Nord UPC",
@@ -37,7 +38,7 @@
     "map": {
       "title": "Ubicació Campus Nord UPC",
       "label": "Mostra el mapa",
-      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.1!2d2.112706!3d41.389282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f7e64b8b3b%3A0x7e4b8c6e9f1e2f3e!2sCampus%20Nord%20UPC!5e0!3m2!1sca!2ses!4v1701234567890!5m2!1sca!2ses"
+      "src": "https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1sEdifici+Omega,+Campus+Nord+UPC,+Carrer+de+Jordi+Girona+1-3,+08034+Barcelona!6i17!3m1!1sca!5m1!1sca"
     }
   },
   "form": {
