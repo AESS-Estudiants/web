@@ -149,6 +149,8 @@ export const contact = z.object({
       z.object({
         icon: iconName,
         title: z.string().min(1),
+        /** Makes the whole card a link, such as the address to Google Maps */
+        href: z.string().url().optional(),
         /** A line of text, or a bold label followed by its text */
         lines: z
           .array(

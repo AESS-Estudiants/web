@@ -23,6 +23,34 @@
   background: var(--bg-section-alt);
 }
 
+.cardLink {
+  transition:
+    background-color var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard);
+}
+
+@media (hover: hover) {
+  .cardLink:hover {
+    border-color: var(--border-strong);
+    background: var(--bg-surface);
+  }
+
+  .cardLink:hover .external {
+    color: var(--icon-accent);
+  }
+}
+
+.cardLink:active {
+  border-color: var(--border-strong);
+  background: var(--bg-surface-hover);
+}
+
+.external {
+  flex: none;
+  margin-left: auto;
+  color: var(--icon-muted);
+}
+
 .iconBox {
   display: flex;
   flex: none;
