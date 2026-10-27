@@ -1,0 +1,65 @@
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  min-width: 0;
+  padding: 0;
+  border: 0;
+}
+
+.legend {
+  /* A legend ignores the fieldset gap */
+  margin-bottom: var(--space-12);
+  padding: 0;
+  color: var(--text-primary);
+  font: var(--font-ui-form-label);
+  letter-spacing: var(--tracking-ui-form-label);
+}
+
+.group:disabled .legend {
+  color: var(--text-disabled);
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-12) var(--space-24);
+}
+
+.option {
+  composes: option from "../choice.module.css";
+}
+
+.box {
+  composes: box from "../choice.module.css";
+}
+
+.input {
+  composes: input from "../choice.module.css";
+  border-radius: var(--radius-full);
+}
+
+/* Inner dot */
+.input::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border-radius: var(--radius-full);
+  background: var(--control-checked);
+  transform: scale(0);
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.input:checked::after {
+  transform: scale(1);
+}
+
+@media (hover: hover) {
+  .option:hover .input:checked:not(:disabled)::after {
+    background: var(--control-checked-hover);
+  }
+}
+
+.input:disabled::after {
+  background: var(--control-disabled);
+}

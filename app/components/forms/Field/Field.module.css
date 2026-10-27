@@ -1,0 +1,31 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.label {
+  color: var(--text-primary);
+  font: var(--font-ui-form-label);
+  letter-spacing: var(--tracking-ui-form-label);
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  color: var(--text-muted);
+  font: var(--font-ui-helper);
+  letter-spacing: var(--tracking-ui-helper);
+}
+
+.error {
+  color: var(--text-primary);
+  font: var(--font-ui-error);
+  letter-spacing: var(--tracking-ui-error);
+}
+
+/* The helper keeps text/muted: Figma greys it out, but that fails WCAG AA contrast */
+.disabled .label {
+  color: var(--text-disabled);
+}
