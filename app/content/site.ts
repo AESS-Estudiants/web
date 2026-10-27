@@ -1,7 +1,7 @@
-import site from './site.json'
+import { site as schema } from './schemas'
+import data from './site.json'
 
-export type SocialNetwork = 'instagram' | 'linkedin' | 'github'
+// Validated at import, so a broken content file fails the build
+export const site = schema.parse(data)
 
-export type NavigationLink = { label: string; to: string }
-
-export { site }
+export type SocialNetwork = (typeof site.socials)[number]['network']
