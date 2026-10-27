@@ -131,6 +131,110 @@ export const home = z.object({
   }),
 })
 
+// Contact page
+
+const formField = z.object({
+  label: z.string().min(1),
+  placeholder: z.string().min(1),
+  /** Error when the field is empty; leave it out for optional fields */
+  required: z.string().min(1).optional(),
+  /** Error when the value has the wrong format */
+  invalid: z.string().min(1).optional(),
+})
+
+export const contact = z.object({
+  hero: z.object({ title: z.string().min(1), description: z.string().min(1) }),
+  location: z.object({
+    title: z.string().min(1),
+    subtitle: z.string().min(1),
+    cards: z.array(
+      z.object({
+        icon: iconName,
+        title: z.string().min(1),
+        /** A line of text, or a bold label followed by its text */
+        lines: z
+          .array(
+            z.union([
+              z.string().min(1),
+              z.object({ label: z.string().min(1), text: z.string().min(1) }),
+            ]),
+          )
+          .min(1),
+      }),
+    ),
+    map: z.object({
+      title: z.string().min(1),
+      label: z.string().min(1),
+      src: z
+        .string()
+        .regex(/^https:\/\/www\.google\.com\/maps\/embed\?/, 'A Google Maps embed URL'),
+    }),
+  }),
+  // Field keys are the names the EmailJS template reads
+  form: z.object({
+    title: z.string().min(1),
+    personal: z.string().min(1),
+    message: z.string().min(1),
+    fields: z.object({
+      from_name: formField.required({ required: true }),
+      reply_to: formField.required({ required: true, invalid: true }),
+      phone: formField.required({ invalid: true }),
+      'user-type': formField
+        .required({ required: true })
+        .extend({ options: z.array(z.string().min(1)).min(1) }),
+      subject: formField.required({ required: true }),
+      message: formField.required({ required: true }),
+    }),
+    privacy: z.object({
+      before: z.string().min(1),
+      link: externalLink,
+      required: z.string().min(1),
+    }),
+    submit: z.string().min(1),
+    sending: z.string().min(1),
+    success: z.string().min(1),
+    error: z.string().min(1),
+  }),
+})
+
+// Join page
+
+/** Icon with a short text, such as a date or a place */
+export const iconLabel = z.object({ icon: iconName, label: z.string().min(1) })
+
+export const join = z.object({
+  hero: z.object({
+    badge: z.string().min(1).optional(),
+    title: z.string().min(1),
+    description: z.string().min(1),
+  }),
+  options: z.object({
+    title: z.string().min(1),
+    subtitle: z.string().optional(),
+    items: z
+      .array(
+        z.object({
+          icon: iconName,
+          eyebrow: z.string().min(1),
+          title: z.string().min(1),
+          body: z.string().min(1),
+          /** Numbered steps to follow */
+          steps: z.array(z.string().min(1)).optional(),
+          /** Practical details, such as the date, time and place */
+          details: z.array(iconLabel).optional(),
+          action,
+        }),
+      )
+      .min(1),
+  }),
+  visit: z.object({
+    eyebrow: z.string().min(1),
+    title: z.string().min(1),
+    body: z.string().min(1),
+    highlights: z.array(iconLabel).min(1),
+  }),
+})
+
 // Projects page
 
 export const projects = z.object({
@@ -275,6 +379,8 @@ export const errors = z.object({ notFound: errorState, unexpected: errorState })
 export type Site = z.infer<typeof site>
 export type Aessbot = z.infer<typeof aessbot>
 export type Home = z.infer<typeof home>
+export type Contact = z.infer<typeof contact>
+export type Join = z.infer<typeof join>
 export type Projects = z.infer<typeof projects>
 export type Courses = z.infer<typeof courses>
 export type Course = Courses['items'][number]

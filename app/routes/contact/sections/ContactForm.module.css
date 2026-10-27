@@ -1,0 +1,140 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+  padding: var(--space-24) 22px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  background: var(--bg-section-alt);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  scroll-margin-top: var(--header-height);
+}
+
+.title {
+  color: var(--text-primary);
+  font: var(--font-heading-event-mobile);
+  letter-spacing: var(--tracking-heading-event-mobile);
+}
+
+/* Banner with the result of sending; the live regions stay empty until then */
+.response {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-12);
+  margin-top: var(--space-24);
+  padding: var(--space-14) var(--space-16);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-md);
+  background: var(--accent-tint-10);
+  color: var(--text-primary);
+  font: var(--font-body-small);
+  letter-spacing: var(--tracking-body-small);
+}
+
+.failed {
+  border-color: var(--border-inverse);
+}
+
+.responseIcon {
+  flex: none;
+  margin-top: 4px;
+}
+
+.fieldset {
+  display: grid;
+  gap: var(--space-16);
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Floated, the legend becomes an ordinary grid item and follows the gap */
+.legend {
+  float: left;
+  width: 100%;
+  padding: 0;
+  color: var(--text-accent);
+  font: var(--font-ui-eyebrow);
+  letter-spacing: var(--tracking-ui-eyebrow);
+  text-transform: uppercase;
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-16);
+}
+
+.privacy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.link {
+  color: var(--text-primary);
+  font: var(--font-body-default-link);
+  letter-spacing: var(--tracking-body-default-link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (hover: hover) {
+  .link:hover {
+    color: var(--text-accent-hover);
+  }
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  color: var(--text-primary);
+  font: var(--font-ui-error);
+  letter-spacing: var(--tracking-ui-error);
+}
+
+.submit {
+  display: flex;
+  padding-top: var(--space-4);
+}
+
+.button {
+  flex: 1;
+}
+
+@media (min-width: 1024px) {
+  .form {
+    gap: var(--space-28);
+    padding: var(--space-40) 44px;
+  }
+
+  .title {
+    font: var(--font-heading-event);
+    letter-spacing: var(--tracking-heading-event);
+  }
+
+  .response {
+    margin-top: var(--space-28);
+  }
+
+  .fieldset:first-of-type {
+    padding-bottom: var(--space-28);
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .wide {
+    grid-column: 1 / -1;
+  }
+
+  .button {
+    flex: none;
+  }
+}

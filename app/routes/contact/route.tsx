@@ -1,5 +1,9 @@
+import { contact } from '~/content/contact'
 import { pageMeta } from '~/lib/seo'
 import type { Route } from './+types/route'
+import { ContactForm } from './sections/ContactForm'
+import { Hero } from './sections/Hero'
+import { Location } from './sections/Location'
 
 export function meta(_: Route.MetaArgs) {
   return pageMeta({
@@ -12,8 +16,10 @@ export function meta(_: Route.MetaArgs) {
 
 export default function ContactPage() {
   return (
-    <section>
-      <h1>Contacte</h1>
-    </section>
+    <>
+      <Hero hero={contact.hero} />
+      <Location location={contact.location} />
+      <ContactForm form={contact.form} />
+    </>
   )
 }

@@ -61,3 +61,26 @@ describe('projects content', () => {
     for (const image of projects.intro.gallery.images) expect(IMAGE_PATHS).toContain(image.src)
   })
 })
+
+describe('join content', () => {
+  it('matches its schema and every option leads somewhere outside the site', async () => {
+    const { join } = await import('./join')
+    expect(join.options.items.length).toBeGreaterThan(0)
+    for (const option of join.options.items) expect(option.action.href).toMatch(/^https:\/\//)
+  })
+
+  it('gives each option either steps or details', async () => {
+    const { join } = await import('./join')
+    for (const option of join.options.items) {
+      expect(Boolean(option.steps?.length) || Boolean(option.details?.length)).toBe(true)
+    }
+  })
+})
+
+describe('contact content', () => {
+  it('matches its schema and links to an existing privacy policy', async () => {
+    const { existsSync } = await import('node:fs')
+    const { contact } = await import('./contact')
+    expect(existsSync(`public${contact.form.privacy.link.href}`)).toBe(true)
+  })
+})
