@@ -12,8 +12,8 @@ export function meta(_: Route.MetaArgs) {
 
 export default function AessbotPage() {
   return (
-    <main>
+    <section>
       <h1>AESSBot</h1>
-    </main>
+    </section>
   )
 }

@@ -12,8 +12,8 @@ export function meta(_: Route.MetaArgs) {
 
 export default function CoursesPage() {
   return (
-    <main>
+    <section>
       <h1>Cursos</h1>
-    </main>
+    </section>
   )
 }

@@ -12,8 +12,8 @@ export function meta(_: Route.MetaArgs) {
 
 export default function ContactPage() {
   return (
-    <main>
+    <section>
       <h1>Contacte</h1>
-    </main>
+    </section>
   )
 }

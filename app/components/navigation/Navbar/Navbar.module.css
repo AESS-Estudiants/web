@@ -1,0 +1,84 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: var(--bg-page);
+}
+
+.bar {
+  composes: container from "../../../styles/layout.module.css";
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+}
+
+.side {
+  display: flex;
+  flex: 1 1 0;
+  align-items: center;
+}
+
+.end {
+  justify-content: flex-end;
+}
+
+.nav {
+  display: none;
+}
+
+.list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: var(--space-2);
+}
+
+.item {
+  display: block;
+  padding: var(--space-12) var(--space-14);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font: var(--font-ui-nav-link);
+  letter-spacing: var(--tracking-ui-nav-link);
+  transition:
+    background-color var(--duration-fast) var(--ease-standard),
+    color var(--duration-fast) var(--ease-standard);
+}
+
+@media (hover: hover) {
+  .item:hover {
+    background: var(--bg-surface);
+    color: var(--text-primary);
+  }
+}
+
+.item:active {
+  background: var(--bg-surface-hover);
+  color: var(--text-primary);
+}
+
+.item.current {
+  background: var(--accent-tint-12);
+  color: var(--text-accent);
+  font: var(--font-ui-nav-link-active);
+}
+
+.cta {
+  display: none;
+}
+
+.toggleOpen {
+  background: var(--bg-surface);
+}
+
+@media (min-width: 1024px) {
+  .nav,
+  .cta {
+    display: flex;
+  }
+
+  .toggle {
+    display: none;
+  }
+}
