@@ -1,0 +1,48 @@
+.card {
+  composes: card from "../card.module.css";
+  padding: var(--space-24) 22px;
+}
+
+.title {
+  color: var(--text-primary);
+  font: var(--font-heading-feature-mobile);
+  letter-spacing: var(--tracking-heading-feature-mobile);
+}
+
+.body {
+  font: var(--font-body-large);
+  letter-spacing: var(--tracking-body-large);
+}
+
+/* Same look as TextLink; the card hover also lights it up */
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+  color: var(--text-accent);
+  font: var(--font-ui-link);
+  letter-spacing: var(--tracking-ui-link);
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+@media (hover: hover) {
+  .card:hover .link {
+    color: var(--text-accent-hover);
+  }
+}
+
+.card:active .link {
+  color: var(--text-accent-strong);
+}
+
+@media (min-width: 1024px) {
+  .card {
+    padding: var(--space-40) 44px;
+  }
+
+  .title {
+    font: var(--font-heading-feature);
+    letter-spacing: var(--tracking-heading-feature);
+  }
+}
