@@ -6,7 +6,7 @@ updates:
     schedule:
       interval: weekly
       day: monday
-      time: '08:00'
+      time: "08:00"
       timezone: Europe/Madrid
     commit-message:
       prefix: chore
@@ -20,7 +20,7 @@ updates:
     schedule:
       interval: weekly
       day: monday
-      time: '08:00'
+      time: "08:00"
       timezone: Europe/Madrid
     commit-message:
       prefix: chore
