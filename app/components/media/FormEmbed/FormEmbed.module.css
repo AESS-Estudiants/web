@@ -1,0 +1,52 @@
+/* As tall as the Google Form in Figma; the form scrolls inside it */
+.embed {
+  position: relative;
+  overflow: hidden;
+  height: 1000px;
+  border: 1px solid var(--border-muted);
+  border-radius: var(--radius-lg);
+  background: var(--bg-surface-hover);
+}
+
+.facade {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-16);
+  height: 100%;
+  padding: var(--space-24);
+  text-align: center;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: var(--accent-tint-12);
+  color: var(--icon-accent);
+}
+
+.text {
+  color: var(--text-secondary);
+  font: var(--font-body-default);
+  letter-spacing: var(--tracking-body-default);
+}
+
+.skeleton,
+.frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  aspect-ratio: auto;
+}
+
+/* Covers the form until it has loaded */
+.skeleton {
+  z-index: 1;
+}

@@ -38,10 +38,8 @@ export const image = z.object({
 /** Text split in paragraphs */
 export const paragraphs = z.array(z.string().min(1)).min(1)
 
-/** Text with bold fragments: plain strings and `{ "strong": "..." }` pieces */
-export const richText = z
-  .array(z.union([z.string().min(1), z.object({ strong: z.string().min(1) })]))
-  .min(1)
+/** Text with **bold** and [links](/path) inline, see components/content/RichText */
+export const richText = z.string().min(1)
 
 /** Logo: a PNG or JPEG in app/assets/images, or an SVG in public/ by its URL */
 export const logo = z.object({
@@ -346,6 +344,136 @@ const youtubeVideo = z.object({
   caption: z.string().optional(),
 })
 
+const iconCard = z.object({ icon: iconName, title: z.string().min(1), body: richText })
+
+const cta = z.object({ text: z.string().min(1), action })
+
+/** Date and time with its offset, as in 2026-05-06T11:00:00+02:00 */
+const dateTime = z.iso.datetime({ offset: true })
+
+/** Sponsor logo in public/, shown as is */
+const sponsorLogo = z.object({
+  src: z.string().regex(/^\/images\/.+\.svg$/, 'An SVG logo in public/images'),
+  alt: z.string().min(1),
+  /** Drawn in the text colour, for dark logos that would not show on the dark page */
+  monochrome: z.boolean().optional(),
+})
+
+const edition = z.object({
+  /** Facts for the Event JSON-LD of the edition */
+  event: z.object({
+    name: z.string().min(1),
+    /** Also the meta description of the page */
+    description: z.string().min(50).max(160),
+    startDate: dateTime,
+    endDate: dateTime,
+    location: z.object({ name: z.string().min(1), address: z.string().min(1) }),
+  }),
+  hero: z.object({
+    title: z.tuple([z.string().min(1), z.string().min(1)]),
+    description: z.string().min(1),
+    poster: image,
+    stats: z.array(stat).max(4),
+  }),
+  /** Only shown while the status is registration */
+  registration: z.object({
+    action,
+    deadline: dateTime,
+    countdownLabel: z.string().min(1),
+    closedLabel: z.string().min(1),
+  }),
+  competition: z.object({
+    title: z.string().min(1),
+    subtitle: z.string().optional(),
+    gallery: z.object({ label: z.string().min(1), images: z.array(image).min(1) }).optional(),
+  }),
+  info: z.object({
+    title: z.string().min(1),
+    subtitle: z.string().optional(),
+    cards: z.array(iconCard).min(1),
+  }),
+  schedule: z.object({
+    title: z.string().min(1),
+    subtitle: z.string().optional(),
+    columns: z.object({
+      date: z.string().min(1),
+      time: z.string().min(1),
+      event: z.string().min(1),
+      location: z.string().min(1),
+    }),
+    items: z
+      .array(
+        z.object({
+          date: z.string().min(1),
+          time: z.string().min(1),
+          icon: iconName,
+          title: z.string().min(1),
+          description: z.string().min(1),
+          location: z.string().min(1),
+          /** The final, highlighted in the accent colour */
+          highlight: z.boolean().optional(),
+        }),
+      )
+      .min(1),
+  }),
+  rules: z.object({
+    title: z.string().min(1),
+    subtitle: z.string().optional(),
+    action,
+    note: z.string().optional(),
+  }),
+  sponsors: z.object({
+    title: z.string().min(1),
+    subtitle: z.string().optional(),
+    groups: z
+      .array(
+        z.object({
+          title: z.string().min(1),
+          size: z.enum(['large', 'small']),
+          logos: z.array(sponsorLogo).min(1),
+        }),
+      )
+      .min(1),
+    cta,
+  }),
+  faq: z.object({
+    title: z.string().min(1),
+    subtitle: z.string().optional(),
+    topics: z
+      .array(
+        z.object({
+          id: z.string().regex(/^[a-z0-9-]+$/, 'A slug'),
+          title: z.string().min(1),
+          items: z.array(faqItem).min(1),
+        }),
+      )
+      .min(1),
+    cta,
+  }),
+})
+
+const registration = z.object({
+  meta: z.object({ title: z.string().min(1), description: z.string().min(50).max(160) }),
+  reminders: z.object({
+    title: z.string().min(1),
+    subtitle: z.string().optional(),
+    cards: z.array(iconCard).min(1),
+  }),
+  form: z.object({
+    title: z.string().min(1),
+    description: z.string().min(1),
+    /** Google Form URL ending in /viewform; the page adds ?embedded=true */
+    url: z.url().regex(/^https:\/\/docs\.google\.com\/forms\/.+\/viewform$/, 'A Google Form'),
+    frameTitle: z.string().min(1),
+  }),
+  steps: z.object({
+    title: z.string().min(1),
+    subtitle: z.string().optional(),
+    items: z.array(iconCard).min(1),
+    cta,
+  }),
+})
+
 export const aessbot = z.object({
   /** Which version of the page is shown: before the edition is announced, while registration is open or after it */
   status: z.enum(['coming-soon', 'registration', 'finished']),
@@ -363,6 +491,10 @@ export const aessbot = z.object({
       .array(z.object({ year: z.number().int(), video: youtubeVideo.optional() }))
       .refine((items) => items.some((item) => item.video), 'At least one edition has a video'),
   }),
+  /** The full edition page, shown while the status is registration or finished */
+  edition,
+  /** The registration page at /aessbot/inscripcio */
+  registration,
 })
 
 // Missing page and unexpected error
@@ -378,6 +510,9 @@ export const errors = z.object({ notFound: errorState, unexpected: errorState })
 
 export type Site = z.infer<typeof site>
 export type Aessbot = z.infer<typeof aessbot>
+export type AessbotEdition = Aessbot['edition']
+export type AessbotRegistration = Aessbot['registration']
+export type AessbotStatus = Aessbot['status']
 export type Home = z.infer<typeof home>
 export type Contact = z.infer<typeof contact>
 export type Join = z.infer<typeof join>

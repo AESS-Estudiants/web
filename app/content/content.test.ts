@@ -1,5 +1,7 @@
+import { existsSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
-import { site as schema } from './schemas'
+import aessbotData from './aessbot.json'
+import { aessbot as aessbotSchema, site as schema } from './schemas'
 import data from './site.json'
 
 describe('all content', () => {
@@ -89,5 +91,40 @@ describe('contact content', () => {
     const { existsSync } = await import('node:fs')
     const { contact } = await import('./contact')
     expect(existsSync(`public${contact.form.privacy.link.href}`)).toBe(true)
+  })
+})
+
+describe('aessbot content', () => {
+  it('matches its schema and only uses existing photos and logos', async () => {
+    const { aessbot } = await import('./aessbot')
+    const { IMAGE_PATHS } = await import('~/lib/images')
+    const { edition } = aessbot
+    const photos = [edition.hero.poster, ...(edition.competition.gallery?.images ?? [])]
+    for (const photo of photos) expect(IMAGE_PATHS).toContain(photo.src)
+    const logos = edition.sponsors.groups.flatMap((group) => group.logos)
+    for (const logo of logos) expect(existsSync(`public${logo.src}`)).toBe(true)
+  })
+
+  it('links the registration button to its page and the rules to an existing file', async () => {
+    const { aessbot } = await import('./aessbot')
+    expect(aessbot.edition.registration.action.to).toBe('/aessbot/inscripcio')
+    expect(existsSync(`public${aessbot.edition.rules.action.href}`)).toBe(true)
+  })
+
+  it('gives every FAQ topic its own id', async () => {
+    const { aessbot } = await import('./aessbot')
+    const ids = aessbot.edition.faq.topics.map((topic) => topic.id)
+    expect(new Set(ids).size).toBe(ids.length)
+  })
+
+  it('rejects a registration form that is not a Google Form', () => {
+    const broken = {
+      ...aessbotData,
+      registration: {
+        ...aessbotData.registration,
+        form: { ...aessbotData.registration.form, url: 'https://example.com/form' },
+      },
+    }
+    expect(aessbotSchema.safeParse(broken).success).toBe(false)
   })
 })

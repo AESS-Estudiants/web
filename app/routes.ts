@@ -4,6 +4,7 @@ import { index, type RouteConfig, route } from '@react-router/dev/routes'
 export default [
   index('routes/home/route.tsx'),
   route('aessbot', 'routes/aessbot/route.tsx'),
+  route('aessbot/inscripcio', 'routes/aessbot-registration/route.tsx'),
   route('cursos', 'routes/courses/route.tsx'),
   route('projectes', 'routes/projects/route.tsx'),
   route('uneix-te', 'routes/join/route.tsx'),

@@ -101,7 +101,7 @@ export function CourseModal({ course, labels, text, onClose, onCloseAutoFocus }:
           </ul>
           <Part icon={ICONS['user-plus']} title={text.registration}>
             <p className={styles.text}>
-              <RichText text={text.registrationText} />
+              <RichText>{text.registrationText}</RichText>
             </p>
           </Part>
         </>

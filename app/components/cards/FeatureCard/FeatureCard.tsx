@@ -8,7 +8,7 @@ import styles from './FeatureCard.module.css'
 
 type FeatureCardProps = {
   icon: LucideIcon
-  /** Small label above the title */
+  /** Small label above the title, left out on cards that don't need it */
   eyebrow?: string
   title: string
   /** One or more paragraphs */
