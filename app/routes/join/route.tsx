@@ -1,7 +1,13 @@
+import { pageMeta } from '~/lib/seo'
 import type { Route } from './+types/route'
 
 export function meta(_: Route.MetaArgs) {
-  return [{ title: 'Uneix-te · AESS Estudiants' }]
+  return pageMeta({
+    title: 'Uneix-te',
+    description:
+      'Vols conèixer AESS, veure el taller o participar en projectes? Pots acostar-te al teu ritme o apuntar-te a una jornada de portes obertes.',
+    path: '/uneix-te',
+  })
 }
 
 export default function JoinPage() {

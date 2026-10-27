@@ -1,7 +1,13 @@
+import { pageMeta } from '~/lib/seo'
 import type { Route } from './+types/route'
 
 export function meta(_: Route.MetaArgs) {
-  return [{ title: 'Pàgina no trobada · AESS Estudiants' }]
+  return pageMeta({
+    title: 'Pàgina no trobada',
+    description: 'La pàgina que cerques no existeix o ha estat moguda.',
+    path: '/404',
+    noindex: true,
+  })
 }
 
 export default function NotFoundPage() {
