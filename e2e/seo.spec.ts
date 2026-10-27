@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs'
 import { expect, test } from '@playwright/test'
-import { absoluteUrl, INDEXED_PATHS } from '../app/lib/seo'
+import { AESSBOT_REGISTRATION_INDEXED, absoluteUrl, INDEXED_PATHS } from '../app/lib/seo'
 
 for (const path of INDEXED_PATHS) {
   test(`${path} has a title, description and canonical`, async ({ page }) => {
@@ -21,7 +21,20 @@ test('home describes the organisation with JSON-LD', async ({ page }) => {
   await page.goto('/')
   const blocks = await page.locator('script[type="application/ld+json"]').allTextContents()
   const types = blocks.map((block) => JSON.parse(block)['@type'])
-  expect(types).toEqual(['Organization', 'WebSite'])
+  expect(types).toEqual(['Organization', 'WebSite', 'FAQPage'])
+})
+
+test('the AESSBot registration page is only indexed while registration is open', async ({
+  page,
+}) => {
+  await page.goto('/aessbot/inscripcio')
+  if (AESSBOT_REGISTRATION_INDEXED) {
+    await expect(page.locator('link[rel="canonical"]')).toHaveCount(1)
+    return
+  }
+  await expect(page).toHaveURL(/\/aessbot$/)
+  const response = await page.request.get('/aessbot/inscripcio')
+  expect(await response.text()).toContain('<meta name="robots" content="noindex"')
 })
 
 test('sitemap lists every indexed page', async ({ request }) => {

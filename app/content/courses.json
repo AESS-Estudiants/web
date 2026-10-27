@@ -3,10 +3,26 @@
     "title": "Cursos",
     "description": "Aprèn amb els nostres cursos pràctics en robòtica, electrònica i programació. Des de iniciació fins a nivell avançat, tenim el curs perfecte per a tu.",
     "stats": [
-      { "icon": "graduation-cap", "value": "5", "label": "Cursos disponibles" },
-      { "icon": "wrench", "value": "100%", "label": "Pràctic" },
-      { "icon": "award", "value": "1 ECTS", "label": "Convalidable" },
-      { "icon": "users", "value": "Places", "label": "Limitades" }
+      {
+        "icon": "graduation-cap",
+        "value": "5",
+        "label": "Cursos disponibles"
+      },
+      {
+        "icon": "wrench",
+        "value": "100%",
+        "label": "Pràctic"
+      },
+      {
+        "icon": "award",
+        "value": "1 ECTS",
+        "label": "Convalidable"
+      },
+      {
+        "icon": "users",
+        "value": "Places",
+        "label": "Limitades"
+      }
     ],
     "poster": {
       "src": "home/courses-2026-poster.png",
@@ -15,13 +31,7 @@
   },
   "intro": {
     "title": "Cursos",
-    "subtitle": [
-      "A AESS Estudiants oferim una àmplia varietat de cursos i tallers pràctics per desenvolupar habilitats en robòtica, programació, disseny electrònic i molt més. Tots els cursos són gratuïts per als membres de l'associació. Oferim dues edicions anuals: ",
-      { "strong": "Gener-Febrer" },
-      " i ",
-      { "strong": "Juny-Juliol" },
-      "."
-    ],
+    "subtitle": "A AESS Estudiants oferim una àmplia varietat de cursos i tallers pràctics per desenvolupar habilitats en robòtica, programació, disseny electrònic i molt més. Tots els cursos són gratuïts per als membres de l'associació. Oferim dues edicions anuals: **Gener-Febrer** i **Juny-Juliol**.",
     "gallery": {
       "label": "Fotos dels cursos d'AESS",
       "images": [
@@ -60,18 +70,17 @@
     "materials": "Material Necessari",
     "noMaterials": "No cal portar material; el facilitarem durant el curs.",
     "registration": "Inscripció",
-    "registrationText": [
-      "Les inscripcions per a la propera edició s'obriran a ",
-      { "strong": "Gener 2026" },
-      ". Estigues atent a les nostres xarxes socials i als grups de WhatsApp per no perdre't cap novetat!"
-    ],
+    "registrationText": "Les inscripcions per a la propera edició s'obriran a **Gener 2026**. Estigues atent a les nostres xarxes socials i als grups de WhatsApp per no perdre't cap novetat!",
     "close": "Tancar"
   },
   "items": [
     {
       "slug": "arduino-introduccio",
       "name": "Arduino Introducció",
-      "logo": { "src": "courses/logos/arduino-intro.png", "alt": "Logotip d'Arduino" },
+      "logo": {
+        "src": "courses/logos/arduino-intro.png",
+        "alt": "Logotip d'Arduino"
+      },
       "level": "Inicial",
       "description": "Arrenca des de zero i construeix el teu primer projecte real amb sensors i actuadors. Comencem des de zero i consolidarem conceptes amb un mini projecte pràctic.",
       "content": "Sessions: Repàs de C i funcions bàsiques d'Arduino; port sèrie i UART; LCD, servos i SoftwareSerial; I2C, SPI i sensors; projecte final aplicat.",
@@ -104,7 +113,10 @@
     {
       "slug": "fusion-3d-design",
       "name": "Fusion 3D Design",
-      "logo": { "src": "courses/logos/fusion.png", "alt": "Logotip d'Autodesk Fusion" },
+      "logo": {
+        "src": "courses/logos/fusion.png",
+        "alt": "Logotip d'Autodesk Fusion"
+      },
       "level": "Inicial/Intermedi",
       "description": "Porta a la realitat totes les teves idees! Comencem des de zero i aprendràs a dissenyar peces i estructures des dels fonaments del 3D fins a aplicacions habituals al món laboral.",
       "content": "Sketches paramètrics, extrusions i lofts, assemblatges, juntes i restriccions, preparació per impressió 3D i exportació. Es recomana portar el programari Fusion instal·lat si és possible; porta un portàtil i ratolí per seguir els exercicis. Eines aplicables a Fusion, SolidWorks o Onshape.",
@@ -137,7 +149,10 @@
     {
       "slug": "programacio-python",
       "name": "Programació en Python",
-      "logo": { "src": "courses/logos/python.png", "alt": "Logotip de Python" },
+      "logo": {
+        "src": "courses/logos/python.png",
+        "alt": "Logotip de Python"
+      },
       "level": "Inicial",
       "description": "Aprèn Python des de zero amb enfocament pràctic en scripts útils, automatització i projectes ràpids per al dia a dia.",
       "content": "Sessions: Sintaxi i estructures de dades; funcions i mòduls; fitxers i I/O; llibreries i entorns virtuals; petit projecte pràctic final.",

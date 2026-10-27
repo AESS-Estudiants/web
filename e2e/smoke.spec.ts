@@ -20,7 +20,9 @@ for (const path of ROUTES) {
     test('marks the current page in the menu, also before hydration', async ({ page }) => {
       await page.goto(path)
       const current = page.getByRole('navigation', { name: 'Principal', includeHidden: true })
-      await expect(current.locator('[aria-current="page"]')).toHaveAttribute('href', path)
+      // A subpage such as /aessbot/inscripcio marks its section
+      const section = `/${path.split('/')[1]}`
+      await expect(current.locator('[aria-current="page"]')).toHaveAttribute('href', section)
     })
 
     test('has no accessibility violations', async ({ page }) => {
