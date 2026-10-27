@@ -15,11 +15,11 @@ pnpm install
 pnpm dev                         # http://localhost:5173
 ```
 
-| Command | What it does |
-|---|---|
-| `pnpm build` | Production build with one prerendered HTML page per route |
-| `pnpm test` | Unit and component tests |
-| `pnpm e2e` | End-to-end, accessibility and SEO tests |
+| Command       | What it does                                                                  |
+| ------------- | ----------------------------------------------------------------------------- |
+| `pnpm build`  | Production build with one prerendered HTML page per route                     |
+| `pnpm test`   | Unit and component tests                                                      |
+| `pnpm e2e`    | End-to-end, accessibility and SEO tests                                       |
 | `pnpm tokens` | Regenerates `app/styles/tokens.css` from the Figma export in `design-tokens/` |
 
 ## Structure
