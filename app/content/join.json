@@ -1,0 +1,57 @@
+{
+  "hero": {
+    "badge": "Comença a participar",
+    "title": "Uneix-te",
+    "description": "Vols conèixer AESS, veure el taller o participar en projectes? Pots acostar-te al teu ritme o apuntar-te a una jornada de portes obertes."
+  },
+  "options": {
+    "title": "Dues maneres de començar",
+    "subtitle": "No cal tenir coneixements previs ni venir amb una idea tancada. La millor manera d'entendre AESS és conèixer-nos, veure què fem i decidir com t'agradaria participar.",
+    "items": [
+      {
+        "icon": "message-circle",
+        "eyebrow": "Opció flexible",
+        "title": "Uneix-te al teu ritme",
+        "body": "Entra al grup de WhatsApp de noves incorporacions, presenta't i queda amb nosaltres quan hi hagi membres al taller.",
+        "steps": [
+          "Entra al grup de WhatsApp.",
+          "Presenta't breument: nom, estudis i què t'interessa.",
+          "Vine al taller quan et vagi bé.",
+          "Coneix els projectes i decideix si vols participar activament."
+        ],
+        "action": {
+          "label": "Entrar al grup",
+          "icon": "message-circle",
+          "href": "https://chat.whatsapp.com/H8rNzFeSTG9BGTsCGX8DL8?mode=gi_t"
+        }
+      },
+      {
+        "icon": "door-open",
+        "eyebrow": "Proper event",
+        "title": "Jornada de portes obertes",
+        "body": "Si prefereixes una primera visita guiada, apunta't a la propera jornada. T'ensenyarem el taller, els projectes actius i com pots formar part de l'associació.",
+        "details": [
+          { "icon": "calendar", "label": "19 de juny" },
+          { "icon": "clock", "label": "15:00 - 21:00" },
+          { "icon": "map-pin", "label": "Aula S203 · Edifici Omega · Campus Nord UPC" }
+        ],
+        "action": {
+          "label": "Apuntar-me a la jornada",
+          "icon": "user-plus",
+          "href": "https://docs.google.com/forms/d/e/1FAIpQLSdh6Tu6yz4BULLGlxu-_IVcHA_qemaGXZqTycv_EIxKydkguw/viewform"
+        }
+      }
+    ]
+  },
+  "visit": {
+    "eyebrow": "Què trobaràs?",
+    "title": "Una primera visita sense compromís",
+    "body": "Podràs veure l'espai, preguntar dubtes, descobrir projectes de robòtica i electrònica, i conèixer membres que ja participen a AESS.",
+    "highlights": [
+      { "icon": "wrench", "label": "Taller i eines" },
+      { "icon": "bot", "label": "Projectes actius" },
+      { "icon": "users", "label": "Comunitat d'estudiants" },
+      { "icon": "graduation-cap", "label": "Aprenentatge pràctic" }
+    ]
+  }
+}
