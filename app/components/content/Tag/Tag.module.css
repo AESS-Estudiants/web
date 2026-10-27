@@ -1,0 +1,12 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  padding: var(--space-6) var(--space-12);
+  border-radius: var(--radius-sm);
+  background: var(--accent-tint-12);
+  color: var(--text-accent);
+  font: var(--font-ui-eyebrow);
+  letter-spacing: var(--tracking-ui-eyebrow);
+  text-transform: uppercase;
+}

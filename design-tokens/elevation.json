@@ -1,0 +1,32 @@
+{
+  "logo": {
+    "$type": "shadow",
+    "$value": {
+      "color": "#00000080",
+      "offsetX": "0px",
+      "offsetY": "27px",
+      "blur": "47px",
+      "spread": "0px"
+    }
+  },
+  "floating": {
+    "$type": "shadow",
+    "$value": {
+      "color": "#00000059",
+      "offsetX": "0px",
+      "offsetY": "8px",
+      "blur": "24px",
+      "spread": "0px"
+    }
+  },
+  "floating-hover": {
+    "$type": "shadow",
+    "$value": {
+      "color": "#00000059",
+      "offsetX": "0px",
+      "offsetY": "10px",
+      "blur": "28px",
+      "spread": "0px"
+    }
+  }
+}

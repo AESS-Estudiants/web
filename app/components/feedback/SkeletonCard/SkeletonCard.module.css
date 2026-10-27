@@ -1,0 +1,79 @@
+.card {
+  display: flex;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  background: var(--bg-section-alt);
+}
+
+.feature {
+  flex-direction: column;
+  gap: var(--space-12);
+  padding: var(--space-24) 22px;
+}
+
+.faq {
+  align-items: center;
+  gap: var(--space-16);
+  padding: 18px;
+  background: var(--bg-surface);
+}
+
+/* Shapes inside a surface card need a lighter base to stay visible */
+.faq > span:not(.grow),
+.faq .grow span span {
+  background-color: var(--bg-surface-hover);
+}
+
+.grow {
+  flex: 1;
+}
+
+.event {
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.poster {
+  height: 200px;
+  border-radius: 0;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-14);
+  padding: var(--space-24) 22px;
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-12);
+  padding-top: var(--space-8);
+}
+
+@media (min-width: 1024px) {
+  .feature {
+    padding: var(--space-28);
+  }
+
+  .faq {
+    padding: 22px var(--space-24);
+  }
+
+  .event {
+    flex-direction: row;
+  }
+
+  .poster {
+    flex: none;
+    width: 260px;
+    height: auto;
+    min-height: 396px;
+  }
+
+  .body {
+    flex: 1;
+    gap: 18px;
+    padding: 36px var(--space-40);
+  }
+}

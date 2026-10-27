@@ -1,0 +1,27 @@
+.wrapper {
+  position: relative;
+}
+
+.select {
+  padding-right: var(--space-48);
+  appearance: none;
+}
+
+/* Placeholder option */
+.select:has(option[value=""]:checked) {
+  color: var(--text-muted);
+}
+
+.select option {
+  background: var(--bg-surface);
+  color: var(--text-primary);
+}
+
+.chevron {
+  position: absolute;
+  top: 50%;
+  right: var(--space-16);
+  color: var(--icon-secondary);
+  pointer-events: none;
+  transform: translateY(-50%);
+}

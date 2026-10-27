@@ -1,0 +1,28 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-6);
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-xs);
+  background: none;
+  color: var(--text-accent);
+  font: var(--font-ui-link);
+  letter-spacing: var(--tracking-ui-link);
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+@media (hover: hover) {
+  .link:hover {
+    color: var(--text-accent-hover);
+  }
+}
+
+.link:active {
+  color: var(--text-accent-strong);
+}
+
+.link:disabled {
+  cursor: not-allowed;
+  color: var(--text-disabled);
+}

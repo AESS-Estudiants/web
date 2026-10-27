@@ -1,109 +1,55 @@
-# AESS Estudiants - Web React
+# AESS Estudiants · Web
 
-Web moderna de AESS Estudiants migrada a React con un diseño completamente nuevo, estético y responsive.
+Website of AESS Estudiants, the robotics student association of ETSETB (UPC). Live at [aessestudiants.org](https://aessestudiants.org).
 
-## 🚀 Características
+## Stack
 
-- ⚛️ **React 18** con Vite
-- 🎨 **Diseño moderno y estético** con gradientes y animaciones
-- 📱 **Completamente responsive** para desktop y mobile
-- 🧭 **React Router** para navegación
-- 🎯 **Componentes reutilizables** (Hero, Carousel, FAQ, etc.)
-- ✉️ **Integración con EmailJS** para formularios
-- 🎭 **Animaciones suaves** y transiciones
+React 19 · React Router 8 (prerendered static pages) · Vite · TypeScript · CSS Modules · Biome · Vitest · Playwright · pnpm.
 
-## 📦 Instalación
+## Getting started
 
-1. Instala las dependencias:
 ```bash
-npm install
+nvm use                          # Node version from .nvmrc
+corepack enable                  # pnpm version pinned in package.json
+pnpm install
+pnpm dev                         # http://localhost:5173
 ```
 
-2. Inicia el servidor de desarrollo:
-```bash
-npm run dev
-```
+| Command       | What it does                                                                  |
+| ------------- | ----------------------------------------------------------------------------- |
+| `pnpm build`  | Production build with one prerendered HTML page per route                     |
+| `pnpm test`   | Unit and component tests                                                      |
+| `pnpm e2e`    | End-to-end, accessibility and SEO tests                                       |
+| `pnpm tokens` | Regenerates `app/styles/tokens.css` from the Figma export in `design-tokens/` |
 
-3. Construye para producción:
-```bash
-npm run build
-```
-
-4. Previsualiza la build de producción:
-```bash
-npm run preview
-```
-
-## 📁 Estructura del Proyecto
+## Structure
 
 ```
-test-web/
-├── public/
-│   ├── images/          # Imágenes y assets
-│   └── documents/       # Documentos PDF
-├── src/
-│   ├── components/      # Componentes reutilizables
-│   │   ├── Navbar.jsx
-│   │   ├── Footer.jsx
-│   │   ├── Hero.jsx
-│   │   ├── Carousel.jsx
-│   │   └── FAQ.jsx
-│   ├── pages/          # Páginas principales
-│   │   ├── Home.jsx
-│   │   ├── Cursos.jsx
-│   │   ├── Projectes.jsx
-│   │   ├── Contact.jsx
-│   │   ├── AESSBot.jsx
-│   │   └── AESSBotInscripcio.jsx
-│   ├── styles/         # Estilos globales
-│   ├── App.jsx         # Componente principal
-│   └── main.jsx        # Punto de entrada
-├── package.json
-└── vite.config.js
+app/
+  routes/       one folder per page (URL in Catalan, folder in English, mapped in routes.ts)
+  components/   design system, same families as Figma
+  features/     self-contained blocks with their own logic (e.g. sumo-game)
+  content/      all editable texts and data, validated by schemas.ts
+  styles/       tokens.css (generated), base.css, motion.css
+public/         PDFs, icons, robots.txt
 ```
 
-## 🎨 Diseño
+## Editing content
 
-El nuevo diseño incluye:
+All texts, courses, projects, FAQs, AESSBot editions and sponsors live in `app/content/` (JSON and Markdown, in Catalan). Edit the file and open a PR; the build fails if a required field is missing.
 
-- **Paleta de colores moderna**: Gradientes azul-púrpura con acentos
-- **Tipografía**: Inter para una lectura clara
-- **Efectos visuales**: Backdrop blur, sombras suaves, animaciones
-- **Responsive**: Adaptado para móviles, tablets y desktop
-- **Accesibilidad**: Navegación por teclado, ARIA labels, contraste adecuado
+## Design
 
-## 📄 Páginas
+Source of truth: the Figma file **AESS** (Desktop, Mobile, Components, Foundations). Components only use the semantic tokens from `tokens.css` (`var(--bg-page)`, `var(--space-16)`…); hardcoded colours fail the checks.
 
-- **Home** (`/`): Página principal con información sobre AESS
-- **Cursos** (`/cursos`): Listado de cursos disponibles
-- **Projectes** (`/projectes`): Proyectos activos y pasados
-- **Contact** (`/contact`): Formulario de contacto
-- **AESSBot** (`/aessbot`): Información sobre la competición
-- **AESSBot Inscripció** (`/aessbot-inscripcio`): Formulario de inscripción
+## Workflow
 
-## 🔧 Tecnologías
+- **Branches**: `main` is production, `dev` is the development trunk (with its own preview). Work in short-lived `type/short-reason` branches from `dev`, e.g. `feat/button-component`. Releases are a PR from `dev` to `main`.
+- **Commits**: one line, `type: reason` (`feat`, `fix`, `chore`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `revert`).
+- **PRs**: small, one topic each, title in the same format, short plain description.
+- **Hooks** (lefthook, installed with `pnpm install`): format with Biome, type check, and commit message and branch name checks.
+- **CI** runs lint, types, tests, build, e2e and Lighthouse on every PR. Vercel deploys a preview for each PR and for `dev`, and production from `main`.
 
-- React 18.2.0
-- React Router DOM 6.20.0
-- Vite 5.0.8
-- EmailJS 3.11.0
-- Font Awesome 6.6.0
+## License
 
-## 📝 Notas
-
-- Las imágenes deben estar en `public/images/`
-- Los documentos PDF deben estar en `public/documents/`
-- El formulario de contacto usa EmailJS (configurar en `Contact.jsx`)
-- El formulario de inscripción de AESSBot usa un iframe de Google Forms
-
-## 🌐 Despliegue
-
-Para desplegar en producción:
-
-1. Ejecuta `npm run build`
-2. Los archivos estarán en la carpeta `dist/`
-3. Sube el contenido de `dist/` a tu servidor
-
-## 📧 Contacto
-
-Para más información, visita [AESS Estudiants](https://aessestudiants.upc.edu)
+Code under the MIT License. Content, photos and logos of AESS Estudiants: all rights reserved.
