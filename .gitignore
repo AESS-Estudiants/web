@@ -38,3 +38,9 @@ lerna-debug.log*
 **/guides
 # React Router
 .react-router/
+
+# Tests
+/coverage/
+/playwright-report/
+/test-results/
+/.lighthouseci/
