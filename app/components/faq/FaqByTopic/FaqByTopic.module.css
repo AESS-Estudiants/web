@@ -85,7 +85,6 @@
 .group {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
   gap: var(--space-10);
   padding-bottom: var(--space-4);
 }
