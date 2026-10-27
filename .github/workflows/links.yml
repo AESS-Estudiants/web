@@ -1,0 +1,31 @@
+name: links
+
+on:
+  pull_request:
+    paths: ["app/content/**", "public/**"]
+  schedule:
+    - cron: "0 7 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lychee:
+    runs-on: ubuntu-latest
+    # Reports broken links without blocking: external sites can fail temporarily
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          # Instagram (429) and LinkedIn (999) refuse bots, which is not a broken link
+          args: --no-progress --accept 200..=299,429,999 --cache --max-cache-age 1d --root-dir "$(pwd)/build/client" "build/client/**/*.html"
+          fail: true

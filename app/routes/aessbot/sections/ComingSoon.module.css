@@ -1,0 +1,109 @@
+.soon {
+  padding-block: var(--space-48) var(--space-72);
+  background: var(--bg-page);
+}
+
+.inner {
+  composes: container from "../../../styles/layout.module.css";
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-48);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-20);
+  max-width: 600px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-10);
+  padding: var(--space-10) var(--space-16);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  color: var(--text-accent);
+  font: var(--font-ui-eyebrow);
+  letter-spacing: var(--tracking-ui-eyebrow);
+  text-transform: uppercase;
+}
+
+/* The AESSBot wordmark font, only on this page */
+.title {
+  margin-top: var(--space-4);
+  color: var(--text-primary);
+  font-family: "Squada One", var(--font-sans);
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  /* One line on mobile and one word per line on desktop, so the height doesn't change when the font arrives */
+  white-space: nowrap;
+}
+
+.year {
+  color: var(--text-accent);
+}
+
+.text {
+  color: var(--text-secondary);
+  font: var(--font-body-large);
+  letter-spacing: var(--tracking-body-large);
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  gap: var(--space-12);
+  padding-top: var(--space-8);
+}
+
+.note {
+  padding-top: var(--space-12);
+  color: var(--text-muted);
+  font: var(--font-ui-caption);
+  letter-spacing: var(--tracking-ui-caption);
+}
+
+.game {
+  width: 100%;
+  max-width: 600px;
+}
+
+@media (min-width: 1024px) {
+  .soon {
+    padding-block: var(--space-96);
+  }
+
+  .inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-56);
+  }
+
+  .content {
+    max-width: 480px;
+  }
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    font-size: 112px;
+  }
+
+  .actions {
+    flex-direction: row;
+    align-self: flex-start;
+  }
+
+  .game {
+    flex: 0 1 482px;
+  }
+}

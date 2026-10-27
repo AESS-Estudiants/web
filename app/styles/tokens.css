@@ -1,0 +1,187 @@
+/* Generated from design-tokens/ by `pnpm tokens`. Do not edit by hand. */
+
+:root {
+  /* Colour (semantic only, primitives are resolved) */
+  --bg-page: #0f1020; /* ink-950 */
+  --bg-section-alt: #161828; /* ink-900 */
+  --bg-surface: #1d2034; /* ink-850 */
+  --bg-surface-hover: #272a41; /* ink-800 */
+  --bg-surface-active: #373b56; /* ink-700 */
+  --border-default: #272a41; /* ink-800 */
+  --border-strong: #373b56; /* ink-700 */
+  --border-subtle: #e8ecec33; /* alpha-steel-100-20 */
+  --border-subtle-hover: #e8ecec66; /* alpha-steel-100-40 */
+  --border-muted: #8f9ca859; /* alpha-steel-500-35 */
+  --border-control: #8f9ca880; /* alpha-steel-500-50 */
+  --border-hover: #8f9ca8; /* steel-500 */
+  --border-active: #c1cbd0; /* steel-300 */
+  --border-inverse: #e8ecec; /* steel-100 */
+  --border-disabled: #5e6a78; /* steel-700 */
+  --text-primary: #e8ecec; /* steel-100 */
+  --text-secondary: #c1cbd0; /* steel-300 */
+  --text-muted: #8f9ca8; /* steel-500 */
+  --text-disabled: #5e6a78; /* steel-700 */
+  --text-accent: #a9bdd1; /* blue-300 */
+  --text-accent-hover: #c9d6e3; /* blue-200 */
+  --text-accent-strong: #5d7fa3; /* blue-600 */
+  --accent-default: #a9bdd1; /* blue-300 */
+  --accent-hover: #c9d6e3; /* blue-200 */
+  --accent-strong: #5d7fa3; /* blue-600 */
+  --accent-subtle: #3e5878; /* blue-700 */
+  --accent-tint-08: #a9bdd114; /* alpha-blue-300-08 */
+  --accent-tint-10: #a9bdd11a; /* alpha-blue-300-10 */
+  --accent-tint-12: #a9bdd11f; /* alpha-blue-300-12 */
+  --accent-border: #a9bdd166; /* alpha-blue-300-40 */
+  --accent-border-strong: #a9bdd199; /* alpha-blue-300-60 */
+  --action-primary-bg: #e8ecec; /* steel-100 */
+  --action-primary-bg-hover: #c9d6e3; /* blue-200 */
+  --action-primary-bg-pressed: #a9bdd1; /* blue-300 */
+  --action-primary-text: #0f1020; /* ink-950 */
+  --focus-ring: #a9bdd1; /* blue-300 */
+  --overlay-scrim: #0f1020b2; /* alpha-ink-950-70 */
+  --indicator-inactive: #e8ecec66; /* alpha-steel-100-40 */
+  --indicator-hover: #8f9ca8; /* steel-500 */
+  --indicator-pressed: #c1cbd0; /* steel-300 */
+  --indicator-current: #a9bdd1; /* blue-300 */
+  --control-checked: #e8ecec; /* steel-100 */
+  --control-checked-hover: #c1cbd0; /* steel-300 */
+  --control-disabled: #5e6a78; /* steel-700 */
+  --icon-primary: #e8ecec; /* steel-100 */
+  --icon-secondary: #c1cbd0; /* steel-300 */
+  --icon-muted: #8f9ca8; /* steel-500 */
+  --icon-disabled: #5e6a78; /* steel-700 */
+  --icon-accent: #a9bdd1; /* blue-300 */
+  --icon-inverse: #0f1020; /* ink-950 */
+
+  /* Font families */
+  --font-sans: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+
+  /* Typography: font shorthand plus tracking */
+  --font-display-hero: 900 6rem/1 var(--font-sans);
+  --tracking-display-hero: -0.03em;
+  --font-display-hero-mobile: 900 3.75rem/1 var(--font-sans);
+  --tracking-display-hero-mobile: -0.03em;
+  --font-heading-section: 800 3rem/1.1 var(--font-sans);
+  --tracking-heading-section: -0.02em;
+  --font-heading-section-mobile: 800 2rem/1.1 var(--font-sans);
+  --tracking-heading-section-mobile: -0.02em;
+  --font-heading-feature: 700 2.5rem/1.12 var(--font-sans);
+  --tracking-heading-feature: -0.02em;
+  --font-heading-feature-mobile: 700 1.75rem/1.12 var(--font-sans);
+  --tracking-heading-feature-mobile: -0.02em;
+  --font-heading-event: 700 2rem/1.1 var(--font-sans);
+  --tracking-heading-event: -0.02em;
+  --font-heading-event-mobile: 700 1.625rem/1.1 var(--font-sans);
+  --tracking-heading-event-mobile: -0.02em;
+  --font-heading-card: 700 1.375rem/1.12 var(--font-sans);
+  --tracking-heading-card: -0.02em;
+  --font-body-lead: 400 1.1875rem/1.7 var(--font-sans);
+  --tracking-body-lead: 0;
+  --font-body-large: 400 1.0625rem/1.7 var(--font-sans);
+  --tracking-body-large: 0;
+  --font-body-large-strong: 600 1.0625rem/1.7 var(--font-sans);
+  --tracking-body-large-strong: 0;
+  --font-body-default: 400 1rem/1.7 var(--font-sans);
+  --tracking-body-default: 0;
+  --font-body-default-strong: 600 1rem/1.7 var(--font-sans);
+  --tracking-body-default-strong: 0;
+  --font-body-default-link: 600 1rem/1.7 var(--font-sans);
+  --tracking-body-default-link: 0;
+  --font-body-small: 400 0.9375rem/1.7 var(--font-sans);
+  --tracking-body-small: 0;
+  --font-body-small-strong: 600 0.9375rem/1.7 var(--font-sans);
+  --tracking-body-small-strong: 0;
+  --font-body-xsmall: 400 0.875rem/1.7 var(--font-sans);
+  --tracking-body-xsmall: 0;
+  --font-ui-stat-value: 700 1.125rem/normal var(--font-sans);
+  --tracking-ui-stat-value: 0;
+  --font-ui-faq-question: 600 1.125rem/normal var(--font-sans);
+  --tracking-ui-faq-question: 0;
+  --font-ui-faq-question-mobile: 600 1rem/normal var(--font-sans);
+  --tracking-ui-faq-question-mobile: 0;
+  --font-ui-nav-link: 500 1.0625rem/normal var(--font-sans);
+  --tracking-ui-nav-link: 0;
+  --font-ui-nav-link-active: 600 1.0625rem/normal var(--font-sans);
+  --tracking-ui-nav-link-active: 0;
+  --font-ui-nav-mobile: 500 1.5rem/normal var(--font-sans);
+  --tracking-ui-nav-mobile: -0.01em;
+  --font-ui-nav-mobile-active: 600 1.5rem/normal var(--font-sans);
+  --tracking-ui-nav-mobile-active: -0.01em;
+  --font-ui-nav-submenu: 500 1.125rem/normal var(--font-sans);
+  --tracking-ui-nav-submenu: 0;
+  --font-ui-button-large: 600 1rem/normal var(--font-sans);
+  --tracking-ui-button-large: 0;
+  --font-ui-button-small: 600 0.875rem/normal var(--font-sans);
+  --tracking-ui-button-small: 0;
+  --font-ui-link: 600 0.9375rem/normal var(--font-sans);
+  --tracking-ui-link: 0;
+  --font-ui-badge: 600 0.875rem/normal var(--font-sans);
+  --tracking-ui-badge: 0;
+  --font-ui-badge-mobile: 600 0.8125rem/normal var(--font-sans);
+  --tracking-ui-badge-mobile: 0;
+  --font-ui-eyebrow: 700 0.75rem/normal var(--font-sans);
+  --tracking-ui-eyebrow: 0.08em;
+  --font-ui-caption: 400 0.8125rem/normal var(--font-sans);
+  --tracking-ui-caption: 0;
+  --font-ui-placeholder: 500 0.8125rem/normal var(--font-sans);
+  --tracking-ui-placeholder: 0;
+  --font-ui-form-label: 600 0.875rem/normal var(--font-sans);
+  --tracking-ui-form-label: 0;
+  --font-ui-input: 400 1rem/normal var(--font-sans);
+  --tracking-ui-input: 0;
+  --font-ui-helper: 400 0.8125rem/1.5 var(--font-sans);
+  --tracking-ui-helper: 0;
+  --font-ui-error: 600 0.8125rem/1.5 var(--font-sans);
+  --tracking-ui-error: 0;
+  --font-ui-keycap: 600 0.6875rem/1.5 var(--font-sans);
+  --tracking-ui-keycap: 0;
+  --font-ui-mono: null 25rem/14 var(--font-mono);
+  --tracking-ui-mono: normalem;
+  --font-logo-wordmark: 900 1.75rem/1 var(--font-sans);
+  --tracking-logo-wordmark: -0.02em;
+  --font-logo-wordmark-mobile: 900 1.375rem/1 var(--font-sans);
+  --tracking-logo-wordmark-mobile: -0.02em;
+  --font-logo-sub: 700 0.75rem/normal var(--font-sans);
+  --tracking-logo-sub: 0.14em;
+  --font-logo-sub-mobile: 700 0.625rem/normal var(--font-sans);
+  --tracking-logo-sub-mobile: 0.14em;
+
+  /* Spacing and radius */
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-14: 14px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-28: 28px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-56: 56px;
+  --space-64: 64px;
+  --space-72: 72px;
+  --space-80: 80px;
+  --space-96: 96px;
+  --space-200: 200px;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  --radius-focus-sm: 12px;
+  --radius-focus-md: 14px;
+  --radius-focus-lg: 20px;
+
+  /* Elevation */
+  --shadow-logo: 0px 27px 47px 0px #00000080;
+  --drop-shadow-logo: 0px 27px 23.5px #00000080;
+  --shadow-floating: 0px 8px 24px 0px #00000059;
+  --drop-shadow-floating: 0px 8px 12px #00000059;
+  --shadow-floating-hover: 0px 10px 28px 0px #00000059;
+  --drop-shadow-floating-hover: 0px 10px 14px #00000059;
+}

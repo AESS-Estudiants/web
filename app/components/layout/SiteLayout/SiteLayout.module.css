@@ -1,0 +1,21 @@
+.skip {
+  position: fixed;
+  top: var(--space-8);
+  left: var(--space-8);
+  z-index: 50;
+  padding: var(--space-10) var(--space-16);
+  border-radius: var(--radius-md);
+  background: var(--action-primary-bg);
+  color: var(--action-primary-text);
+  font: var(--font-ui-button-small);
+  transform: translateY(-200%);
+}
+
+.skip:focus-visible {
+  transform: none;
+}
+
+.main {
+  min-height: 60vh;
+  outline: none;
+}

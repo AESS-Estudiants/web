@@ -1,0 +1,197 @@
+{
+  "hero": {
+    "badge": { "icon": "calendar", "label": "Portes obertes · 19 de juny · 15:00 – 21:00" },
+    "title": ["AESS", "Estudiants"],
+    "description": "Som una associació d'estudiants on aprenem construint. Organitzem tallers, competicions i projectes perquè qualsevol persona amb curiositat per la tecnologia pugui començar, equivocar-se, aprendre i acabar fent coses que funcionen.",
+    "actions": [
+      { "label": "Fes-te membre", "to": "/uneix-te", "icon": "user-plus" },
+      { "label": "Què fem", "to": "#qui-som", "variant": "secondary" }
+    ]
+  },
+  "about": {
+    "title": "Qui som i què fem?",
+    "link": { "label": "Tots els projectes", "to": "/projectes" },
+    "intro": {
+      "icon": "box",
+      "eyebrow": "AESS Estudiants",
+      "title": "L'associació de robòtica de l'ETSETB",
+      "body": [
+        "Som una associació sense ànim de lucre de l'ETSETB (UPC), fundada el 1999, oberta a tota persona amb ganes de fer projectes i trobar gent amb qui compartir hores al taller."
+      ],
+      "link": { "label": "Vine a conèixer-nos", "to": "/uneix-te" }
+    },
+    "cards": [
+      {
+        "icon": "cpu",
+        "eyebrow": "Projectes",
+        "title": "Fem robots i invents diversos",
+        "body": [
+          "Barregem electrònica, mecànica, programació i moltes proves fins que allò que teníem al cap comença a funcionar.",
+          "No ens limitem a la robòtica. També hi caben projectes de software, automatització, disseny, eines internes o qualsevol idea que els membres tinguin ganes de tirar endavant."
+        ],
+        "to": "/projectes"
+      },
+      {
+        "icon": "users",
+        "eyebrow": "Qui hi participa",
+        "title": "Persones d'àmbits diversos",
+        "body": [
+          "La majoria venim de Telecos, la FIB o altres escoles de la UPC, però l’associació està oberta a qualsevol persona amb ganes de participar-hi: estudiants d’altres centres, gent de batxillerat o persones que ja han acabat la universitat."
+        ]
+      },
+      {
+        "icon": "wrench",
+        "eyebrow": "Taller propi",
+        "title": "Un lloc on provar coses sense por",
+        "body": [
+          "Tenim eines, material i gent que et pot donar un cop de mà. No cal venir sabent soldar, programar o dissenyar. I si ja en saps, t'ho passaràs bé!"
+        ]
+      },
+      {
+        "icon": "graduation-cap",
+        "eyebrow": "Cursos",
+        "title": "Formació",
+        "body": [
+          "Fem tallers i cursos impartits per membres de l'associació per a qualsevol persona que vulgui aprendre tecnologia d'una manera pràctica, tocant electrònica, programació, disseny 3D, robòtica i altres eines que després es poden aplicar a projectes reals."
+        ],
+        "to": "/cursos"
+      },
+      {
+        "icon": "bot",
+        "eyebrow": "AESSBot",
+        "title": "Organitzem competicions de robots",
+        "body": [
+          "AESSBot és la nostra competició de robots minisumo on els equips dissenyen, construeixen i programen el seu propi robot per enfrontar-se dins d'un ring."
+        ],
+        "to": "/aessbot"
+      },
+      {
+        "icon": "coffee",
+        "eyebrow": "Vida associativa",
+        "title": "No tot és soldar, compilar i apretar cargols",
+        "body": [
+          "Els projectes són l’excusa perfecta per conèixer gent, compartir espai i acabar formant part d’una comunitat que es mou més enllà del taller."
+        ],
+        "to": "/uneix-te"
+      }
+    ],
+    "gallery": {
+      "label": "Fotos de les activitats d'AESS",
+      "images": [
+        { "src": "home/qui-som-8.jpg", "alt": "Dos membres treballant amb la serra al taller" },
+        { "src": "home/qui-som-1.jpeg", "alt": "Estand d'AESS amb robots i cartells de l'AESSBot" },
+        { "src": "home/qui-som-3.jpeg", "alt": "Una membre fa una classe a un grup d'estudiants" },
+        {
+          "src": "home/qui-som-4.jpg",
+          "alt": "Membres d'AESS soldant en una activitat a l'aire lliure"
+        },
+        {
+          "src": "home/qui-som-5.jpeg",
+          "alt": "Un equip treballant amb ordinadors en una sessió de vespre"
+        },
+        { "src": "home/qui-som-6.jpg", "alt": "Dos robots minisumo al ring de l'AESSBot" },
+        {
+          "src": "home/qui-som-7.jpeg",
+          "alt": "Estudiants soldant components electrònics en un taller"
+        },
+        { "src": "home/qui-som-9.jpeg", "alt": "Un combat de robots de l'AESSBot sota les carpes" },
+        { "src": "home/qui-som-2.jpeg", "alt": "Un membre programa un braç robòtic al taller" }
+      ]
+    }
+  },
+  "events": {
+    "title": "Propers esdeveniments",
+    "items": [
+      {
+        "tag": "Competició anual",
+        "title": "AESSBot 2026",
+        "body": "La competició de robòtica més esperada de la UPC. Construeix el teu propi robot minisumo i competeix contra altres equips en una batalla d'enginyeria i estratègia.",
+        "poster": { "src": "home/aessbot-2026-poster.jpg", "alt": "Cartell de l'AESSBot 2026" },
+        "stats": [
+          { "icon": "trophy", "value": "Més de 1.000€", "label": "En premis" },
+          { "icon": "award", "value": "1 ECTS", "label": "Per arribar a la final" },
+          { "icon": "calendar", "value": "Feb 18 - Mai 6", "label": "Durada de la competició" },
+          { "icon": "bot", "value": "16 robots", "label": "3 persones per equip" }
+        ],
+        "actions": [
+          { "label": "Més informació", "to": "/aessbot", "arrow": true },
+          { "label": "Inscriu-te!", "to": "/aessbot", "variant": "secondary" }
+        ]
+      },
+      {
+        "tag": "Cursos semestrals",
+        "title": "Cursos",
+        "body": "Desenvolupa habilitats pràctiques en robòtica i electrònica amb els nostres cursos intensius. Tots els cursos es fan en períodes no lectius (gener-febrer i juny-juliol).",
+        "poster": { "src": "home/courses-2026-poster.jpg", "alt": "Cartell dels cursos d'AESS" },
+        "stats": [
+          { "icon": "award", "value": "1 ECTS", "label": "Per curs aprovat" },
+          { "icon": "users", "value": "Places limitades", "label": "Reserva la teva aviat" },
+          { "icon": "calendar", "value": "Properament", "label": "Properament" }
+        ],
+        "actions": [
+          { "label": "Més informació", "to": "/cursos", "arrow": true },
+          {
+            "label": "Inscriu-te!",
+            "href": "https://docs.google.com/forms/d/e/1FAIpQLSfPPmNP2heuAxZne8FewLPJgNdluvf332XoYgQdJmhzzoZDZA/viewform?usp=header",
+            "variant": "secondary"
+          }
+        ]
+      }
+    ]
+  },
+  "faq": {
+    "title": "Tens dubtes?",
+    "subtitle": "Fes clic a cada pregunta per veure'n la resposta",
+    "items": [
+      {
+        "icon": "users",
+        "question": "Per què ser membre?",
+        "answer": "Ser membre d'AESS t'ofereix múltiples beneficis: aplicar coneixements reals en projectes pràctics, unir-te amb persones amb els mateixos interessos, desenvolupar soft skills com parlar en públic i gestionar projectes, accés al nostre taller amb eines professionals, participar en competicions com l'AESSBot, cursos amb crèdits ECTS convalidables, i integrar-te en una comunitat multidisciplinar."
+      },
+      {
+        "icon": "user-plus",
+        "question": "Com formar part d'AESS?",
+        "answer": "Segueix els passos de la secció de dalt per unir-te a la nostra associació."
+      },
+      {
+        "icon": "graduation-cap",
+        "question": "Cal tenir coneixements previs?",
+        "answer": "No! La gràcia és poder aprendre tots junts. No cal tenir coneixements previs per començar a formar part de la nostra comunitat."
+      },
+      {
+        "icon": "clock",
+        "question": "Quan estem al despatx?",
+        "answer": "No tenim un horari fixe ja que depenem dels horaris dels membres. Per aquest motiu el millor és entrar al grup de WhatsApp per poder saber quan pots venir. Tot i així, els divendres acostumem a estar."
+      },
+      {
+        "icon": "bell",
+        "question": "Com puc estar al dia de les activitats?",
+        "answer": "Via el grup de WhatsApp per participar i Instagram per veure què fem."
+      },
+      {
+        "icon": "map-pin",
+        "question": "On està ubicat el taller?",
+        "answer": "El nostre taller està ubicat a l'aula S203 de l'edifici Omega al campus Nord de la UPC."
+      },
+      {
+        "icon": "euro",
+        "question": "Hi ha algun cost per ser membre?",
+        "answer": "Entrar a l'associació i conèixer-nos és completament gratuït! Hi ha una quota anual de 20€ però només és per als membres actius que ja han vingut a l'associació uns quants cops. Així que primer vine, coneix-nos i quan decideixis participar activament, podràs pagar la quota. Els diners serveixen perquè l'associació pugui comprar material i eines a les quals podràs accedir un cop siguis membre."
+      },
+      {
+        "icon": "user-check",
+        "question": "Puc participar si no estudio a l'ETSETB?",
+        "answer": "Sí! Som una comunitat multidisciplinar oberta a estudiants de totes les escoles de la UPC (ETSETB, FIB, ETSEIB, etc.). La diversitat de perfils enriqueix els nostres projectes."
+      }
+    ],
+    "cta": {
+      "text": "No trobes el que busques?",
+      "action": {
+        "label": "Contacta'ns",
+        "to": "/contacte",
+        "icon": "mail",
+        "variant": "primary"
+      }
+    }
+  }
+}

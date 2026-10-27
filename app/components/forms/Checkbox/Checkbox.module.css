@@ -1,0 +1,46 @@
+.option {
+  composes: option from "../choice.module.css";
+}
+
+.box {
+  composes: box from "../choice.module.css";
+}
+
+.label {
+  min-width: 0;
+}
+
+.input {
+  composes: input from "../choice.module.css";
+  border-radius: 6px;
+}
+
+.input:checked {
+  background: var(--control-checked);
+}
+
+@media (hover: hover) {
+  .option:hover .input:checked:not(:disabled) {
+    background: var(--control-checked-hover);
+  }
+}
+
+.input:checked:disabled {
+  border-color: var(--border-default);
+  background: var(--bg-surface-hover);
+}
+
+.mark {
+  position: relative;
+  color: var(--icon-inverse);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.input:checked + .mark {
+  opacity: 1;
+}
+
+.input:disabled + .mark {
+  color: var(--icon-disabled);
+}

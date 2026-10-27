@@ -1,0 +1,12 @@
+/* In Figma the introduction is in the lead style and the secondary colour */
+.header p {
+  max-width: 760px;
+  color: var(--text-secondary);
+}
+
+@media (min-width: 1024px) {
+  .header p {
+    font: var(--font-body-lead);
+    letter-spacing: var(--tracking-body-lead);
+  }
+}

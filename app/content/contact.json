@@ -1,0 +1,95 @@
+{
+  "hero": {
+    "title": "Contacte",
+    "description": "Tens alguna pregunta, suggeriment o vols col·laborar amb nosaltres? Omple el formulari i et respondrem el més aviat possible."
+  },
+  "location": {
+    "title": "Com arribar",
+    "subtitle": "Ens trobaràs al Campus Nord de la UPC, a l'edifici Omega",
+    "cards": [
+      {
+        "icon": "map-pin",
+        "title": "Adreça",
+        "href": "https://www.google.com/maps/search/?api=1&query=Edifici+Omega%2C+Campus+Nord+UPC%2C+Carrer+de+Jordi+Girona+1-3%2C+08034+Barcelona",
+        "lines": [
+          "Edifici Omega, Aula S203",
+          "Campus Nord UPC",
+          "Carrer de Jordi Girona, 1-3",
+          "08034 Barcelona"
+        ]
+      },
+      {
+        "icon": "train-front",
+        "title": "Transports Públics",
+        "lines": [
+          { "label": "Metro:", "text": "L3 (Palau Reial)" },
+          { "label": "Bus:", "text": "7, 33, 54, 63, 67, 68, 75" }
+        ]
+      },
+      {
+        "icon": "clock",
+        "title": "Horaris",
+        "lines": [
+          "L'horari varia segons disponibilitat dels membres.",
+          "Consulta el grup de WhatsApp per saber quan estem al taller."
+        ]
+      }
+    ],
+    "map": {
+      "title": "Ubicació Campus Nord UPC",
+      "label": "Mostra el mapa",
+      "src": "https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1sEdifici+Omega,+Campus+Nord+UPC,+Carrer+de+Jordi+Girona+1-3,+08034+Barcelona!6i17!3m1!1sca!5m1!1sca"
+    }
+  },
+  "form": {
+    "title": "Formulari de contacte",
+    "personal": "Dades Personals",
+    "message": "Informació del Missatge",
+    "fields": {
+      "from_name": {
+        "label": "Nom*",
+        "placeholder": "Escriu el teu nom",
+        "required": "Escriu el teu nom."
+      },
+      "reply_to": {
+        "label": "Email*",
+        "placeholder": "Escriu el teu correu",
+        "required": "Escriu el teu correu.",
+        "invalid": "Introdueix una adreça electrònica vàlida."
+      },
+      "phone": {
+        "label": "Telèfon",
+        "placeholder": "e.g., +34 600 123 456",
+        "invalid": "Introdueix un número de telèfon vàlid."
+      },
+      "user-type": {
+        "label": "Tema*",
+        "placeholder": "Selecciona un tema",
+        "required": "Selecciona un tema.",
+        "options": ["AESS Estudiants", "AESSBot", "Cursos", "Altres"]
+      },
+      "subject": {
+        "label": "Assumpte*",
+        "placeholder": "Escriu l'assumpte del missatge",
+        "required": "Escriu l'assumpte del missatge."
+      },
+      "message": {
+        "label": "El teu missatge*",
+        "placeholder": "Escriu el teu missatge aquí...",
+        "required": "Escriu el teu missatge."
+      }
+    },
+    "privacy": {
+      "before": "Accepto",
+      "link": {
+        "label": "la política de privacitat",
+        "href": "/documents/Política_Privacitat.pdf"
+      },
+      "required": "Has d'acceptar la política de privacitat."
+    },
+    "submit": "Enviar missatge",
+    "sending": "Enviant...",
+    "success": "Missatge enviat correctament! Et respondrem el més aviat possible.",
+    "error": "Error en l'enviament. Si us plau, torna-ho a intentar més tard."
+  }
+}

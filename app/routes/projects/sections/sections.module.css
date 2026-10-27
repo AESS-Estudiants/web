@@ -1,0 +1,33 @@
+/* Shared by the sections of the projects page */
+.header {
+  max-width: 800px;
+}
+
+.grid,
+.pair {
+  display: grid;
+  gap: var(--space-12);
+}
+
+.state {
+  color: var(--text-primary);
+  font: var(--font-body-default-strong);
+  letter-spacing: var(--tracking-body-default-strong);
+}
+
+@media (min-width: 768px) {
+  .pair {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid,
+  .pair {
+    gap: var(--space-16);
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

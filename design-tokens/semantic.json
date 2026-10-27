@@ -1,0 +1,272 @@
+{
+  "bg": {
+    "page": {
+      "$type": "color",
+      "$value": "{ink.950}",
+      "$description": "Page background"
+    },
+    "section-alt": {
+      "$type": "color",
+      "$value": "{ink.900}",
+      "$description": "Alternate section band"
+    },
+    "surface": {
+      "$type": "color",
+      "$value": "{ink.850}",
+      "$description": "Cards, panels, inputs"
+    },
+    "surface-hover": {
+      "$type": "color",
+      "$value": "{ink.800}",
+      "$description": "Hover/pressed surface, disabled button, image placeholder"
+    },
+    "surface-active": {
+      "$type": "color",
+      "$value": "{ink.700}",
+      "$description": "Current tab / pressed chip"
+    }
+  },
+  "border": {
+    "default": {
+      "$type": "color",
+      "$value": "{ink.800}",
+      "$description": "Default 1px dividers and card borders"
+    },
+    "strong": {
+      "$type": "color",
+      "$value": "{ink.700}",
+      "$description": "Icon buttons, inputs, hover borders"
+    },
+    "subtle": {
+      "$type": "color",
+      "$value": "{alpha.steel-100-20}",
+      "$description": "Glass borders on photos"
+    },
+    "subtle-hover": {
+      "$type": "color",
+      "$value": "{alpha.steel-100-40}",
+      "$description": "Carousel arrow hover"
+    },
+    "muted": {
+      "$type": "color",
+      "$value": "{alpha.steel-500-35}",
+      "$description": "Image frames"
+    },
+    "control": {
+      "$type": "color",
+      "$value": "{alpha.steel-500-50}",
+      "$description": "Secondary/ghost button border"
+    },
+    "hover": {
+      "$type": "color",
+      "$value": "{steel.500}",
+      "$description": "Card hover border"
+    },
+    "active": {
+      "$type": "color",
+      "$value": "{steel.300}",
+      "$description": "Pressed border"
+    },
+    "inverse": {
+      "$type": "color",
+      "$value": "{steel.100}",
+      "$description": "Checked/focused control border"
+    },
+    "disabled": {
+      "$type": "color",
+      "$value": "{steel.700}",
+      "$description": "Disabled control border"
+    }
+  },
+  "text": {
+    "primary": {
+      "$type": "color",
+      "$value": "{steel.100}",
+      "$description": "Headings and body"
+    },
+    "secondary": {
+      "$type": "color",
+      "$value": "{steel.300}",
+      "$description": "Secondary copy"
+    },
+    "muted": {
+      "$type": "color",
+      "$value": "{steel.500}",
+      "$description": "Captions, meta"
+    },
+    "disabled": {
+      "$type": "color",
+      "$value": "{steel.700}",
+      "$description": "Disabled text"
+    },
+    "accent": {
+      "$type": "color",
+      "$value": "{blue.300}",
+      "$description": "Links, eyebrows"
+    },
+    "accent-hover": {
+      "$type": "color",
+      "$value": "{blue.200}",
+      "$description": "Link hover"
+    },
+    "accent-strong": {
+      "$type": "color",
+      "$value": "{blue.600}",
+      "$description": "Link pressed"
+    }
+  },
+  "accent": {
+    "default": {
+      "$type": "color",
+      "$value": "{blue.300}",
+      "$description": "Accent colour"
+    },
+    "hover": {
+      "$type": "color",
+      "$value": "{blue.200}",
+      "$description": "Accent hover"
+    },
+    "strong": {
+      "$type": "color",
+      "$value": "{blue.600}",
+      "$description": "Accent pressed"
+    },
+    "subtle": {
+      "$type": "color",
+      "$value": "{blue.700}",
+      "$description": "Subtle accent"
+    },
+    "tint-08": {
+      "$type": "color",
+      "$value": "{alpha.blue-300-08}",
+      "$description": "Highlighted table row"
+    },
+    "tint-10": {
+      "$type": "color",
+      "$value": "{alpha.blue-300-10}",
+      "$description": "Badge, success banner"
+    },
+    "tint-12": {
+      "$type": "color",
+      "$value": "{alpha.blue-300-12}",
+      "$description": "Icon tiles"
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{alpha.blue-300-40}",
+      "$description": "Accent banner border"
+    },
+    "border-strong": {
+      "$type": "color",
+      "$value": "{alpha.blue-300-60}",
+      "$description": "Open FAQ border"
+    }
+  },
+  "action": {
+    "primary-bg": {
+      "$type": "color",
+      "$value": "{steel.100}",
+      "$description": "Primary button fill"
+    },
+    "primary-bg-hover": {
+      "$type": "color",
+      "$value": "{blue.200}",
+      "$description": "Primary button hover"
+    },
+    "primary-bg-pressed": {
+      "$type": "color",
+      "$value": "{blue.300}",
+      "$description": "Primary button pressed"
+    },
+    "primary-text": {
+      "$type": "color",
+      "$value": "{ink.950}",
+      "$description": "Text on primary button"
+    }
+  },
+  "focus": {
+    "ring": {
+      "$type": "color",
+      "$value": "{blue.300}",
+      "$description": "2px focus ring layer, offset 2px"
+    }
+  },
+  "overlay": {
+    "scrim": {
+      "$type": "color",
+      "$value": "{alpha.ink-950-70}",
+      "$description": "Scrim / glass on photos"
+    }
+  },
+  "indicator": {
+    "inactive": {
+      "$type": "color",
+      "$value": "{alpha.steel-100-40}",
+      "$description": "Carousel dot inactive"
+    },
+    "hover": {
+      "$type": "color",
+      "$value": "{steel.500}",
+      "$description": "Carousel dot hover"
+    },
+    "pressed": {
+      "$type": "color",
+      "$value": "{steel.300}",
+      "$description": "Carousel dot pressed"
+    },
+    "current": {
+      "$type": "color",
+      "$value": "{blue.300}",
+      "$description": "Carousel dot current"
+    }
+  },
+  "control": {
+    "checked": {
+      "$type": "color",
+      "$value": "{steel.100}",
+      "$description": "Checkbox/radio checked fill"
+    },
+    "checked-hover": {
+      "$type": "color",
+      "$value": "{steel.300}",
+      "$description": "Checkbox/radio checked hover"
+    },
+    "disabled": {
+      "$type": "color",
+      "$value": "{steel.700}",
+      "$description": "Disabled control fill"
+    }
+  },
+  "icon": {
+    "primary": {
+      "$type": "color",
+      "$value": "{steel.100}",
+      "$description": "Icons on dark"
+    },
+    "secondary": {
+      "$type": "color",
+      "$value": "{steel.300}",
+      "$description": "Secondary icons"
+    },
+    "muted": {
+      "$type": "color",
+      "$value": "{steel.500}",
+      "$description": "Muted icons"
+    },
+    "disabled": {
+      "$type": "color",
+      "$value": "{steel.700}",
+      "$description": "Disabled icons"
+    },
+    "accent": {
+      "$type": "color",
+      "$value": "{blue.300}",
+      "$description": "Accent icons"
+    },
+    "inverse": {
+      "$type": "color",
+      "$value": "{ink.950}",
+      "$description": "Icons on light"
+    }
+  }
+}

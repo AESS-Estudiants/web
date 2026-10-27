@@ -1,0 +1,478 @@
+{
+  "status": "coming-soon",
+  "comingSoon": {
+    "badge": "Propera edició",
+    "title": ["AESSBot", "2027"],
+    "description": "Estem preparant la nova edició de la competició de robots minisumo de l'ETSETB. En breus tindreu tota la informació: dates, normativa i inscripcions. Mentrestant, escalfa motors: treu el robot de la CPU del ring.",
+    "actions": [
+      {
+        "label": "Segueix-nos a Instagram",
+        "href": "https://www.instagram.com/aessestudiants",
+        "icon": "instagram"
+      },
+      {
+        "label": "Tornar a l'inici",
+        "to": "/",
+        "variant": "secondary"
+      }
+    ],
+    "note": "Edició 2026 · 16 robots · Gran final a la Plaça Telecos"
+  },
+  "editions": {
+    "title": "Edicions anteriors",
+    "subtitle": "Mentre preparem l'AESSBot 2027, torna a viure les edicions anteriors.",
+    "items": [
+      {
+        "year": 2026
+      },
+      {
+        "year": 2025,
+        "video": {
+          "youtubeId": "tPKSWS5g-3Y",
+          "title": "Vídeo resum de l'AESSBot 2025",
+          "caption": "Vídeo resum de l'AESSBot 2025"
+        }
+      }
+    ]
+  },
+  "edition": {
+    "event": {
+      "name": "AESSBot 2026",
+      "description": "La competició de robòtica més esperada de la UPC. Apunta el teu equip avui perquè les places són limitades i es tanquen aviat.",
+      "startDate": "2026-05-06T11:00:00+02:00",
+      "endDate": "2026-05-06T15:00:00+02:00",
+      "location": {
+        "name": "Plaça Telecomunicacions",
+        "address": "Campus Nord UPC, Barcelona"
+      }
+    },
+    "hero": {
+      "title": ["AESSBot", "2026"],
+      "description": "La competició de robòtica més esperada de la UPC. Apunta el teu equip avui perquè les places són limitades i es tanquen aviat.",
+      "poster": {
+        "src": "home/aessbot-2026-poster.jpg",
+        "alt": "Cartell de l'AESSBot 2026, la competició de robots minisumo de l'ETSETB"
+      },
+      "stats": [
+        {
+          "icon": "trophy",
+          "value": "+1000€",
+          "label": "En premis"
+        },
+        {
+          "icon": "users",
+          "value": "16",
+          "label": "Equips"
+        },
+        {
+          "icon": "user-plus",
+          "value": "3",
+          "label": "Participants per equip"
+        },
+        {
+          "icon": "graduation-cap",
+          "value": "1",
+          "label": "ECTS"
+        }
+      ]
+    },
+    "registration": {
+      "action": {
+        "label": "Inscriu-te",
+        "to": "/aessbot/inscripcio",
+        "icon": "clipboard-check"
+      },
+      "deadline": "2026-02-11T23:59:59+01:00",
+      "countdownLabel": "Les inscripcions tanquen en:",
+      "closedLabel": "Inscripcions tancades"
+    },
+    "competition": {
+      "title": "La competició",
+      "subtitle": "Entra al ring i demostra qui és el rei del Minisumo! El teu repte? Dissenyar el robot definitiu que aconsegueixi fer fora del ring a la resta d'oponents i proclamar-te vencedor. Preparat per portar les teves habilitats a un altre nivell? La competició t'espera, i només els millors dominaran el ring!",
+      "gallery": {
+        "label": "Fotos de l'AESSBot 2025",
+        "images": [
+          {
+            "src": "aessbot/aessbot-2025-group.jpg",
+            "alt": "Foto de grup dels participants i l'organització de l'AESSBot 2025 a les escales del Campus Nord, al costat del cartell de la competició"
+          },
+          {
+            "src": "aessbot/aessbot-2025-demo.jpg",
+            "alt": "Un membre de l'organització ensenya un robot minisumo a un grup de participants de l'AESSBot 2025"
+          }
+        ]
+      }
+    },
+    "info": {
+      "title": "Informació",
+      "subtitle": "Tot el que necessites saber sobre costos, materials i requisits per participar a l'AESSBot.",
+      "cards": [
+        {
+          "icon": "euro",
+          "title": "Inscripció gratuïta",
+          "body": "La inscripció a la competició és totalment gratuïta. Només cal abonar una fiança de 50€ retornable un cop hagueu participat a la final."
+        },
+        {
+          "icon": "wrench",
+          "title": "Ajut econòmic",
+          "body": "Es reemborsarà fins a 100€ en material per equip. El vostre robot pot costar el que vulgueu, però només us reemborsarem fins a 100€ si participeu a la final i presenteu les factures originals (a nom d'AESS Estudiants)."
+        },
+        {
+          "icon": "trophy",
+          "title": "+1000€ en premis",
+          "body": "Repartirem més de 1000€ en premis entre els millors equips classificats. A què esperes per guanyar?"
+        },
+        {
+          "icon": "award",
+          "title": "1 crèdit ECTS",
+          "body": "Es pot obtenir 1 crèdit ECTS convalidable. Consulta les condicions a la [normativa](#normativa)."
+        },
+        {
+          "icon": "graduation-cap",
+          "title": "Obert a tots els estudiants",
+          "body": "La competició està oberta a tots els estudiants de qualsevol universitat."
+        },
+        {
+          "icon": "clipboard-check",
+          "title": "Més informació",
+          "body": "Per a més detalls sobre el reglament, límits tècnics i condicions, consulta la [normativa oficial](/documents/Reglament.pdf)."
+        }
+      ]
+    },
+    "schedule": {
+      "title": "Calendari",
+      "subtitle": "Consulta les dates clau de la competició.",
+      "columns": {
+        "date": "Data",
+        "time": "Hora",
+        "event": "Event",
+        "location": "Ubicació"
+      },
+      "items": [
+        {
+          "date": "18 Feb 2026",
+          "time": "12:00 - 14:00",
+          "icon": "info",
+          "title": "Introducció",
+          "description": "Benvinguda, explicació de la competició i planificació del projecte.",
+          "location": "Campus Nord, Biblioteca Gabriel Ferreter"
+        },
+        {
+          "date": "25 Feb 2026",
+          "time": "12:00 - 14:00",
+          "icon": "wrench",
+          "title": "Actuadors",
+          "description": "Control de motors (DC, servos, steppers).",
+          "location": "Campus Nord, C4S102C i C4S102B"
+        },
+        {
+          "date": "4 Mar 2026",
+          "time": "12:00 - 14:00",
+          "icon": "box",
+          "title": "Disseny 3D",
+          "description": "Disseny 3D amb OnShape.",
+          "location": "Campus Nord, C4S102C i C4S102B"
+        },
+        {
+          "date": "18 Mar 2026",
+          "time": "12:00 - 14:00",
+          "icon": "signal",
+          "title": "Sensors",
+          "description": "Connexió i ús de sensors: pulsadors, ultrasó, sharp i sensors de llum del terra.",
+          "location": "Campus Nord, C4S102C i C4S102B"
+        },
+        {
+          "date": "25 Mar 2026",
+          "time": "12:00 - 14:00",
+          "icon": "cpu",
+          "title": "PCB",
+          "description": "Disseny de plaques i tècniques de soldadura en placa de topos.",
+          "location": "Campus Nord, C4S102C i C4S102B"
+        },
+        {
+          "date": "22 Apr 2026",
+          "time": "12:00 - 14:00",
+          "icon": "list",
+          "title": "Seguiment",
+          "description": "Acompanyament i seguiment pels equips.",
+          "location": "Campus Nord, C4S102C i C4S102B"
+        },
+        {
+          "date": "6 Mai 2026",
+          "time": "11:00 - 15:00",
+          "icon": "trophy",
+          "title": "Final AESSBot 2026",
+          "description": "Gran final de la competició amb tots els participants",
+          "location": "Campus Nord, Plaça Telecomunicacions",
+          "highlight": true
+        }
+      ]
+    },
+    "rules": {
+      "title": "Normativa",
+      "subtitle": "Consulta i descarrega el reglament oficial de la competició. Assegura't de llegir-lo atentament abans de participar a la competició.",
+      "action": {
+        "label": "Descarregar Reglament",
+        "href": "/documents/Reglament.pdf",
+        "icon": "clipboard-check"
+      },
+      "note": "* Subjecte a canvis"
+    },
+    "sponsors": {
+      "title": "Patrocinadors i Col·laboradors",
+      "subtitle": "Gràcies al suport d'aquestes empreses i entitats per fer possible l'AESSBot 2026",
+      "groups": [
+        {
+          "title": "Patrocinadors Oficials",
+          "size": "large",
+          "logos": [
+            {
+              "src": "/images/logos/vento-build.svg",
+              "alt": "Vento.build",
+              "monochrome": true
+            }
+          ]
+        },
+        {
+          "title": "Col·laboradors",
+          "size": "small",
+          "logos": [
+            {
+              "src": "/images/logos/logo-telecos.svg",
+              "alt": "ETSETB",
+              "monochrome": true
+            },
+            {
+              "src": "/images/logos/logo-upc.svg",
+              "alt": "UPC"
+            }
+          ]
+        }
+      ],
+      "cta": {
+        "text": "Vols ser patrocinador o col·laborador de l'AESSBot 2026?",
+        "action": {
+          "label": "Contacta'ns",
+          "to": "/contacte",
+          "variant": "secondary"
+        }
+      }
+    },
+    "faq": {
+      "title": "Tens dubtes sobre l'AESSBot 2026?",
+      "subtitle": "Fes clic a cada pregunta per veure'n la resposta",
+      "topics": [
+        {
+          "id": "competicio",
+          "title": "La competició",
+          "items": [
+            {
+              "icon": "bot",
+              "question": "Quin és el repte?",
+              "answer": "El teu repte serà dissenyar i construir un robot autònom capaç d'empènyer el robot oponent fora del ring de combat (Dohyo), seguint la normativa oficial de la competició."
+            },
+            {
+              "icon": "calendar",
+              "question": "Quan és la competició?",
+              "answer": "La gran final de l'AESSBot 2026 tindrà lloc el 6 de maig de 2026 al Campus Nord de la UPC."
+            },
+            {
+              "icon": "trophy",
+              "question": "Com funciona la competició?",
+              "answer": "La competició té tres fases: (1) Fase de Lliga: cada equip disputa 8 combats contra oponents assignats aleatòriament. S'atorguen 3 punts per victòria. Els 7 millors equips es classifiquen directament per a la Fase 3. (2) Fase de Repesca (Battle Royale): els equips no classificats participen en una batalla en un ring més gran. El guanyador obté la 8a plaça. (3) Fase d'Eliminatòries: els 8 equips classificats disputen quarts de final, semifinals i final fins determinar el campió."
+            },
+            {
+              "icon": "clipboard-check",
+              "question": "On puc trobar la normativa?",
+              "answer": "El reglament complet de la competició està disponible a la secció de \"Normativa\" d'aquesta mateixa pàgina."
+            },
+            {
+              "icon": "x",
+              "question": "Hi ha restriccions sobre els materials del robot?",
+              "answer": "Sí. El robot no pot incorporar armes tallants/perforants, dispositius d'interferència electromagnètica, làsers que saturin sensors, ni elements que puguin danyar el Dohyo. Consulta la normativa per a la llista completa de restriccions."
+            }
+          ]
+        },
+        {
+          "id": "inscripcio",
+          "title": "Inscripció i equips",
+          "items": [
+            {
+              "icon": "users",
+              "question": "Qui pot participar?",
+              "answer": "La competició està oberta a estudiants de grau i màster de qualsevol universitat."
+            },
+            {
+              "icon": "list",
+              "question": "Les places són limitades?",
+              "answer": "Sí, la competició està limitada a 16 equips de màxim 3 persones. En cas que hi hagi més sol·licituds, es prioritzen: (1) equips més grans, (2) estudiants ETSETB, (3) estudiants UPC, (4) data d'inscripció."
+            },
+            {
+              "icon": "clipboard-check",
+              "question": "Com funciona el procés d'inscripció?",
+              "answer": "Les inscripcions es tanquen l'11 de febrer de 2026. Abans del 15 de febrer, rebreu un correu electrònic confirmant si heu estat admesos a la competició. Els equips acceptats hauran de portar la fiança de 50€ en efectiu el primer dia de taller. Si algun equip admès causa baixa, se li comunicarà immediatament al següent equip de la llista d'espera."
+            },
+            {
+              "icon": "user-check",
+              "question": "Puc participar sol?",
+              "answer": "Sí. Tot i això, si s'esgoten les places, es prioritzen equips amb més membres per facilitar la participació del màxim nombre d'estudiants."
+            },
+            {
+              "icon": "handshake",
+              "question": "No vull participar sol, però no tinc equip",
+              "answer": "No et preocupis, nosaltres te'n busquem un! Inscriu-te tu sol i marca l'opció que vols buscar equip al formulari."
+            },
+            {
+              "icon": "alert-circle",
+              "question": "Què passa si em retiro abans de la final?",
+              "answer": "En cas de retirada sense causa justificada, la fiança no serà retornada. Per als detalls complets sobre les condicions de retirada, consulta el reglament oficial."
+            }
+          ]
+        },
+        {
+          "id": "costos",
+          "title": "Costos, premis i crèdits",
+          "items": [
+            {
+              "icon": "euro",
+              "question": "La participació és gratuïta?",
+              "answer": "Sí. La inscripció és gratuïta, però cal dipositar una fiança de 50€ per equip. Les condicions de retorn de la fiança estan detallades al reglament."
+            },
+            {
+              "icon": "euro",
+              "question": "Reben els equips ajut econòmic pel material?",
+              "answer": "Sí. Es reemborsarà fins a un màxim de 100€ (IVA inclòs) per equip en despeses justificades de material per a la construcció del robot. Per a tots els detalls sobre requisits, procediment i condicions, consulteu el reglament."
+            },
+            {
+              "icon": "trophy",
+              "question": "Hi ha premis?",
+              "answer": "Sí, es repartiran més de 1000€ en premis entre els millors equips classificats."
+            },
+            {
+              "icon": "graduation-cap",
+              "question": "Puc convalidar crèdits ECTS?",
+              "answer": "Sí. Per a estudiants de l'ETSETB i FIB de la UPC, es reconeix 1 ECTS de forma automàtica complint els requisits. Per a estudiants d'altres escoles de la UPC, s'informarà a la vostra escola. Per a estudiants d'altres universitats, consulteu amb nosaltres les opcions de reconeixement."
+            },
+            {
+              "icon": "circle-check",
+              "question": "Què s'ha de fer per convalidar el crèdit?",
+              "answer": "Per obtenir el crèdit ECTS és necessari: (1) Assistir a tots els tallers programats, i (2) Participar a la competició final amb un robot reglamentari i funcional. Per a estudiants de l'ETSETB i FIB, el reconeixement és automàtic. Per a altres escoles de la UPC o altres universitats, contacta amb nosaltres."
+            }
+          ]
+        },
+        {
+          "id": "tallers",
+          "title": "Tallers i construcció",
+          "items": [
+            {
+              "icon": "bot",
+              "question": "Com construeixo el robot?",
+              "answer": "Teniu total llibertat per construir el robot que vulgueu, sempre que compleixi la normativa. Posem a la vostra disposició tallers per aprendre noves eines i tecnologies. A més, es facilitarà accés al taller de l'associació en horari no lectiu per utilitzar eines i rebre seguiment."
+            },
+            {
+              "icon": "info",
+              "question": "Què aprendré als tallers?",
+              "answer": "Tant si tens coneixements previs com si no, aprendràs noves eines i tecnologies que podràs aplicar al teu robot (disseny 3D, electrònica, sensors...) i que et serviran pel teu futur professional."
+            },
+            {
+              "icon": "laptop",
+              "question": "Quin material necessito per als tallers?",
+              "answer": "Cada taller és diferent, però en general haureu de portar ordinador i material per prendre notes."
+            },
+            {
+              "icon": "wrench",
+              "question": "Puc construir el robot només assistint als tallers?",
+              "answer": "No. Els tallers no estan pensats per ser una guia pas a pas de com construir un robot, sinó per donar-vos recursos. Haureu de treballar fora de les hores de taller."
+            },
+            {
+              "icon": "wrench",
+              "question": "Tinc accés al taller de l'associació?",
+              "answer": "Sí, els equips participants tindran accés al taller de l'AESS per utilitzar eines i rebre seguiment. Els horaris es comunicaran després de l'acceptació."
+            }
+          ]
+        }
+      ],
+      "cta": {
+        "text": "No trobes la resposta a la teva pregunta? Contacta amb nosaltres i et respondrem amb molt de gust.",
+        "action": {
+          "label": "Contacta'ns",
+          "to": "/contacte",
+          "icon": "mail"
+        }
+      }
+    }
+  },
+  "registration": {
+    "meta": {
+      "title": "Inscripció AESSBot 2026",
+      "description": "Inscriu el teu equip a l'AESSBot 2026, la competició de robots minisumo de l'ETSETB. Consulta els recordatoris i què passa després d'inscriure't."
+    },
+    "reminders": {
+      "title": "Recordatoris Importants",
+      "subtitle": "Abans d'inscriure't, assegura't de llegir aquests punts clau",
+      "cards": [
+        {
+          "icon": "calendar",
+          "title": "Data Límit d'Inscripció",
+          "body": "Les inscripcions tanquen el **11 de febrer de 2026** a les 23:59. No deixis la teva inscripció per l'últim moment!"
+        },
+        {
+          "icon": "users",
+          "title": "Places Limitades",
+          "body": "Només hi ha **16 equips disponibles**. Si s'esgoten les places, es seguiran els criteris de prioritat de la normativa."
+        },
+        {
+          "icon": "euro",
+          "title": "Fiança Retornable",
+          "body": "Cal abonar una **fiança de 50€ per equip** el primer dia de taller. Consulta el reglament per a les condicions de retorn."
+        },
+        {
+          "icon": "graduation-cap",
+          "title": "Requisit d'Estudiant",
+          "body": "Tots els participants han de ser **estudiants de grau o màster** de qualsevol universitat."
+        },
+        {
+          "icon": "clipboard-check",
+          "title": "Llegeix la Normativa",
+          "body": "Abans d'inscriure't, **llegeix atentament la normativa oficial** per conèixer totes les especificacions tècniques i condicions de participació. [Descarrega aquí](/documents/Reglament.pdf)"
+        }
+      ]
+    },
+    "form": {
+      "title": "Inscriu el teu equip a l'AESSBot 2026",
+      "description": "Omple el formulari següent per inscriure el teu equip a l'AESSBot 2026. Tots els membres de l'equip han de ser estudiants de grau o màster de qualsevol universitat.",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScciiXmQMnUtMhncWi28Q-ktjAPgIQtR8Ay9EgmTJtKJdQCVg/viewform",
+      "frameTitle": "Formulari d'inscripció AESSBot"
+    },
+    "steps": {
+      "title": "Què passa després d'inscriure't?",
+      "subtitle": "Un cop hagis enviat el formulari, segueix aquests passos",
+      "items": [
+        {
+          "icon": "clock",
+          "title": "1. Espera al Tancament d'Inscripcions",
+          "body": "Un cop enviada la teva inscripció, cal esperar fins el **11 de febrer de 2026** quan es tanquin les inscripcions oficials per aplicar els criteris de prioritat en cas que hi hagi més de 16 equips."
+        },
+        {
+          "icon": "circle-check",
+          "title": "2. Validació d'Inscripcions",
+          "body": "L'equip de l'organització revisarà totes les inscripcions rebudes i validarà que compleixin els requisits de participació. Recordeu que la fiança es paga al primer taller en metal·lic (exactament)."
+        },
+        {
+          "icon": "send",
+          "title": "3. Correu de Benvinguda i Convocatòria",
+          "body": "Rebràs un correu **com a màxim el 13 de febrer de 2026 a les 23:59** confirmant si el teu equip ha estat admès o si queda a la llista d'espera. Si sou admesos, disposareu de 72 hores per confirmar la vostra participació."
+        }
+      ],
+      "cta": {
+        "text": "Tens dubtes sobre el procés d'inscripció?",
+        "action": {
+          "label": "Contacta'ns",
+          "to": "/contacte",
+          "icon": "mail",
+          "variant": "secondary"
+        }
+      }
+    }
+  }
+}

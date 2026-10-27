@@ -1,0 +1,5 @@
+export { Footer } from './Footer/Footer'
+export { FooterLink, type FooterLinkProps } from './FooterLink/FooterLink'
+export { Logo } from './Logo/Logo'
+export { Navbar } from './Navbar/Navbar'
+export { SocialLinks } from './SocialLinks/SocialLinks'

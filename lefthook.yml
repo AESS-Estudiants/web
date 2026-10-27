@@ -1,0 +1,41 @@
+output:
+  - summary
+
+pre-commit:
+  parallel: true
+  jobs:
+    - name: format
+      glob: "*.{js,jsx,mjs,ts,tsx,json,jsonc,css,yml,yaml}"
+      run: pnpm exec biome check --write --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
+      stage_fixed: true
+    - name: typecheck
+      glob: "*.{ts,tsx}"
+      run: pnpm typecheck
+    - name: design-tokens
+      glob:
+        - "*.css"
+        - "design-tokens/*.json"
+      run: pnpm tokens:check
+
+commit-msg:
+  jobs:
+    - name: conventional-commit
+      run: node scripts/check-commit-msg.mjs {1}
+
+pre-push:
+  jobs:
+    - name: branch-name-and-protected-branches
+      use_stdin: true
+      interactive: true
+      run: node scripts/pre-push.mjs
+
+# Keep node_modules in step with the lockfile after switching branches or pulling
+post-checkout:
+  jobs:
+    - name: sync-node-modules
+      run: git diff --quiet {1} {2} -- pnpm-lock.yaml || pnpm install --frozen-lockfile
+
+post-merge:
+  jobs:
+    - name: sync-node-modules
+      run: git diff --quiet ORIG_HEAD HEAD -- pnpm-lock.yaml || pnpm install --frozen-lockfile

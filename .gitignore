@@ -36,3 +36,11 @@ lerna-debug.log*
 .vite/
 
 **/guides
+# React Router
+.react-router/
+
+# Tests
+/coverage/
+/playwright-report/
+/test-results/
+/.lighthouseci/
