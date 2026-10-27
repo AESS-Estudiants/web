@@ -53,3 +53,11 @@ describe('courses content', () => {
     expect(schema.safeParse(broken).success).toBe(false)
   })
 })
+
+describe('projects content', () => {
+  it('matches its schema and only uses existing photos', async () => {
+    const { projects } = await import('./projects')
+    const { IMAGE_PATHS } = await import('~/lib/images')
+    for (const image of projects.intro.gallery.images) expect(IMAGE_PATHS).toContain(image.src)
+  })
+})

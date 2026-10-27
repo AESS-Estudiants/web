@@ -131,6 +131,45 @@ export const home = z.object({
   }),
 })
 
+// Projects page
+
+export const projects = z.object({
+  hero: z.object({
+    title: z.tuple([z.string().min(1), z.string().min(1)]),
+    description: z.string().min(1),
+    actions: z.array(action).max(2),
+  }),
+  intro: z.object({
+    title: z.string().min(1),
+    subtitle: z.string().min(1),
+    gallery: z.object({ label: z.string().min(1), images: z.array(image).min(1) }),
+  }),
+  active: z.object({
+    title: z.string().min(1),
+    subtitle: z.string().min(1),
+    items: z.array(
+      z.object({
+        icon: iconName,
+        status: z.string().min(1),
+        title: z.string().min(1),
+        body: z.string().min(1),
+        state: z.object({ label: z.string().min(1), value: z.string().min(1) }),
+      }),
+    ),
+  }),
+  activities: z.object({
+    title: z.string().min(1),
+    subtitle: z.string().min(1),
+    items: z.array(z.object({ icon: iconName, title: z.string().min(1), body: z.string().min(1) })),
+  }),
+  join: z.object({
+    badge: z.object({ icon: iconName, label: z.string().min(1) }),
+    title: z.string().min(1),
+    body: z.string().min(1),
+    action,
+  }),
+})
+
 // Courses page
 
 export const courses = z.object({
@@ -236,6 +275,7 @@ export const errors = z.object({ notFound: errorState, unexpected: errorState })
 export type Site = z.infer<typeof site>
 export type Aessbot = z.infer<typeof aessbot>
 export type Home = z.infer<typeof home>
+export type Projects = z.infer<typeof projects>
 export type Courses = z.infer<typeof courses>
 export type Course = Courses['items'][number]
 export type RichTextContent = z.infer<typeof richText>
