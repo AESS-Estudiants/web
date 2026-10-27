@@ -1,6 +1,6 @@
 import AxeBuilder from '@axe-core/playwright'
 import { expect, test } from '@playwright/test'
-import { INDEXED_PATHS as ROUTES } from '../app/lib/seo'
+import { INDEXED_PATHS as ROUTES } from '../app/lib/indexed-paths'
 
 for (const path of ROUTES) {
   test.describe(path, () => {
