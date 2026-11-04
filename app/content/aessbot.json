@@ -1,5 +1,5 @@
 {
-  "status": "coming-soon",
+  "status": "registration",
   "comingSoon": {
     "badge": "Propera edició",
     "title": ["AESSBot", "2027"],
@@ -37,7 +37,7 @@
   },
   "edition": {
     "event": {
-      "name": "AESSBot 2026",
+      "name": "AESSBot 2027",
       "description": "La competició de robòtica més esperada de la UPC. Apunta el teu equip avui perquè les places són limitades i es tanquen aviat.",
       "startDate": "2026-05-06T11:00:00+02:00",
       "endDate": "2026-05-06T15:00:00+02:00",
@@ -47,11 +47,11 @@
       }
     },
     "hero": {
-      "title": ["AESSBot", "2026"],
+      "title": ["AESSBot", "2027"],
       "description": "La competició de robòtica més esperada de la UPC. Apunta el teu equip avui perquè les places són limitades i es tanquen aviat.",
       "poster": {
-        "src": "home/aessbot-2026-poster.jpg",
-        "alt": "Cartell de l'AESSBot 2026, la competició de robots minisumo de l'ETSETB"
+        "src": "home/aessbot-2027-poster.jpg",
+        "alt": "Cartell de l'AESSBot 2027, la 20a edició de la competició de robots minisumo de l'ETSETB: inscripcions obertes fins el 26 de novembre de 2026"
       },
       "stats": [
         {
@@ -82,7 +82,7 @@
         "to": "/aessbot/inscripcio",
         "icon": "clipboard-check"
       },
-      "deadline": "2026-02-11T23:59:59+01:00",
+      "deadline": "2026-11-26T23:59:59+01:00",
       "countdownLabel": "Les inscripcions tanquen en:",
       "closedLabel": "Inscripcions tancades"
     },
@@ -220,7 +220,7 @@
     },
     "sponsors": {
       "title": "Patrocinadors i Col·laboradors",
-      "subtitle": "Gràcies al suport d'aquestes empreses i entitats per fer possible l'AESSBot 2026",
+      "subtitle": "Gràcies al suport d'aquestes empreses i entitats per fer possible l'AESSBot 2027",
       "groups": [
         {
           "title": "Patrocinadors Oficials",
@@ -250,7 +250,7 @@
         }
       ],
       "cta": {
-        "text": "Vols ser patrocinador o col·laborador de l'AESSBot 2026?",
+        "text": "Vols ser patrocinador o col·laborador de l'AESSBot 2027?",
         "action": {
           "label": "Contacta'ns",
           "to": "/contacte",
@@ -259,7 +259,7 @@
       }
     },
     "faq": {
-      "title": "Tens dubtes sobre l'AESSBot 2026?",
+      "title": "Tens dubtes sobre l'AESSBot 2027?",
       "subtitle": "Fes clic a cada pregunta per veure'n la resposta",
       "topics": [
         {
@@ -310,7 +310,7 @@
             {
               "icon": "clipboard-check",
               "question": "Com funciona el procés d'inscripció?",
-              "answer": "Les inscripcions es tanquen l'11 de febrer de 2026. Abans del 15 de febrer, rebreu un correu electrònic confirmant si heu estat admesos a la competició. Els equips acceptats hauran de portar la fiança de 50€ en efectiu el primer dia de taller. Si algun equip admès causa baixa, se li comunicarà immediatament al següent equip de la llista d'espera."
+              "answer": "Les inscripcions es tanquen el 26 de novembre de 2026. Abans del 15 de febrer, rebreu un correu electrònic confirmant si heu estat admesos a la competició. Els equips acceptats hauran de portar la fiança de 50€ en efectiu el primer dia de taller. Si algun equip admès causa baixa, se li comunicarà immediatament al següent equip de la llista d'espera."
             },
             {
               "icon": "user-check",
@@ -404,8 +404,8 @@
   },
   "registration": {
     "meta": {
-      "title": "Inscripció AESSBot 2026",
-      "description": "Inscriu el teu equip a l'AESSBot 2026, la competició de robots minisumo de l'ETSETB. Consulta els recordatoris i què passa després d'inscriure't."
+      "title": "Inscripció AESSBot 2027",
+      "description": "Inscriu el teu equip a l'AESSBot 2027, la competició de robots minisumo de l'ETSETB. Consulta els recordatoris i què passa després d'inscriure't."
     },
     "reminders": {
       "title": "Recordatoris Importants",
@@ -414,7 +414,7 @@
         {
           "icon": "calendar",
           "title": "Data Límit d'Inscripció",
-          "body": "Les inscripcions tanquen el **11 de febrer de 2026** a les 23:59. No deixis la teva inscripció per l'últim moment!"
+          "body": "Les inscripcions tanquen el **26 de novembre de 2026** a les 23:59. No deixis la teva inscripció per l'últim moment!"
         },
         {
           "icon": "users",
@@ -439,9 +439,9 @@
       ]
     },
     "form": {
-      "title": "Inscriu el teu equip a l'AESSBot 2026",
-      "description": "Omple el formulari següent per inscriure el teu equip a l'AESSBot 2026. Tots els membres de l'equip han de ser estudiants de grau o màster de qualsevol universitat.",
-      "url": "https://docs.google.com/forms/d/e/1FAIpQLScciiXmQMnUtMhncWi28Q-ktjAPgIQtR8Ay9EgmTJtKJdQCVg/viewform",
+      "title": "Inscriu el teu equip a l'AESSBot 2027",
+      "description": "Omple el formulari següent per inscriure el teu equip a l'AESSBot 2027. Tots els membres de l'equip han de ser estudiants de grau o màster de qualsevol universitat.",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfqVjaAz6Yxn-CG_c9KJ_y9n2Pcn4POQ-KPGPvikNs1409yzw/viewform",
       "frameTitle": "Formulari d'inscripció AESSBot"
     },
     "steps": {
@@ -451,7 +451,7 @@
         {
           "icon": "clock",
           "title": "1. Espera al Tancament d'Inscripcions",
-          "body": "Un cop enviada la teva inscripció, cal esperar fins el **11 de febrer de 2026** quan es tanquin les inscripcions oficials per aplicar els criteris de prioritat en cas que hi hagi més de 16 equips."
+          "body": "Un cop enviada la teva inscripció, cal esperar fins el **26 de novembre de 2026** quan es tanquin les inscripcions oficials per aplicar els criteris de prioritat en cas que hi hagi més de 16 equips."
         },
         {
           "icon": "circle-check",
