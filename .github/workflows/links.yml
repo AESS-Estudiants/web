@@ -27,6 +27,6 @@ jobs:
       - uses: lycheeverse/lychee-action@v2
         with:
           # Instagram (429) and LinkedIn (999) refuse bots, which is not a broken link
-          # Google Maps answers 403 to bots, so its links are skipped
-          args: --no-progress --accept 200..=299,429,999 --exclude "^https://www\.google\.com/maps" --cache --max-cache-age 1d --root-dir "$(pwd)/build/client" "build/client/**/*.html"
+          # Google Maps answers 403 to bots and the AESSBot form asks to sign in, so both are skipped
+          args: --no-progress --accept 200..=299,429,999 --exclude "^https://www\.google\.com/maps" --exclude "^https://docs\.google\.com/forms/d/e/1FAIpQLSfqVjaAz6Yxn" --cache --max-cache-age 1d --root-dir "$(pwd)/build/client" "build/client/**/*.html"
           fail: true
