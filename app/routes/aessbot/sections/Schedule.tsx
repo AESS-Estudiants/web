@@ -32,7 +32,7 @@ export function Schedule({ schedule }: { schedule: AessbotEdition['schedule'] })
         </thead>
         <tbody className={styles.body}>
           {schedule.items.map((item) => (
-            <tr key={item.title} className={cx(styles.row, item.highlight && styles.highlight)}>
+            <tr key={item.date} className={cx(styles.row, item.highlight && styles.highlight)}>
               <td className={styles.date}>
                 <Icon icon={Calendar} size={16} className={styles.cellIcon} />
                 {item.date}

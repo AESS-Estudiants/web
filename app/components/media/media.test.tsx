@@ -12,7 +12,7 @@ it('loads YouTube only after the play button is pressed', async () => {
   expect(frame.getAttribute('src')).toContain('youtube-nocookie.com/embed/abc')
 })
 
-it('selects the newest edition with a video and marks upcoming ones', () => {
+it('selects the newest edition with a video and marks upcoming videos', () => {
   render(
     <EditionsPlayer
       editions={[
@@ -21,7 +21,7 @@ it('selects the newest edition with a video and marks upcoming ones', () => {
       ]}
     />,
   )
-  expect(screen.getByRole('tab', { name: '2026 · Properament' })).toBeDisabled()
+  expect(screen.getByRole('tab', { name: '2026 · Vídeo properament' })).toBeDisabled()
   expect(screen.getByRole('tab', { name: '2025' })).toHaveAttribute('aria-selected', 'true')
   expect(screen.getByRole('button', { name: 'Reprodueix el vídeo: AESSBot 2025' })).toBeVisible()
 })

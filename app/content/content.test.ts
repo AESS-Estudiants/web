@@ -102,13 +102,17 @@ describe('aessbot content', () => {
     const photos = [edition.hero.poster, ...(edition.competition.gallery?.images ?? [])]
     for (const photo of photos) expect(IMAGE_PATHS).toContain(photo.src)
     const logos = edition.sponsors.groups.flatMap((group) => group.logos)
-    for (const logo of logos) expect(existsSync(`public${logo.src}`)).toBe(true)
+    for (const logo of logos) {
+      if ('src' in logo) expect(existsSync(`public${logo.src}`)).toBe(true)
+    }
   })
 
-  it('links the registration button to its page and the rules to an existing file', async () => {
+  it('links registration to its page and published rules to an existing file', async () => {
     const { aessbot } = await import('./aessbot')
     expect(aessbot.edition.registration.action.to).toBe('/aessbot/inscripcio')
-    expect(existsSync(`public${aessbot.edition.rules.action.href}`)).toBe(true)
+    if (aessbot.edition.rules) {
+      expect(existsSync(`public${aessbot.edition.rules.action.href}`)).toBe(true)
+    }
   })
 
   it('gives every FAQ topic its own id', async () => {
