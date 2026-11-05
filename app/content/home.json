@@ -104,14 +104,17 @@
     "items": [
       {
         "tag": "Competició anual",
-        "title": "AESSBot 2026",
+        "title": "AESSBot 2027",
         "body": "La competició de robòtica més esperada de la UPC. Construeix el teu propi robot minisumo i competeix contra altres equips en una batalla d'enginyeria i estratègia.",
-        "poster": { "src": "home/aessbot-2026-poster.jpg", "alt": "Cartell de l'AESSBot 2026" },
+        "poster": {
+          "src": "home/aessbot-2027-poster.jpg",
+          "alt": "Cartell de l'AESSBot 2027, la 20a edició de la competició de robots minisumo: inscripcions obertes fins el 26 de novembre de 2026"
+        },
         "stats": [
           { "icon": "trophy", "value": "Més de 1.000€", "label": "En premis" },
           { "icon": "award", "value": "1 ECTS", "label": "Per arribar a la final" },
-          { "icon": "calendar", "value": "Feb 18 - Mai 6", "label": "Durada de la competició" },
-          { "icon": "bot", "value": "16 robots", "label": "3 persones per equip" }
+          { "icon": "calendar", "value": "Des 9 - Mai 5", "label": "Durada de la competició" },
+          { "icon": "bot", "value": "20 robots", "label": "3 persones per equip" }
         ],
         "actions": [
           { "label": "Més informació", "to": "/aessbot", "arrow": true },

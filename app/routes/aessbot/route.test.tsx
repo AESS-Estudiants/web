@@ -58,10 +58,10 @@ describe('/aessbot', () => {
     content.status = 'registration'
     // A day before registration closes
     vi.useFakeTimers({ toFake: ['Date'] })
-    vi.setSystemTime(new Date('2026-02-10T23:00:00+01:00'))
+    vi.setSystemTime(new Date('2026-11-25T23:00:00+01:00'))
     renderWithRouter(<AessbotPage />)
     expect(screen.getAllByRole('heading', { level: 1 })).toHaveLength(1)
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('AESSBot 2026')
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('AESSBot 2027')
     expect(screen.getByRole('link', { name: 'Inscriu-te' })).toHaveAttribute(
       'href',
       '/aessbot/inscripcio',
@@ -75,7 +75,7 @@ describe('/aessbot', () => {
   it('says registration is closed once the deadline has passed', () => {
     content.status = 'registration'
     vi.useFakeTimers({ toFake: ['Date'] })
-    vi.setSystemTime(new Date('2026-02-12T00:00:00+01:00'))
+    vi.setSystemTime(new Date('2026-11-27T00:00:00+01:00'))
     renderWithRouter(<AessbotPage />)
     expect(screen.queryByRole('timer')).not.toBeInTheDocument()
     expect(screen.getByText('Inscripcions tancades')).toBeInTheDocument()
@@ -84,7 +84,7 @@ describe('/aessbot', () => {
   it('shows the edition without registration once it is over', () => {
     content.status = 'finished'
     renderWithRouter(<AessbotPage />)
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('AESSBot 2026')
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('AESSBot 2027')
     expect(screen.queryByRole('link', { name: 'Inscriu-te' })).not.toBeInTheDocument()
     expect(screen.queryByRole('timer')).not.toBeInTheDocument()
     expect(screen.getByRole('heading', { name: 'Calendari' })).toBeInTheDocument()
