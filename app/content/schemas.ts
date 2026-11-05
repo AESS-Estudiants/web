@@ -420,12 +420,14 @@ const edition = z.object({
       )
       .min(1),
   }),
-  rules: z.object({
-    title: z.string().min(1),
-    subtitle: z.string().optional(),
-    action,
-    note: z.string().optional(),
-  }),
+  rules: z
+    .object({
+      title: z.string().min(1),
+      subtitle: z.string().optional(),
+      action,
+      note: z.string().optional(),
+    })
+    .optional(),
   sponsors: z.object({
     title: z.string().min(1),
     subtitle: z.string().optional(),
@@ -434,7 +436,9 @@ const edition = z.object({
         z.object({
           title: z.string().min(1),
           size: z.enum(['large', 'small']),
-          logos: z.array(sponsorLogo).min(1),
+          logos: z
+            .array(sponsorLogo.or(z.object({ id: z.string().min(1), pending: z.literal(true) })))
+            .min(1),
         }),
       )
       .min(1),

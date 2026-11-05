@@ -4,7 +4,7 @@ import { Section } from '~/components/layout'
 import type { AessbotEdition } from '~/content/schemas'
 import styles from './Rules.module.css'
 
-export function Rules({ rules }: { rules: AessbotEdition['rules'] }) {
+export function Rules({ rules }: { rules: NonNullable<AessbotEdition['rules']> }) {
   return (
     <Section id="normativa" labelledBy="normativa-title">
       <SectionHeader id="normativa-title" title={rules.title} subtitle={rules.subtitle} />

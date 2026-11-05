@@ -5,7 +5,7 @@ import styles from './EditionsPlayer.module.css'
 
 export type Edition = {
   year: number
-  /** Summary video; an edition without one is shown as coming soon */
+  /** Summary video; a missing video is shown as coming soon */
   video?: Video
 }
 
@@ -30,7 +30,7 @@ export function EditionsPlayer({ editions, className }: EditionsPlayerProps) {
             disabled={!edition.video}
             className={styles.tab}
           >
-            {edition.video ? edition.year : `${edition.year} · Properament`}
+            {edition.video ? edition.year : `${edition.year} · Vídeo properament`}
           </Tabs.Trigger>
         ))}
       </Tabs.List>

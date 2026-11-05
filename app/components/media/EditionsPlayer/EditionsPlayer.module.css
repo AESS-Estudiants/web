@@ -22,7 +22,7 @@
   color: var(--text-secondary);
   font: var(--font-ui-button-small);
   letter-spacing: var(--tracking-ui-button-small);
-  white-space: nowrap;
+  white-space: normal;
   transition:
     background-color var(--duration-fast) var(--ease-standard),
     color var(--duration-fast) var(--ease-standard);
@@ -40,7 +40,7 @@
   color: var(--text-primary);
 }
 
-/* Upcoming edition; muted text keeps WCAG AA contrast unlike text/disabled */
+/* Upcoming video; muted text keeps WCAG AA contrast unlike text/disabled */
 .tab:disabled {
   cursor: default;
   color: var(--text-muted);

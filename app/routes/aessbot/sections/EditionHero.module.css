@@ -13,7 +13,7 @@
 .text {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
   gap: var(--space-20);
   max-width: 540px;
 }
@@ -33,7 +33,7 @@
 .registration {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
   gap: var(--space-24);
 }
 
@@ -56,6 +56,7 @@
   }
 
   .text {
+    align-items: flex-start;
     gap: 22px;
   }
 
