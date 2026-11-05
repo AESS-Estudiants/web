@@ -113,8 +113,8 @@
         "stats": [
           { "icon": "trophy", "value": "Més de 1.000€", "label": "En premis" },
           { "icon": "award", "value": "1 ECTS", "label": "Per arribar a la final" },
-          { "icon": "calendar", "value": "Feb 18 - Mai 6", "label": "Durada de la competició" },
-          { "icon": "bot", "value": "16 robots", "label": "3 persones per equip" }
+          { "icon": "calendar", "value": "Des 9 - Mai 5", "label": "Durada de la competició" },
+          { "icon": "bot", "value": "20 robots", "label": "3 persones per equip" }
         ],
         "actions": [
           { "label": "Més informació", "to": "/aessbot", "arrow": true },

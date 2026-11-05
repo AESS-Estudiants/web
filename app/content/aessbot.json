@@ -39,8 +39,8 @@
     "event": {
       "name": "AESSBot 2027",
       "description": "La competició de robòtica més esperada de la UPC. Apunta el teu equip avui perquè les places són limitades i es tanquen aviat.",
-      "startDate": "2026-05-06T11:00:00+02:00",
-      "endDate": "2026-05-06T15:00:00+02:00",
+      "startDate": "2027-05-05T11:00:00+02:00",
+      "endDate": "2027-05-05T15:00:00+02:00",
       "location": {
         "name": "Plaça Telecomunicacions",
         "address": "Campus Nord UPC, Barcelona"
@@ -61,7 +61,7 @@
         },
         {
           "icon": "users",
-          "value": "16",
+          "value": "20",
           "label": "Equips"
         },
         {
@@ -150,23 +150,15 @@
       },
       "items": [
         {
-          "date": "18 Feb 2026",
+          "date": "9 Des 2026",
           "time": "12:00 - 14:00",
           "icon": "info",
           "title": "Introducció",
-          "description": "Benvinguda, explicació de la competició i planificació del projecte.",
+          "description": "Logística de la competició i com començar el projecte. S'obre el període de compres.",
           "location": "Campus Nord, Biblioteca Gabriel Ferreter"
         },
         {
-          "date": "25 Feb 2026",
-          "time": "12:00 - 14:00",
-          "icon": "wrench",
-          "title": "Actuadors",
-          "description": "Control de motors (DC, servos, steppers).",
-          "location": "Campus Nord, C4S102C i C4S102B"
-        },
-        {
-          "date": "4 Mar 2026",
+          "date": "16 Des 2026",
           "time": "12:00 - 14:00",
           "icon": "box",
           "title": "Disseny 3D",
@@ -174,7 +166,15 @@
           "location": "Campus Nord, C4S102C i C4S102B"
         },
         {
-          "date": "18 Mar 2026",
+          "date": "17 Feb 2027",
+          "time": "12:00 - 14:00",
+          "icon": "wrench",
+          "title": "Actuadors",
+          "description": "Control de motors (DC, servos, steppers).",
+          "location": "Campus Nord, C4S102C i C4S102B"
+        },
+        {
+          "date": "24 Feb 2027",
           "time": "12:00 - 14:00",
           "icon": "signal",
           "title": "Sensors",
@@ -182,7 +182,15 @@
           "location": "Campus Nord, C4S102C i C4S102B"
         },
         {
-          "date": "25 Mar 2026",
+          "date": "3 Mar 2027",
+          "time": "12:00 - 14:00",
+          "icon": "handshake",
+          "title": "Taller de patrocinadors",
+          "description": "Obert a propostes per part dels patrocinadors. Per confirmar.",
+          "location": "Campus Nord, C4S102C i C4S102B"
+        },
+        {
+          "date": "10 Mar 2027",
           "time": "12:00 - 14:00",
           "icon": "cpu",
           "title": "PCB",
@@ -190,7 +198,15 @@
           "location": "Campus Nord, C4S102C i C4S102B"
         },
         {
-          "date": "22 Apr 2026",
+          "date": "17 Mar 2027",
+          "time": "12:00 - 14:00",
+          "icon": "handshake",
+          "title": "Taller de patrocinadors",
+          "description": "Obert a propostes per part dels patrocinadors. Per confirmar.",
+          "location": "Campus Nord, C4S102C i C4S102B"
+        },
+        {
+          "date": "7 Abr 2027",
           "time": "12:00 - 14:00",
           "icon": "list",
           "title": "Seguiment",
@@ -198,10 +214,18 @@
           "location": "Campus Nord, C4S102C i C4S102B"
         },
         {
-          "date": "6 Mai 2026",
+          "date": "28 Abr 2027",
+          "time": "12:00 - 14:00",
+          "icon": "circle-check",
+          "title": "Validació dels robots",
+          "description": "Seguiment i validació del funcionament dels robots. Només els robots validats competeixen a la final.",
+          "location": "Campus Nord, C4S102C i C4S102B"
+        },
+        {
+          "date": "5 Mai 2027",
           "time": "11:00 - 15:00",
           "icon": "trophy",
-          "title": "Final AESSBot 2026",
+          "title": "Final AESSBot 2027",
           "description": "Gran final de la competició amb tots els participants",
           "location": "Campus Nord, Plaça Telecomunicacions",
           "highlight": true
@@ -274,7 +298,7 @@
             {
               "icon": "calendar",
               "question": "Quan és la competició?",
-              "answer": "La gran final de l'AESSBot 2026 tindrà lloc el 6 de maig de 2026 al Campus Nord de la UPC."
+              "answer": "La gran final de l'AESSBot 2027 tindrà lloc el 5 de maig de 2027 al Campus Nord de la UPC."
             },
             {
               "icon": "trophy",
@@ -305,7 +329,7 @@
             {
               "icon": "list",
               "question": "Les places són limitades?",
-              "answer": "Sí, la competició està limitada a 16 equips de màxim 3 persones. En cas que hi hagi més sol·licituds, es prioritzen: (1) equips més grans, (2) estudiants ETSETB, (3) estudiants UPC, (4) data d'inscripció."
+              "answer": "Sí, la competició està limitada a 20 equips de màxim 3 persones. En cas que hi hagi més sol·licituds, es prioritzen: (1) equips més grans, (2) estudiants ETSETB, (3) estudiants UPC, (4) data d'inscripció."
             },
             {
               "icon": "clipboard-check",
@@ -419,7 +443,7 @@
         {
           "icon": "users",
           "title": "Places Limitades",
-          "body": "Només hi ha **16 equips disponibles**. Si s'esgoten les places, es seguiran els criteris de prioritat de la normativa."
+          "body": "Només hi ha **20 equips disponibles**. Si s'esgoten les places, es seguiran els criteris de prioritat de la normativa."
         },
         {
           "icon": "euro",
@@ -451,7 +475,7 @@
         {
           "icon": "clock",
           "title": "1. Espera al Tancament d'Inscripcions",
-          "body": "Un cop enviada la teva inscripció, cal esperar fins el **26 de novembre de 2026** quan es tanquin les inscripcions oficials per aplicar els criteris de prioritat en cas que hi hagi més de 16 equips."
+          "body": "Un cop enviada la teva inscripció, cal esperar fins el **26 de novembre de 2026** quan es tanquin les inscripcions oficials per aplicar els criteris de prioritat en cas que hi hagi més de 20 equips."
         },
         {
           "icon": "circle-check",
