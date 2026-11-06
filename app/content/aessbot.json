@@ -56,8 +56,8 @@
       "stats": [
         {
           "icon": "trophy",
-          "value": "+1000€",
-          "label": "En premis"
+          "value": "Premis",
+          "label": "Per als millors equips"
         },
         {
           "icon": "users",
@@ -110,17 +110,17 @@
         {
           "icon": "euro",
           "title": "Inscripció gratuïta",
-          "body": "La inscripció a la competició és totalment gratuïta. Només cal abonar una fiança de 50€ retornable un cop hagueu participat a la final."
+          "body": "La inscripció a la competició és totalment gratuïta. Només cal abonar una fiança de 50€ per equip el dia del taller d'introducció."
         },
         {
           "icon": "wrench",
           "title": "Ajut econòmic",
-          "body": "Es reemborsarà fins a 100€ en material per equip. El vostre robot pot costar el que vulgueu, però només us reemborsarem fins a 100€ si participeu a la final i presenteu les factures originals (a nom d'AESS Estudiants)."
+          "body": "Es reemborsarà part del material del robot. L'import màxim per equip i les condicions es detallaran a la normativa del 2027."
         },
         {
           "icon": "trophy",
-          "title": "+1000€ en premis",
-          "body": "Repartirem més de 1000€ en premis entre els millors equips classificats. A què esperes per guanyar?"
+          "title": "Premis",
+          "body": "Hi haurà premis per als millors equips classificats. A què esperes per guanyar?"
         },
         {
           "icon": "award",
@@ -291,7 +291,7 @@
             {
               "icon": "trophy",
               "question": "Com funciona la competició?",
-              "answer": "La competició té tres fases: (1) Fase de Lliga: cada equip disputa 8 combats contra oponents assignats aleatòriament. S'atorguen 3 punts per victòria. Els 7 millors equips es classifiquen directament per a la Fase 3. (2) Fase de Repesca (Battle Royale): els equips no classificats participen en una batalla en un ring més gran. El guanyador obté la 8a plaça. (3) Fase d'Eliminatòries: els 8 equips classificats disputen quarts de final, semifinals i final fins determinar el campió."
+              "answer": "Els equips s'enfronten en combats de minisumo fins a decidir el campió. El format detallat de la competició es publicarà a la normativa del 2027."
             },
             {
               "icon": "clipboard-check",
@@ -337,7 +337,7 @@
             {
               "icon": "alert-circle",
               "question": "Què passa si em retiro abans de la final?",
-              "answer": "En cas de retirada sense causa justificada, la fiança no serà retornada. Les condicions de retirada es detallaran a la normativa del 2027."
+              "answer": "Les condicions de retirada i de retorn de la fiança es detallaran a la normativa del 2027."
             }
           ]
         },
@@ -353,22 +353,17 @@
             {
               "icon": "euro",
               "question": "Reben els equips ajut econòmic pel material?",
-              "answer": "Sí. Es reemborsarà fins a un màxim de 100€ (IVA inclòs) per equip en despeses justificades de material per a la construcció del robot. Els requisits, el procediment i les condicions es detallaran a la normativa del 2027."
+              "answer": "Sí. Es reemborsarà part del material per a la construcció del robot. L'import màxim per equip, els requisits i el procediment es detallaran a la normativa del 2027."
             },
             {
               "icon": "trophy",
               "question": "Hi ha premis?",
-              "answer": "Sí, es repartiran més de 1000€ en premis entre els millors equips classificats."
+              "answer": "Sí, hi haurà premis per als millors equips classificats. Els detalls es publicaran més endavant."
             },
             {
               "icon": "graduation-cap",
               "question": "Puc convalidar crèdits ECTS?",
-              "answer": "Sí. Per a estudiants de l'ETSETB i FIB de la UPC, es reconeix 1 ECTS de forma automàtica complint els requisits. Per a estudiants d'altres escoles de la UPC, s'informarà a la vostra escola. Per a estudiants d'altres universitats, consulteu amb nosaltres les opcions de reconeixement."
-            },
-            {
-              "icon": "circle-check",
-              "question": "Què s'ha de fer per convalidar el crèdit?",
-              "answer": "Per obtenir el crèdit ECTS és necessari: (1) Assistir a tots els tallers programats, i (2) Participar a la competició final amb un robot reglamentari i funcional. Per a estudiants de l'ETSETB i FIB, el reconeixement és automàtic. Per a altres escoles de la UPC o altres universitats, contacta amb nosaltres."
+              "answer": "Sí, es pot obtenir 1 crèdit ECTS. Les condicions per obtenir-lo i convalidar-lo es detallaran a la normativa del 2027."
             }
           ]
         },
