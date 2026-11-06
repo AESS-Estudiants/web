@@ -135,7 +135,7 @@
         {
           "icon": "clipboard-check",
           "title": "Més informació",
-          "body": "La normativa del 2027 s'està actualitzant. La publicarem quan estigui llesta, amb els límits tècnics i les condicions de participació."
+          "body": "La normativa del 2027 s'està actualitzant i està subjecta a canvis. La publicarem quan estigui llesta, amb els límits tècnics i les condicions de participació."
         }
       ]
     },
@@ -155,7 +155,7 @@
           "icon": "info",
           "title": "Introducció",
           "description": "Logística de la competició i com començar el projecte. S'obre el període de compres.",
-          "location": "Campus Nord, Biblioteca Gabriel Ferreter"
+          "location": "Campus Nord, UPC"
         },
         {
           "date": "16 Des 2026",
@@ -163,7 +163,7 @@
           "icon": "box",
           "title": "Disseny 3D",
           "description": "Disseny 3D amb OnShape.",
-          "location": "Campus Nord, C4S102C i C4S102B"
+          "location": "Campus Nord, UPC"
         },
         {
           "date": "17 Feb 2027",
@@ -171,7 +171,7 @@
           "icon": "wrench",
           "title": "Actuadors",
           "description": "Control de motors (DC, servos, steppers).",
-          "location": "Campus Nord, C4S102C i C4S102B"
+          "location": "Campus Nord, UPC"
         },
         {
           "date": "24 Feb 2027",
@@ -179,7 +179,7 @@
           "icon": "signal",
           "title": "Sensors",
           "description": "Connexió i ús de sensors: pulsadors, ultrasó, sharp i sensors de llum del terra.",
-          "location": "Campus Nord, C4S102C i C4S102B"
+          "location": "Campus Nord, UPC"
         },
         {
           "date": "3 Mar 2027",
@@ -187,7 +187,7 @@
           "icon": "handshake",
           "title": "Pròximament...",
           "description": "Contingut del taller pendent de confirmar.",
-          "location": "Campus Nord, C4S102C i C4S102B"
+          "location": "Campus Nord, UPC"
         },
         {
           "date": "10 Mar 2027",
@@ -195,7 +195,7 @@
           "icon": "cpu",
           "title": "PCB",
           "description": "Disseny de plaques i tècniques de soldadura en placa de topos.",
-          "location": "Campus Nord, C4S102C i C4S102B"
+          "location": "Campus Nord, UPC"
         },
         {
           "date": "17 Mar 2027",
@@ -203,7 +203,7 @@
           "icon": "handshake",
           "title": "Pròximament...",
           "description": "Contingut del taller pendent de confirmar.",
-          "location": "Campus Nord, C4S102C i C4S102B"
+          "location": "Campus Nord, UPC"
         },
         {
           "date": "7 Abr 2027",
@@ -211,7 +211,7 @@
           "icon": "list",
           "title": "Seguiment",
           "description": "Acompanyament i seguiment pels equips.",
-          "location": "Campus Nord, C4S102C i C4S102B"
+          "location": "Campus Nord, UPC"
         },
         {
           "date": "28 Abr 2027",
@@ -219,14 +219,14 @@
           "icon": "circle-check",
           "title": "Validació dels robots",
           "description": "Seguiment i validació del funcionament dels robots. Només els robots validats competeixen a la final.",
-          "location": "Campus Nord, C4S102C i C4S102B"
+          "location": "Campus Nord, UPC"
         },
         {
           "date": "12 Mai 2027",
           "time": "11:00 - 15:00",
           "icon": "trophy",
           "title": "Final AESSBot 2027",
-          "description": "Gran final de la competició amb tots els participants",
+          "description": "Gran final de la competició",
           "location": "Campus Nord, Plaça Telecomunicacions",
           "highlight": true
         }
@@ -296,12 +296,12 @@
             {
               "icon": "clipboard-check",
               "question": "On puc trobar la normativa?",
-              "answer": "La normativa del 2027 s'està actualitzant i encara no està disponible. La publicarem en aquesta pàgina quan estigui llesta."
+              "answer": "La normativa del 2027 s'està actualitzant, encara no està disponible i està subjecta a canvis. La publicarem en aquesta pàgina quan estigui llesta."
             },
             {
               "icon": "x",
               "question": "Hi ha restriccions sobre els materials del robot?",
-              "answer": "Sí. El robot no pot incorporar armes tallants/perforants, dispositius d'interferència electromagnètica, làsers que saturin sensors, ni elements que puguin danyar el Dohyo. Consulta la normativa per a la llista completa de restriccions."
+              "answer": "Sí. El robot no pot incorporar armes tallants/perforants, dispositius d'interferència electromagnètica, làsers que saturin sensors, ni elements que puguin danyar el Dohyo. La llista completa de restriccions es detallarà a la normativa del 2027."
             }
           ]
         },
@@ -337,7 +337,7 @@
             {
               "icon": "alert-circle",
               "question": "Què passa si em retiro abans de la final?",
-              "answer": "En cas de retirada sense causa justificada, la fiança no serà retornada. Per als detalls complets sobre les condicions de retirada, consulta el reglament oficial."
+              "answer": "En cas de retirada sense causa justificada, la fiança no serà retornada. Les condicions de retirada es detallaran a la normativa del 2027."
             }
           ]
         },
@@ -348,12 +348,12 @@
             {
               "icon": "euro",
               "question": "La participació és gratuïta?",
-              "answer": "Sí. La inscripció és gratuïta, però cal dipositar una fiança de 50€ per equip. Les condicions de retorn de la fiança estan detallades al reglament."
+              "answer": "Sí. La inscripció és gratuïta, però cal dipositar una fiança de 50€ per equip. Les condicions de retorn de la fiança es detallaran a la normativa del 2027."
             },
             {
               "icon": "euro",
               "question": "Reben els equips ajut econòmic pel material?",
-              "answer": "Sí. Es reemborsarà fins a un màxim de 100€ (IVA inclòs) per equip en despeses justificades de material per a la construcció del robot. Per a tots els detalls sobre requisits, procediment i condicions, consulteu el reglament."
+              "answer": "Sí. Es reemborsarà fins a un màxim de 100€ (IVA inclòs) per equip en despeses justificades de material per a la construcció del robot. Els requisits, el procediment i les condicions es detallaran a la normativa del 2027."
             },
             {
               "icon": "trophy",
@@ -436,7 +436,7 @@
         {
           "icon": "euro",
           "title": "Fiança Retornable",
-          "body": "Cal abonar una **fiança de 50€ per equip** el primer dia de taller. Consulta el reglament per a les condicions de retorn."
+          "body": "Cal abonar una **fiança de 50€ per equip** el primer dia de taller. Les condicions de retorn es detallaran a la normativa del 2027."
         },
         {
           "icon": "graduation-cap",
@@ -446,7 +446,7 @@
         {
           "icon": "clipboard-check",
           "title": "Normativa en actualització",
-          "body": "La normativa del 2027 **encara no està disponible**. La publicarem quan estigui actualitzada, amb les especificacions tècniques i les condicions de participació."
+          "body": "La normativa del 2027 **encara no està disponible** i està subjecta a canvis. La publicarem quan estigui actualitzada, amb les especificacions tècniques i les condicions de participació."
         }
       ]
     },

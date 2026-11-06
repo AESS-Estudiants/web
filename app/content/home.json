@@ -113,7 +113,7 @@
         "stats": [
           { "icon": "trophy", "value": "Més de 1.000€", "label": "En premis" },
           { "icon": "award", "value": "1 ECTS", "label": "Per arribar a la final" },
-          { "icon": "calendar", "value": "Des 9 - Mai 5", "label": "Durada de la competició" },
+          { "icon": "calendar", "value": "Des 9 - Mai 12", "label": "Durada de la competició" },
           { "icon": "bot", "value": "20 robots", "label": "3 persones per equip" }
         ],
         "actions": [
