@@ -15,14 +15,27 @@ export function Sponsors({ sponsors }: { sponsors: AessbotEdition['sponsors'] })
             <h3 className={styles.groupTitle}>{group.title}</h3>
             <ul className={styles.logos}>
               {group.logos.map((logo) => (
-                <li key={logo.src} className={cx(styles.logo, styles[group.size])}>
-                  <img
-                    src={logo.src}
-                    alt={logo.alt}
-                    loading="lazy"
-                    decoding="async"
-                    className={cx(logo.monochrome && styles.monochrome)}
-                  />
+                <li
+                  key={'src' in logo ? logo.src : logo.id}
+                  className={cx(styles.logo, styles[group.size])}
+                >
+                  {'src' in logo ? (
+                    <img
+                      src={logo.src}
+                      alt={logo.alt}
+                      loading="lazy"
+                      decoding="async"
+                      className={cx(logo.monochrome && styles.monochrome)}
+                    />
+                  ) : (
+                    <span
+                      className={styles.pending}
+                      role="img"
+                      aria-label="Patrocinador pendent de desvelar"
+                    >
+                      ???
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>

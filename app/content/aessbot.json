@@ -39,8 +39,8 @@
     "event": {
       "name": "AESSBot 2027",
       "description": "La competició de robòtica més esperada de la UPC. Apunta el teu equip avui perquè les places són limitades i es tanquen aviat.",
-      "startDate": "2027-05-05T11:00:00+02:00",
-      "endDate": "2027-05-05T15:00:00+02:00",
+      "startDate": "2027-05-12T11:00:00+02:00",
+      "endDate": "2027-05-12T15:00:00+02:00",
       "location": {
         "name": "Plaça Telecomunicacions",
         "address": "Campus Nord UPC, Barcelona"
@@ -125,7 +125,7 @@
         {
           "icon": "award",
           "title": "1 crèdit ECTS",
-          "body": "Es pot obtenir 1 crèdit ECTS convalidable. Consulta les condicions a la [normativa](#normativa)."
+          "body": "Es pot obtenir 1 crèdit ECTS convalidable. Les condicions es publicaran a la normativa del 2027, que s'està actualitzant."
         },
         {
           "icon": "graduation-cap",
@@ -135,7 +135,7 @@
         {
           "icon": "clipboard-check",
           "title": "Més informació",
-          "body": "Per a més detalls sobre el reglament, límits tècnics i condicions, consulta la [normativa oficial](/documents/Reglament.pdf)."
+          "body": "La normativa del 2027 s'està actualitzant. La publicarem quan estigui llesta, amb els límits tècnics i les condicions de participació."
         }
       ]
     },
@@ -185,8 +185,8 @@
           "date": "3 Mar 2027",
           "time": "12:00 - 14:00",
           "icon": "handshake",
-          "title": "Taller de patrocinadors",
-          "description": "Obert a propostes per part dels patrocinadors. Per confirmar.",
+          "title": "Pròximament...",
+          "description": "Contingut del taller pendent de confirmar.",
           "location": "Campus Nord, C4S102C i C4S102B"
         },
         {
@@ -201,8 +201,8 @@
           "date": "17 Mar 2027",
           "time": "12:00 - 14:00",
           "icon": "handshake",
-          "title": "Taller de patrocinadors",
-          "description": "Obert a propostes per part dels patrocinadors. Per confirmar.",
+          "title": "Pròximament...",
+          "description": "Contingut del taller pendent de confirmar.",
           "location": "Campus Nord, C4S102C i C4S102B"
         },
         {
@@ -222,7 +222,7 @@
           "location": "Campus Nord, C4S102C i C4S102B"
         },
         {
-          "date": "5 Mai 2027",
+          "date": "12 Mai 2027",
           "time": "11:00 - 15:00",
           "icon": "trophy",
           "title": "Final AESSBot 2027",
@@ -232,16 +232,6 @@
         }
       ]
     },
-    "rules": {
-      "title": "Normativa",
-      "subtitle": "Consulta i descarrega el reglament oficial de la competició. Assegura't de llegir-lo atentament abans de participar a la competició.",
-      "action": {
-        "label": "Descarregar Reglament",
-        "href": "/documents/Reglament.pdf",
-        "icon": "clipboard-check"
-      },
-      "note": "* Subjecte a canvis"
-    },
     "sponsors": {
       "title": "Patrocinadors i Col·laboradors",
       "subtitle": "Gràcies al suport d'aquestes empreses i entitats per fer possible l'AESSBot 2027",
@@ -250,11 +240,9 @@
           "title": "Patrocinadors Oficials",
           "size": "large",
           "logos": [
-            {
-              "src": "/images/logos/vento-build.svg",
-              "alt": "Vento.build",
-              "monochrome": true
-            }
+            { "id": "pendent-1", "pending": true },
+            { "id": "pendent-2", "pending": true },
+            { "id": "pendent-3", "pending": true }
           ]
         },
         {
@@ -298,7 +286,7 @@
             {
               "icon": "calendar",
               "question": "Quan és la competició?",
-              "answer": "La gran final de l'AESSBot 2027 tindrà lloc el 5 de maig de 2027 al Campus Nord de la UPC."
+              "answer": "La gran final de l'AESSBot 2027 tindrà lloc el 12 de maig de 2027 al Campus Nord de la UPC."
             },
             {
               "icon": "trophy",
@@ -308,7 +296,7 @@
             {
               "icon": "clipboard-check",
               "question": "On puc trobar la normativa?",
-              "answer": "El reglament complet de la competició està disponible a la secció de \"Normativa\" d'aquesta mateixa pàgina."
+              "answer": "La normativa del 2027 s'està actualitzant i encara no està disponible. La publicarem en aquesta pàgina quan estigui llesta."
             },
             {
               "icon": "x",
@@ -334,7 +322,7 @@
             {
               "icon": "clipboard-check",
               "question": "Com funciona el procés d'inscripció?",
-              "answer": "Les inscripcions es tanquen el 26 de novembre de 2026. Abans del 15 de febrer, rebreu un correu electrònic confirmant si heu estat admesos a la competició. Els equips acceptats hauran de portar la fiança de 50€ en efectiu el primer dia de taller. Si algun equip admès causa baixa, se li comunicarà immediatament al següent equip de la llista d'espera."
+              "answer": "Les inscripcions es tanquen el 26 de novembre de 2026. Abans del 29 de novembre de 2026, rebreu un correu electrònic confirmant si heu estat admesos a la competició. Els equips acceptats hauran de portar la fiança de 50€ en efectiu el primer dia de taller. Si algun equip admès causa baixa, se li comunicarà immediatament al següent equip de la llista d'espera."
             },
             {
               "icon": "user-check",
@@ -457,8 +445,8 @@
         },
         {
           "icon": "clipboard-check",
-          "title": "Llegeix la Normativa",
-          "body": "Abans d'inscriure't, **llegeix atentament la normativa oficial** per conèixer totes les especificacions tècniques i condicions de participació. [Descarrega aquí](/documents/Reglament.pdf)"
+          "title": "Normativa en actualització",
+          "body": "La normativa del 2027 **encara no està disponible**. La publicarem quan estigui actualitzada, amb les especificacions tècniques i les condicions de participació."
         }
       ]
     },
@@ -485,7 +473,7 @@
         {
           "icon": "send",
           "title": "3. Correu de Benvinguda i Convocatòria",
-          "body": "Rebràs un correu **com a màxim el 13 de febrer de 2026 a les 23:59** confirmant si el teu equip ha estat admès o si queda a la llista d'espera. Si sou admesos, disposareu de 72 hores per confirmar la vostra participació."
+          "body": "Rebràs un correu **abans del 29 de novembre de 2026** confirmant si el teu equip ha estat admès o si queda a la llista d'espera."
         }
       ],
       "cta": {

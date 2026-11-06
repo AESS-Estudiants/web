@@ -25,7 +25,7 @@ export function EditionPage({ content, registrationOpen }: EditionPageProps) {
       <Competition competition={edition.competition} editions={content.editions.items} />
       <Info info={edition.info} />
       <Schedule schedule={edition.schedule} />
-      <Rules rules={edition.rules} />
+      {edition.rules && <Rules rules={edition.rules} />}
       <Sponsors sponsors={edition.sponsors} />
       <EditionFaq faq={edition.faq} />
     </>

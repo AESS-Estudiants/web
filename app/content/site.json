@@ -29,8 +29,5 @@
       "url": "https://www.linkedin.com/company/aess-estudiants-upc"
     }
   ],
-  "legal": [
-    { "label": "Política de privacitat", "href": "/documents/Política_Privacitat.pdf" },
-    { "label": "Normativa", "href": "/documents/Reglament.pdf" }
-  ]
+  "legal": [{ "label": "Política de privacitat", "href": "/documents/Política_Privacitat.pdf" }]
 }
