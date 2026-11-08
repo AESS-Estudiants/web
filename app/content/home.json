@@ -111,9 +111,9 @@
           "alt": "Cartell de l'AESSBot 2027, la 20a edició de la competició de robots minisumo: inscripcions obertes fins el 26 de novembre de 2026"
         },
         "stats": [
-          { "icon": "trophy", "value": "Més de 1.000€", "label": "En premis" },
-          { "icon": "award", "value": "1 ECTS", "label": "Per arribar a la final" },
-          { "icon": "calendar", "value": "Des 9 - Mai 5", "label": "Durada de la competició" },
+          { "icon": "trophy", "value": "Premis", "label": "Per als millors equips" },
+          { "icon": "award", "value": "1 ECTS", "label": "Crèdit convalidable" },
+          { "icon": "calendar", "value": "Des 9 - Mai 12", "label": "Durada de la competició" },
           { "icon": "bot", "value": "20 robots", "label": "3 persones per equip" }
         ],
         "actions": [
