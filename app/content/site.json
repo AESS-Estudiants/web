@@ -9,6 +9,7 @@
     { "label": "Uneix-te", "to": "/uneix-te" },
     { "label": "Contacte", "to": "/contacte" }
   ],
+  "hiddenPaths": ["/cursos"],
   "join": { "label": "Fes-te membre", "to": "/uneix-te" },
   "contact": {
     "email": "aess.estudiants@upc.edu",

@@ -2,7 +2,7 @@ import { Menu, UserPlus, X } from 'lucide-react'
 import { useEffect, useId, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router'
 import { Button, IconButton } from '~/components/buttons'
-import { site } from '~/content/site'
+import { navigation, site } from '~/content/site'
 import { cx } from '~/lib/cx'
 import { useIsCurrentPage } from '../current-page'
 import { Logo } from '../Logo/Logo'
@@ -44,7 +44,7 @@ export function Navbar() {
 
         <nav className={styles.nav} aria-label="Principal">
           <ul className={styles.list}>
-            {site.navigation.map((link) => (
+            {navigation.map((link) => (
               <li key={link.to}>
                 <Link
                   to={link.to}

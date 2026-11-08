@@ -61,6 +61,8 @@ export const site = z.object({
   name: z.string().min(1),
   description: z.string().min(1).max(160),
   navigation: z.array(link).min(1),
+  /** Pages switched off for now: they are left out of the build, the menu, the sitemap and the links to them */
+  hiddenPaths: z.array(route),
   join: link,
   contact: z.object({
     email: z.email(),

@@ -42,6 +42,7 @@ public/         PDFs, SVG logos and the share image
 All texts, courses, projects, FAQs, AESSBot editions and sponsors live in `app/content/` as JSON, in Catalan. Edit the file and open a PR; the build and the tests fail if a field is missing or a link or photo doesn't exist. Text fields marked as rich text accept `**bold**` and `[links](/path)`.
 
 - **Photos**: put them in `app/assets/images/<page>/` (JPEG, 2000 px wide is plenty) and refer to them as `<page>/<file>.jpg` with an `alt` text. Sizes and formats are generated at build time.
+- **Hiding a page**: add its route to `hiddenPaths` in `app/content/site.json`, e.g. `["/cursos"]`. The page isn't built (its URL shows the 404 page) and it leaves the menu, the sitemap and the links on the home page, but its content stays in place. Remove it from the list to bring the page back, and add its URL back to `lighthouserc.json`.
 - **AESSBot**: `status` in `app/content/aessbot.json` picks the page. `coming-soon` shows the minigame page, `registration` the full edition with the registration page at `/aessbot/inscripcio`, and `finished` the edition without registration. Update the edition texts, dates and form link before switching.
 
 ## Design

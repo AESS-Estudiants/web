@@ -1,16 +1,17 @@
+import type { LinksFunction } from 'react-router'
 import { courses } from '~/content/courses'
 import { preloadPicture } from '~/lib/images'
 import { breadcrumbJsonLd, coursesJsonLd, pageMeta } from '~/lib/seo'
-import type { Route } from './+types/route'
 import { CourseList } from './sections/CourseList'
 import { HERO_POSTER_SIZES, Hero } from './sections/Hero'
 import { Intro } from './sections/Intro'
 
-export const links: Route.LinksFunction = () => [
+// Typed without ./+types, which only exists while the page is in routes.ts (see hiddenPaths in site.json)
+export const links: LinksFunction = () => [
   preloadPicture(courses.hero.poster.src, HERO_POSTER_SIZES),
 ]
 
-export function meta(_: Route.MetaArgs) {
+export function meta() {
   return [
     ...pageMeta({
       title: 'Cursos',

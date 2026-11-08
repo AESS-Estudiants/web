@@ -2,6 +2,7 @@ import { render, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { createRoutesStub } from 'react-router'
 import { describe, expect, it } from 'vitest'
+import { site } from '~/content/site'
 import { Navbar } from './Navbar'
 
 function renderAt(path: string) {
@@ -14,13 +15,22 @@ function renderAt(path: string) {
 
 describe('Navbar', () => {
   it('marks the current page', () => {
-    renderAt('/cursos')
+    renderAt('/projectes')
     const nav = screen.getByRole('navigation', { name: 'Principal' })
-    expect(within(nav).getByRole('link', { name: 'Cursos' })).toHaveAttribute(
+    expect(within(nav).getByRole('link', { name: 'Projectes' })).toHaveAttribute(
       'aria-current',
       'page',
     )
     expect(within(nav).getByRole('link', { name: 'Inici' })).not.toHaveAttribute('aria-current')
+  })
+
+  it('leaves out the pages switched off in site.json', () => {
+    renderAt('/')
+    const nav = screen.getByRole('navigation', { name: 'Principal' })
+    const hrefs = within(nav)
+      .getAllByRole('link')
+      .map((link) => link.getAttribute('href'))
+    for (const path of site.hiddenPaths) expect(hrefs).not.toContain(path)
   })
 
   it('opens and closes the mobile menu', async () => {

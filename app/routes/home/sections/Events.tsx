@@ -5,6 +5,7 @@ import { ICONS } from '~/components/icons'
 import { Section } from '~/components/layout'
 import { Picture } from '~/components/media'
 import type { Home } from '~/content/schemas'
+import { isHiddenPath } from '~/content/site'
 import { picture } from '~/lib/images'
 import styles from './Events.module.css'
 
@@ -29,9 +30,9 @@ export function Events({ events }: { events: Home['events'] }) {
             stats={
               <Stats stats={event.stats.map((stat) => ({ ...stat, icon: ICONS[stat.icon] }))} />
             }
-            actions={event.actions.map((action) => (
-              <ContentButton key={action.label} action={action} size="small" />
-            ))}
+            actions={event.actions
+              .filter((action) => !action.to || !isHiddenPath(action.to))
+              .map((action) => <ContentButton key={action.label} action={action} size="small" />)}
           >
             <p>{event.body}</p>
           </EventBanner>

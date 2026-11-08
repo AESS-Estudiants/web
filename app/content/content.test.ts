@@ -20,6 +20,22 @@ describe('site content', () => {
     const routes = ['/', '/aessbot', '/cursos', '/projectes', '/uneix-te', '/contacte']
     for (const link of [...data.navigation, data.join]) expect(routes).toContain(link.to)
   })
+
+  it('only hides existing pages, and never the home or the join page', () => {
+    const hideable = ['/aessbot', '/cursos', '/projectes', '/contacte']
+    for (const path of data.hiddenPaths) expect(hideable).toContain(path)
+  })
+
+  it('tells a link to a hidden page apart, also with a query or a section', async () => {
+    const { isHiddenPath, site } = await import('./site')
+    for (const path of site.hiddenPaths) {
+      expect(isHiddenPath(path)).toBe(true)
+      expect(isHiddenPath(`${path}?curs=python`)).toBe(true)
+      expect(isHiddenPath(`${path}#llista`)).toBe(true)
+    }
+    expect(isHiddenPath('/')).toBe(false)
+    expect(isHiddenPath('#qui-som')).toBe(false)
+  })
 })
 
 describe('schemas', () => {

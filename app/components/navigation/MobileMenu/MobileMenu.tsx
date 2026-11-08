@@ -2,7 +2,7 @@ import { UserPlus } from 'lucide-react'
 import { Link } from 'react-router'
 import { Button } from '~/components/buttons'
 import { SocialLinks } from '~/components/navigation/SocialLinks/SocialLinks'
-import { site } from '~/content/site'
+import { navigation, site } from '~/content/site'
 import { cx } from '~/lib/cx'
 import { useIsCurrentPage } from '../current-page'
 import styles from './MobileMenu.module.css'
@@ -14,7 +14,7 @@ export function MobileMenu({ id, open }: MobileMenuProps) {
   return (
     <nav id={id} className={cx(styles.panel, open && styles.open)} aria-label="Menú" hidden={!open}>
       <ul className={styles.list}>
-        {site.navigation.map((link) => (
+        {navigation.map((link) => (
           <li key={link.to}>
             <Link
               to={link.to}

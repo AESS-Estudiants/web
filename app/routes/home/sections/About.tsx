@@ -5,6 +5,7 @@ import { ICONS } from '~/components/icons'
 import { Section } from '~/components/layout'
 import { Picture } from '~/components/media'
 import type { Home } from '~/content/schemas'
+import { isHiddenPath } from '~/content/site'
 import { picture } from '~/lib/images'
 import styles from './About.module.css'
 
@@ -32,7 +33,7 @@ export function About({ about }: { about: Home['about'] }) {
               icon={ICONS[card.icon]}
               eyebrow={card.eyebrow}
               title={card.title}
-              to={card.to}
+              to={card.to && !isHiddenPath(card.to) ? card.to : undefined}
             >
               {card.body.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
