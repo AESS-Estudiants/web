@@ -9,12 +9,20 @@ import { isHiddenPath } from '~/content/site'
 import { picture } from '~/lib/images'
 import styles from './Events.module.css'
 
+/** An event whose page is switched off in site.json (hiddenPaths) is left out with it */
+function linksToHiddenPage(event: Home['events']['items'][number]) {
+  return event.actions.some((action) => action.to !== undefined && isHiddenPath(action.to))
+}
+
 export function Events({ events }: { events: Home['events'] }) {
+  const items = events.items.filter((event) => !linksToHiddenPage(event))
+  if (items.length === 0) return null
+
   return (
     <Section id="esdeveniments" labelledBy="esdeveniments-title">
       <SectionHeader id="esdeveniments-title" title={events.title} />
       <div className={styles.list}>
-        {events.items.map((event) => (
+        {items.map((event) => (
           <EventBanner
             key={event.title}
             tag={event.tag}
@@ -30,9 +38,9 @@ export function Events({ events }: { events: Home['events'] }) {
             stats={
               <Stats stats={event.stats.map((stat) => ({ ...stat, icon: ICONS[stat.icon] }))} />
             }
-            actions={event.actions
-              .filter((action) => !action.to || !isHiddenPath(action.to))
-              .map((action) => <ContentButton key={action.label} action={action} size="small" />)}
+            actions={event.actions.map((action) => (
+              <ContentButton key={action.label} action={action} size="small" />
+            ))}
           >
             <p>{event.body}</p>
           </EventBanner>
