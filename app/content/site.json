@@ -6,7 +6,6 @@
     { "label": "AESSBot", "to": "/aessbot" },
     { "label": "Cursos", "to": "/cursos" },
     { "label": "Projectes", "to": "/projectes" },
-    { "label": "Uneix-te", "to": "/uneix-te" },
     { "label": "Contacte", "to": "/contacte" }
   ],
   "hiddenPaths": ["/cursos"],

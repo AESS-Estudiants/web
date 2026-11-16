@@ -1,5 +1,6 @@
 import AxeBuilder from '@axe-core/playwright'
 import { expect, test } from '@playwright/test'
+import site from '../app/content/site.json' with { type: 'json' }
 import { INDEXED_PATHS as ROUTES } from '../app/lib/indexed-paths'
 
 for (const path of ROUTES) {
@@ -22,6 +23,11 @@ for (const path of ROUTES) {
       const current = page.getByRole('navigation', { name: 'Principal', includeHidden: true })
       // A subpage such as /aessbot/inscripcio marks its section
       const section = `/${path.split('/')[1]}`
+      // Pages left out of the menu, such as /uneix-te, mark nothing
+      if (!site.navigation.some((item) => item.to === section)) {
+        await expect(current.locator('[aria-current="page"]')).toHaveCount(0)
+        return
+      }
       await expect(current.locator('[aria-current="page"]')).toHaveAttribute('href', section)
     })
 
