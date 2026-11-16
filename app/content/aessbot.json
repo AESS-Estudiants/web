@@ -56,8 +56,8 @@
       "stats": [
         {
           "icon": "trophy",
-          "value": "Premis",
-          "label": "Per als millors equips"
+          "value": "+1000€",
+          "label": "En premis"
         },
         {
           "icon": "users",
@@ -119,8 +119,8 @@
         },
         {
           "icon": "trophy",
-          "title": "Premis",
-          "body": "Hi haurà premis per als millors equips classificats. A què esperes per guanyar?"
+          "title": "+1000€ en premis",
+          "body": "Repartirem més de 1000€ en premis entre els millors equips classificats. A què esperes per guanyar?"
         },
         {
           "icon": "award",
@@ -358,7 +358,7 @@
             {
               "icon": "trophy",
               "question": "Hi ha premis?",
-              "answer": "Sí, hi haurà premis per als millors equips classificats. Els detalls es publicaran més endavant."
+              "answer": "Sí, es repartiran més de 1000€ en premis entre els millors equips classificats."
             },
             {
               "icon": "graduation-cap",
