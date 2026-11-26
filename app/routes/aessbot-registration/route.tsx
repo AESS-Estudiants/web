@@ -18,16 +18,16 @@ export function meta(_: Route.MetaArgs) {
   })
 }
 
-// Before the edition is announced there is nothing to sign up for, so the page sends you to /aessbot
+// Outside the registration period there is nothing to sign up for, so the page sends you to /aessbot
 export default function AessbotRegistrationPage() {
   const navigate = useNavigate()
-  const comingSoon = aessbot.status === 'coming-soon'
+  const closed = aessbot.status !== 'registration'
 
   useEffect(() => {
-    if (comingSoon) navigate('/aessbot', { replace: true })
-  }, [comingSoon, navigate])
+    if (closed) navigate('/aessbot', { replace: true })
+  }, [closed, navigate])
 
-  if (comingSoon) return null
+  if (closed) return null
 
   const { registration } = aessbot
   return (
