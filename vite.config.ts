@@ -2,6 +2,7 @@ import { fileURLToPath } from 'node:url'
 import { reactRouter } from '@react-router/dev/vite'
 import { defineConfig } from 'vite'
 import { imagetools } from 'vite-imagetools'
+import { BUILD_CONSTANTS } from './app/content/build-constants.ts'
 
 // `import photo from './photo.jpg?responsive'` gives AVIF, WebP and JPEG at several widths
 const RESPONSIVE = new URLSearchParams({
@@ -19,6 +20,7 @@ export default defineConfig({
     }),
     reactRouter(),
   ],
+  define: BUILD_CONSTANTS,
   // One small stylesheet instead of a render-blocking file per component family
   build: { cssCodeSplit: false },
   resolve: { alias: { '~': fileURLToPath(new URL('./app', import.meta.url)) } },

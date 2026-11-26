@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import type { ReactNode } from 'react'
-import { createMemoryRouter, RouterProvider } from 'react-router'
+import { renderToString } from 'react-dom/server'
+import { createMemoryRouter, MemoryRouter, RouterProvider } from 'react-router'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import type { AessbotStatus } from '~/content/schemas'
 import { renderWithRouter } from '~/test/render'
@@ -72,13 +73,31 @@ describe('/aessbot', () => {
     expect(jsonLdTypes()).toEqual(['BreadcrumbList', 'Event'])
   })
 
-  it('says registration is closed once the deadline has passed', () => {
+  it('drops the registration button once the deadline has passed', () => {
     content.status = 'registration'
     vi.useFakeTimers({ toFake: ['Date'] })
     vi.setSystemTime(new Date('2026-11-27T00:00:00+01:00'))
     renderWithRouter(<AessbotPage />)
     expect(screen.queryByRole('timer')).not.toBeInTheDocument()
     expect(screen.getByText('Inscripcions tancades')).toBeInTheDocument()
+    expect(screen.queryByRole('link', { name: 'Inscriu-te' })).not.toBeInTheDocument()
+  })
+
+  it('prerenders registration as closed when the site is built after the deadline', () => {
+    content.status = 'registration'
+    // The tests run after the 2027 deadline, like a build made after it
+    const html = renderToString(
+      <MemoryRouter>
+        <AessbotPage />
+      </MemoryRouter>,
+    )
+    expect(html).toContain('Inscripcions tancades')
+    expect(html).not.toContain('href="/aessbot/inscripcio"')
+    // Nor does the event tell search engines that registration is open
+    const jsonLd = meta({} as never).flatMap((tag) =>
+      'script:ld+json' in tag ? [tag['script:ld+json'] as object] : [],
+    )
+    expect(jsonLd.some((block) => 'offers' in block)).toBe(false)
   })
 
   it('shows the edition without registration once it is over', () => {
@@ -119,8 +138,19 @@ describe('/aessbot/inscripcio', () => {
     expect(router.state.location.pathname).toBe('/aessbot')
   })
 
+  it('sends you to /aessbot once the deadline has passed, before the status changes', async () => {
+    content.status = 'registration'
+    vi.useFakeTimers({ toFake: ['Date'] })
+    vi.setSystemTime(new Date('2026-11-27T00:00:00+01:00'))
+    const router = renderAt('/aessbot/inscripcio')
+    expect(await screen.findByText('AESSBot')).toBeInTheDocument()
+    expect(router.state.location.pathname).toBe('/aessbot')
+  })
+
   it('loads the Google Form only after a click while registration is open', async () => {
     content.status = 'registration'
+    vi.useFakeTimers({ toFake: ['Date'] })
+    vi.setSystemTime(new Date('2026-11-25T23:00:00+01:00'))
     renderAt('/aessbot/inscripcio')
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Recordatoris Importants')
     expect(document.querySelector('iframe')).toBeNull()
