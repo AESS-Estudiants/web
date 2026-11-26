@@ -43,7 +43,7 @@ All texts, courses, projects, FAQs, AESSBot editions and sponsors live in `app/c
 
 - **Photos**: put them in `app/assets/images/<page>/` (JPEG, 2000 px wide is plenty) and refer to them as `<page>/<file>.jpg` with an `alt` text. Sizes and formats are generated at build time.
 - **Hiding a page**: add its route to `hiddenPaths` in `app/content/site.json`, e.g. `["/cursos"]`. The page isn't built (its URL shows the 404 page) and it leaves the menu, the sitemap, the links on the home page and the home events that link to it, but its content stays in place. Remove it from the list to bring the page back, and add its URL back to `lighthouserc.json`.
-- **AESSBot**: `status` in `app/content/aessbot.json` picks the page. `coming-soon` shows the minigame page, `registration` the full edition with the registration page at `/aessbot/inscripcio`, and `finished` the edition without registration. Update the edition texts, dates and form link before switching.
+- **AESSBot**: `status` in `app/content/aessbot.json` picks the page. `coming-soon` shows the minigame page, `registration` the full edition with the registration page at `/aessbot/inscripcio`, and `finished` the edition without registration. Update the edition texts, dates and form link before switching. Registration also closes by itself at `registrationDeadline`: the browser hides the sign-up buttons (on `/aessbot` and the home events that link to `/aessbot/inscripcio`) and sends the registration page back to `/aessbot`. Set `status` to `finished` afterwards so the prerendered pages, the sitemap and the search engine data catch up.
 
 ## Design
 

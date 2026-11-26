@@ -2,18 +2,21 @@ import { ContentButton } from '~/components/buttons'
 import { Countdown, Stats } from '~/components/content'
 import { ICONS } from '~/components/icons'
 import { Picture } from '~/components/media'
+import { useBeforeDeadline } from '~/content/aessbot-registration'
 import type { AessbotEdition } from '~/content/schemas'
 import { picture } from '~/lib/images'
 import styles from './EditionHero.module.css'
 
 type EditionHeroProps = {
   hero: AessbotEdition['hero']
-  /** Registration button and countdown, only while registration is open */
-  registration?: AessbotEdition['registration']
+  /** Registration button and countdown, only while the status is registration */
+  registration?: AessbotEdition['registration'] & { deadline: string }
 }
 
 export function EditionHero({ hero, registration }: EditionHeroProps) {
   const [name, year] = hero.title
+  // Past the deadline only the countdown stays, saying registration is closed
+  const beforeDeadline = useBeforeDeadline(registration?.deadline ?? '')
   return (
     <section className={styles.hero} aria-labelledby="aessbot-title">
       <div className={styles.inner}>
@@ -24,7 +27,9 @@ export function EditionHero({ hero, registration }: EditionHeroProps) {
           <p className={styles.description}>{hero.description}</p>
           {registration && (
             <div className={styles.registration}>
-              <ContentButton action={registration.action} className={styles.action} />
+              {beforeDeadline && (
+                <ContentButton action={registration.action} className={styles.action} />
+              )}
               <Countdown
                 deadline={registration.deadline}
                 label={registration.countdownLabel}

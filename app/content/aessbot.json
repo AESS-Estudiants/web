@@ -1,5 +1,6 @@
 {
   "status": "finished",
+  "registrationDeadline": "2026-11-26T23:59:59+01:00",
   "comingSoon": {
     "badge": "Propera edició",
     "title": ["AESSBot", "2027"],
@@ -82,7 +83,6 @@
         "to": "/aessbot/inscripcio",
         "icon": "clipboard-check"
       },
-      "deadline": "2026-11-26T23:59:59+01:00",
       "countdownLabel": "Les inscripcions tanquen en:",
       "closedLabel": "Inscripcions tancades"
     },

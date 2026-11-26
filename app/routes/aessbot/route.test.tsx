@@ -72,13 +72,14 @@ describe('/aessbot', () => {
     expect(jsonLdTypes()).toEqual(['BreadcrumbList', 'Event'])
   })
 
-  it('says registration is closed once the deadline has passed', () => {
+  it('drops the registration button once the deadline has passed', () => {
     content.status = 'registration'
     vi.useFakeTimers({ toFake: ['Date'] })
     vi.setSystemTime(new Date('2026-11-27T00:00:00+01:00'))
     renderWithRouter(<AessbotPage />)
     expect(screen.queryByRole('timer')).not.toBeInTheDocument()
     expect(screen.getByText('Inscripcions tancades')).toBeInTheDocument()
+    expect(screen.queryByRole('link', { name: 'Inscriu-te' })).not.toBeInTheDocument()
   })
 
   it('shows the edition without registration once it is over', () => {
@@ -119,8 +120,19 @@ describe('/aessbot/inscripcio', () => {
     expect(router.state.location.pathname).toBe('/aessbot')
   })
 
+  it('sends you to /aessbot once the deadline has passed, before the status changes', async () => {
+    content.status = 'registration'
+    vi.useFakeTimers({ toFake: ['Date'] })
+    vi.setSystemTime(new Date('2026-11-27T00:00:00+01:00'))
+    const router = renderAt('/aessbot/inscripcio')
+    expect(await screen.findByText('AESSBot')).toBeInTheDocument()
+    expect(router.state.location.pathname).toBe('/aessbot')
+  })
+
   it('loads the Google Form only after a click while registration is open', async () => {
     content.status = 'registration'
+    vi.useFakeTimers({ toFake: ['Date'] })
+    vi.setSystemTime(new Date('2026-11-25T23:00:00+01:00'))
     renderAt('/aessbot/inscripcio')
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Recordatoris Importants')
     expect(document.querySelector('iframe')).toBeNull()

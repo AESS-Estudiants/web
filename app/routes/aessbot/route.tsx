@@ -39,7 +39,7 @@ export function meta(_: Route.MetaArgs) {
         image: picture(hero.poster.src).img.src,
         registration:
           aessbot.status === 'registration'
-            ? { path: registration.action.to ?? PATH, deadline: registration.deadline }
+            ? { path: registration.action.to ?? PATH, deadline: aessbot.registrationDeadline }
             : undefined,
       }),
     },

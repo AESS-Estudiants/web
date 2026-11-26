@@ -381,10 +381,9 @@ const edition = z.object({
     poster: image,
     stats: z.array(stat).max(4),
   }),
-  /** Only shown while the status is registration */
+  /** Only shown while the status is registration; the button goes once registrationDeadline passes */
   registration: z.object({
     action,
-    deadline: dateTime,
     countdownLabel: z.string().min(1),
     closedLabel: z.string().min(1),
   }),
@@ -487,6 +486,11 @@ const registration = z.object({
 export const aessbot = z.object({
   /** Which version of the page is shown: before the edition is announced, while registration is open or after it */
   status: z.enum(['coming-soon', 'registration', 'finished']),
+  /**
+   * When registration closes. Past it, the browser hides the sign-up buttons and sends the
+   * registration page back to /aessbot, even before the status is changed to finished.
+   */
+  registrationDeadline: dateTime,
   comingSoon: z.object({
     badge: z.string().min(1),
     title: z.tuple([z.string().min(1), z.string().min(1)]),
