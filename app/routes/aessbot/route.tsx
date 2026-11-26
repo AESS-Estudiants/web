@@ -2,6 +2,7 @@ import '@fontsource/squada-one/latin-400.css'
 import squadaOne from '@fontsource/squada-one/files/squada-one-latin-400-normal.woff2?url'
 import { aessbot } from '~/content/aessbot'
 import { picture } from '~/lib/images'
+import { AESSBOT_REGISTRATION_INDEXED } from '~/lib/indexed-paths'
 import { breadcrumbJsonLd, eventJsonLd, pageMeta } from '~/lib/seo'
 import type { Route } from './+types/route'
 import { ComingSoon } from './sections/ComingSoon'
@@ -37,10 +38,9 @@ export function meta(_: Route.MetaArgs) {
         ...event,
         path: PATH,
         image: picture(hero.poster.src).img.src,
-        registration:
-          aessbot.status === 'registration'
-            ? { path: registration.action.to ?? PATH, deadline: aessbot.registrationDeadline }
-            : undefined,
+        registration: AESSBOT_REGISTRATION_INDEXED
+          ? { path: registration.action.to ?? PATH, deadline: aessbot.registrationDeadline }
+          : undefined,
       }),
     },
   ]

@@ -15,11 +15,11 @@ export const aessbotRegistration = __AESSBOT_REGISTRATION__
 const MINUTE = 60_000
 
 /**
- * Whether the deadline is still ahead. The time is only known in the browser, so the prerendered
- * page counts as before it, and a page left open changes within a minute of the deadline.
+ * Whether the deadline is still ahead. The prerendered page goes by the time of the build, the
+ * browser then checks the clock, and a page left open changes within a minute of the deadline.
  */
 export function useBeforeDeadline(deadline: string) {
-  const [before, setBefore] = useState(true)
+  const [before, setBefore] = useState(() => __BUILD_TIME__ < new Date(deadline).getTime())
 
   useEffect(() => {
     const end = new Date(deadline).getTime()
@@ -30,6 +30,11 @@ export function useBeforeDeadline(deadline: string) {
   }, [deadline])
 
   return before
+}
+
+/** Whether people can sign up at a given time */
+export function isRegistrationOpenAt({ status, registrationDeadline }: Registration, now: number) {
+  return status === 'registration' && now < new Date(registrationDeadline).getTime()
 }
 
 /** Whether people can sign up: the status says registration and the deadline hasn't passed */

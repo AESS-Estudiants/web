@@ -29,10 +29,13 @@ function remaining(deadline: number, now: number): Remaining | 'closed' {
   }
 }
 
-// Days, hours and minutes left. The time is only known in the browser, so the prerendered page shows dashes
+// Days, hours and minutes left. The time is only known in the browser, so the prerendered page shows
+// dashes, or the closed label if the deadline had already passed when the site was built
 export function Countdown({ deadline, label, closedLabel, className }: CountdownProps) {
   const labelId = useId()
-  const [left, setLeft] = useState<Remaining | 'closed' | null>(null)
+  const [left, setLeft] = useState<Remaining | 'closed' | null>(() =>
+    __BUILD_TIME__ >= new Date(deadline).getTime() ? 'closed' : null,
+  )
 
   useEffect(() => {
     const end = new Date(deadline).getTime()

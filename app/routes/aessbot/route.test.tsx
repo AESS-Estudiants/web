@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import type { ReactNode } from 'react'
-import { createMemoryRouter, RouterProvider } from 'react-router'
+import { renderToString } from 'react-dom/server'
+import { createMemoryRouter, MemoryRouter, RouterProvider } from 'react-router'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import type { AessbotStatus } from '~/content/schemas'
 import { renderWithRouter } from '~/test/render'
@@ -80,6 +81,23 @@ describe('/aessbot', () => {
     expect(screen.queryByRole('timer')).not.toBeInTheDocument()
     expect(screen.getByText('Inscripcions tancades')).toBeInTheDocument()
     expect(screen.queryByRole('link', { name: 'Inscriu-te' })).not.toBeInTheDocument()
+  })
+
+  it('prerenders registration as closed when the site is built after the deadline', () => {
+    content.status = 'registration'
+    // The tests run after the 2027 deadline, like a build made after it
+    const html = renderToString(
+      <MemoryRouter>
+        <AessbotPage />
+      </MemoryRouter>,
+    )
+    expect(html).toContain('Inscripcions tancades')
+    expect(html).not.toContain('href="/aessbot/inscripcio"')
+    // Nor does the event tell search engines that registration is open
+    const jsonLd = meta({} as never).flatMap((tag) =>
+      'script:ld+json' in tag ? [tag['script:ld+json'] as object] : [],
+    )
+    expect(jsonLd.some((block) => 'offers' in block)).toBe(false)
   })
 
   it('shows the edition without registration once it is over', () => {

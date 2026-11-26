@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router'
 import { aessbot } from '~/content/aessbot'
-import { useRegistrationOpen } from '~/content/aessbot-registration'
+import { isRegistrationOpenAt, useRegistrationOpen } from '~/content/aessbot-registration'
 import { AESSBOT_REGISTRATION_INDEXED } from '~/lib/indexed-paths'
 import { pageMeta } from '~/lib/seo'
 import type { Route } from './+types/route'
@@ -20,13 +20,15 @@ export function meta(_: Route.MetaArgs) {
 }
 
 // Outside the registration period there is nothing to sign up for, so the page sends you to /aessbot.
-// Past the deadline that happens in the browser, even before the status is changed to finished.
+// Past the deadline that happens in the browser too, also on a page built before it.
 export default function AessbotRegistrationPage() {
   const navigate = useNavigate()
   const closed = !useRegistrationOpen(aessbot)
 
   useEffect(() => {
-    if (closed) navigate('/aessbot', { replace: true })
+    // The clock decides, not the time of the build, in case this browser's clock is behind it
+    if (closed && !isRegistrationOpenAt(aessbot, Date.now()))
+      navigate('/aessbot', { replace: true })
   }, [closed, navigate])
 
   if (closed) return null
