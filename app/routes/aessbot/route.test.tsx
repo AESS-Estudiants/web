@@ -112,6 +112,13 @@ describe('/aessbot/inscripcio', () => {
     expect(router.state.location.pathname).toBe('/aessbot')
   })
 
+  it('sends you to /aessbot once registration is over', async () => {
+    content.status = 'finished'
+    const router = renderAt('/aessbot/inscripcio')
+    expect(await screen.findByText('AESSBot')).toBeInTheDocument()
+    expect(router.state.location.pathname).toBe('/aessbot')
+  })
+
   it('loads the Google Form only after a click while registration is open', async () => {
     content.status = 'registration'
     renderAt('/aessbot/inscripcio')

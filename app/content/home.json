@@ -116,10 +116,7 @@
           { "icon": "calendar", "value": "Des 9 - Mai 12", "label": "Durada de la competició" },
           { "icon": "bot", "value": "20 robots", "label": "3 persones per equip" }
         ],
-        "actions": [
-          { "label": "Més informació", "to": "/aessbot", "arrow": true },
-          { "label": "Inscriu-te!", "to": "/aessbot", "variant": "secondary" }
-        ]
+        "actions": [{ "label": "Més informació", "to": "/aessbot", "arrow": true }]
       },
       {
         "tag": "Cursos semestrals",
