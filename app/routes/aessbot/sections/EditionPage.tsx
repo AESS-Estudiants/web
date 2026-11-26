@@ -20,7 +20,11 @@ export function EditionPage({ content, registrationOpen }: EditionPageProps) {
     <>
       <EditionHero
         hero={edition.hero}
-        registration={registrationOpen ? edition.registration : undefined}
+        registration={
+          registrationOpen
+            ? { ...edition.registration, deadline: content.registrationDeadline }
+            : undefined
+        }
       />
       <Competition competition={edition.competition} editions={content.editions.items} />
       <Info info={edition.info} />
